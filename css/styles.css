@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Caveat&display=swap');
+
+body {
+    font-family: 'Darker Grotesque', Arial, sans-serif;
+}
+.container {
+ background-color: rgba(204, 238, 255, 0.9);
+}
+h1 {   
+  font-family: 'Caveat', Arial, cursive;
+}
+
+ul {
+display: flex;
+list-style: none;
+}
+li {
+ padding: 5px;
+}
+.align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
