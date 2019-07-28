@@ -1,51 +1,96 @@
 @import url('https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Caveat&display=swap');
-
 html {
-    font-size: 62.5%; /*10px == 1rem*/
+    font-size: 62.5%;
+    /*10px == 1rem*/
 }
+
 body {
     font-family: 'Darker Grotesque', Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
-.container {
- background-color: rgba(26, 163, 255, 0.9);
- padding: 3rem 2rem;
- display: flex;
- justify-content: space-between;
 
+.container {
+    background-color: rgba(26, 163, 255, 0.9);
+    padding: 3rem 2rem;
+  
 }
-nav {
+.large-screen-flex {
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    justify-content: space-between;
+    align-items: center;
+    -webkit-align-items: center; /* Safari 7.0+ */
+}
+.navbar-brand {
+    font-family: 'Caveat', Arial, cursive;
+    align-items: center;
+    font-size: 3rem;
+    margin: 0 1rem;
+    padding: 0 0.6rem;
+}
+.navigation-bar {
     position: fixed;
     width: 100%;
     font-size: 2rem;
-}
-.navbar-brand {   
-  font-family: 'Caveat', Arial, cursive;
-  align-items: center;
-  font-size: 3rem;
-  margin: 0 1rem;
-  padding: 0 0.6rem;
+    
 }
 
-ul {
-display: flex;
-list-style: none;
-margin: 0;
-padding: 0;
+.navigation-bar ul {
+    list-style: none;
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    margin: 0;
+    padding: 0;
 }
-li {
+
+.navigation-bar li {
     margin: 0 1rem;
     padding: 0.6rem;
 }
-nav a {
+
+.navigation-bar a {
     text-decoration: none;
     color: white;
 }
+
 /*Toggle navbar*/
 
 nav .toggle-bars {
     display: none;
-  }
-  
+}
+
+/* media queries */
+
+@media screen and (max-width: 768px) {
+    .large-screen-flex {
+        display: block;
+    }
+    .small-screen-flex {
+        display: flex;
+        display: -webkit-flex; /* Safari */
+        justify-content: space-between;
+        align-items: center;
+        -webkit-align-items: center; /* Safari 7.0+ */
+    }
+ 
+    .navigation-bar .toggle-bars {
+        display: block;
+        margin: 0 1rem;
+        padding: 0.2rem;
+    }
+    .navigation-bar.responsive .toggle-bars {
+    position: absolute;
+    right: 2rem;
+    top: 3.3rem;
+} 
+    .navigation-bar ul {
+        display: none;
+    }
+    .navigation-bar.responsive ul {
+        display: block;
+        margin-top: 3rem;
+    }
+
+}

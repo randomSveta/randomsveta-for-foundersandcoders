@@ -9,19 +9,26 @@
 
 <body>
     <header>
-        <nav>
-            <div class="container">
-                <div class="navbar-brand">
-                    <a href="#">Sveta Klimova</a>
+        <nav class="navigation-bar" id="navbar-top">
+            <div class="container large-screen-flex">
+                <div class="small-screen-flex">
+                    <div class="navbar-brand">
+                        <a href="#">Sveta Klimova</a>
+                    </div>
+                    <div class="toggle-bars"><a href="javascript:void(0);" onclick="navbarToggle()">
+                            <i class="fa fa-bars" id="menu-icon"></i>
+                        </a></div>
                 </div>
-                <ul class="navigation-bar">
-                    <li><a href="#about">About me</a></li>
+
+                <ul>
+
+                    <li><a href="#about" class="active">About me</a></li>
                     <li><a href="#my-achievements">My achievements</a></li>
                     <li><a href="#contact-me">Contact me</a></li>
-                    <li class="toggle-bars"><a href="javascript:void(0);" onclick="navbarToggle()">
-                            <i class="fa fa-bars"></i>
-                        </a></li>
+
                 </ul>
+
+
             </div>
 
         </nav>
