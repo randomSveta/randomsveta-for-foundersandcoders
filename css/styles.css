@@ -1,25 +1,51 @@
 @import url('https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Caveat&display=swap');
 
+html {
+    font-size: 62.5%; /*10px == 1rem*/
+}
 body {
     font-family: 'Darker Grotesque', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 .container {
- background-color: rgba(204, 238, 255, 0.9);
+ background-color: rgba(26, 163, 255, 0.9);
+ padding: 3rem 2rem;
+ display: flex;
+ justify-content: space-between;
+
 }
-h1 {   
+nav {
+    position: fixed;
+    width: 100%;
+    font-size: 2rem;
+}
+.navbar-brand {   
   font-family: 'Caveat', Arial, cursive;
+  align-items: center;
+  font-size: 3rem;
+  margin: 0 1rem;
+  padding: 0 0.6rem;
 }
 
 ul {
 display: flex;
 list-style: none;
+margin: 0;
+padding: 0;
 }
 li {
- padding: 5px;
+    margin: 0 1rem;
+    padding: 0.6rem;
 }
-.align-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+nav a {
+    text-decoration: none;
+    color: white;
 }
+/*Toggle navbar*/
+
+nav .toggle-bars {
+    display: none;
+  }
+  
