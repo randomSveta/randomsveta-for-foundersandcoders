@@ -30,6 +30,7 @@ header {
     -ms-flex-align: center;
     -webkit-align-items: center;
     -webkit-box-align: center;
+    align-items: center;
 }
 
 .navbar-brand {
@@ -37,6 +38,7 @@ header {
     font-size: 3rem;
     margin: 0 1rem;
     padding: 0 0.6rem;
+    text-shadow: 0.2rem 0.2rem black;
 }
 
 .navigation-bar {
@@ -56,6 +58,7 @@ header {
     -ms-flex-align: center;
     -webkit-align-items: center;
     -webkit-box-align: center;
+    align-items: center;
 }
 
 a {
@@ -80,14 +83,14 @@ nav .toggle-bars {
     -ms-flex-align: center;
     -webkit-align-items: center;
     -webkit-box-align: center;
-    
+    align-items: center;
 }
 
 
 .photo-info-social h1{
     font-size: 5rem;
-    color:white;
     text-align: center;
+    color:white;
    }
 .photo-info-social .info-about{
  margin-left: 12rem;
@@ -103,17 +106,20 @@ nav .toggle-bars {
     -webkit-align-items: center;
     -webkit-box-align: center;
     justify-content: center;
+    align-items: center;
     
 }
 .social-media a {
  font-size: 5rem;
- color: white;
+ color:white;
  padding-right: 2.5rem; 
 }
 .photo-info-social img {
     height: 80vh;
 }
-
+section {
+    height: 100vh;
+}
 /* Media queries */
 
 @media screen and (min-width: 900px) {
@@ -164,6 +170,7 @@ nav .toggle-bars {
         -ms-flex-align: center;
         -webkit-align-items: center;
         -webkit-box-align: center;
+        align-items: center;
     }
     .navigation-bar .toggle-bars {
         display: block;
