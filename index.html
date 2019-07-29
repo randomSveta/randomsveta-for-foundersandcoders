@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="./js/index.js"></script>
@@ -17,24 +18,50 @@
                     </div>
                     <div class="toggle-bars"><a href="javascript:void(0);" onclick="navbarToggle()">
                             <i class="fa fa-bars" id="menu-icon"></i>
-                        </a></div>
+                        </a>
+                    </div>
                 </div>
-
-                <ul>
-
-                    <li><a href="#about" class="active">About me</a></li>
+                <ul class="underscore-nav-item" id="nav-links">
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#why-me">Why me</a></li>
                     <li><a href="#my-achievements">My achievements</a></li>
                     <li><a href="#contact-me">Contact me</a></li>
-
                 </ul>
-
-
             </div>
 
         </nav>
+
+        <div class="container photo-info-social" id="about">
+            <div>
+                <img src="./images/Sveta_photo_header.png" alt="Photo of Sveta">
+            </div>
+            <div class="info-about">
+                <h1>A journey from QA Engineer to<br> Front-End Developer</h1>
+
+                <div class="social-media">
+                    <ul>
+                        <li><a href="https://github.com/randomSveta" target="_blank"><i class="fa fa-github"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/svetaklimova/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://www.freecodecamp.org/svetaklimova" target="_blank"><i class="fa fa-free-code-camp"></i></a></li>
+                        <li><a href="https://randomsveta.wordpress.com/" target="_blank"><i class="fa fa-wordpress"></i></a></li>
+                        <li><a href="https://www.codewars.com/users/randomsveta" target="_blank"><i class="fa fa-code"></i></a></li>
+                        <li><a href="https://codepen.io/randomsveta/" target="_blank"><i class="fa fa-codepen"></i></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+        <section id="about">
+            <h2>About me</h2>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
 </body>
 
 </html>
