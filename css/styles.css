@@ -167,7 +167,7 @@ footer{
     display: none;
     max-height: 60vh;
 }
-.dots {
+.dots, .play-stop-buttons {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -192,12 +192,13 @@ h2 {
     align-content: center;
     margin: 0;
     padding: 0;
-    background-color: bisque;
+    background-color: rgba(255, 255, 153, 0.4);
 }
 
 .fill-color {
     background-color: red;
 }
+
 /* Media queries */
 
 @media screen and (min-width: 769px) {
