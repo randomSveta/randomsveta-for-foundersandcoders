@@ -15,7 +15,7 @@ function navbarToggle() {
     }
 }
 
-let slideIndex = 1;
+let slideIndex = 0;
 window.onload = function() {
     showSlides(slideIndex);
   };
@@ -28,23 +28,27 @@ function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 
+
 function showSlides(n) {
-    let i;
     var slides = document.getElementsByClassName("slides");
     var dots = document.getElementsByClassName("dot");
 
     if (n > slides.length) {
-        slideIndex = 1
+        slideIndex = 1;
     }
     if (n < 1) { 
-        slideIndex = slides.length 
+        slideIndex = slides.length;
     }
-    for (i = 0; i < slides.length; i++) {
+    for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    for (i = 0; i < dots.length; i++) {
+    slideIndex ++;
+    if (slideIndex > slides.length) {slideIndex = 1} 
+    for (let i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" fill-color", "");
     }
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " fill-color";
+
+    setTimeout(function() { showSlides(slideIndex) }, 2000);
 }
