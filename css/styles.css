@@ -18,7 +18,7 @@ body {
     padding: 3rem 2rem;
 }
 header {
-    height: 100vh;
+    min-height: 100vh;
     background-color: rgba(77, 210, 255, 0.95);
 }
 
@@ -46,6 +46,7 @@ header {
     position: fixed;
     width: 100%;
     font-size: 2rem;
+    z-index: 10;
 }
 
 .navigation-bar ul {
@@ -88,12 +89,12 @@ nav .toggle-bars {
 
 
 .photo-info-social h1{
-    font-size: 5rem;
+    font-size: 4rem;
     text-align: center;
     color:white;
    }
 .photo-info-social .info-about{
- margin-left: 12rem;
+ margin-left: 18%;
 }
 .social-media ul{
     list-style: none;
@@ -115,10 +116,13 @@ nav .toggle-bars {
  padding-right: 2.5rem; 
 }
 .photo-info-social img {
-    height: 80vh;
+    width: 100%;
+    max-width: 350px;
+    max-height: 80vh;
+    height: auto;
 }
 section {
-    height: 100vh;
+    max-height: 100vh;
 }
 footer{
     background-color: rgba(31, 195, 249, 1);
@@ -130,11 +134,73 @@ footer{
     font-size: 2rem;
     padding: 1rem;
     margin: 0;
+    z-index: -1;
+}
+.carousel-certificates{
+    margin: 0;
+    padding: 2rem;
+    position: relative;
+    
+}
+.slide-indicators{
+    position: absolute;
+    top: 40%;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.carousel-images-list{
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
+.carousel-images-list img{
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+}
+
+.slides {
+    display: none;
+    max-height: 60vh;
+}
+.dots {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+.dot {
+    height: 0.2rem;
+    width: 0.2rem;
+    padding: 0.3rem;
+    margin: 0.5rem;
+    border: 0.1rem solid red;
+    border-radius: 1rem;
+}
+h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+.achievements {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+}
+
+.fill-color {
+    background-color: red;
+}
 /* Media queries */
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 769px) {
     .underscore-nav-item a {
         position: relative;
     }
@@ -170,7 +236,7 @@ footer{
 
 }
 
-@media screen and (max-width: 899px) {
+@media screen and (max-width: 768px) {
     .large-screen-flex {
         display: block;
     }
@@ -223,10 +289,10 @@ footer{
         background-color: rgb(255, 255, 204);
     }
     header {
-        height: 60vh;
+        mins-height: 50vh;
     }
     .photo-info-social img {
-        height: 30vh;
+        max-height: 30vh;
     }
     .photo-info-social h1{
         font-size: 3.5rem;
@@ -236,6 +302,6 @@ footer{
     }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 414px) {
 
 }
