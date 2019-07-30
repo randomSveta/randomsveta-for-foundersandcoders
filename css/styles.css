@@ -101,7 +101,7 @@ nav .toggle-bars {
     display: -webkit-flex;
     /* Safari */
     margin: 0;
-    padding: 0;
+    padding: 2rem 1rem 1rem 1rem;
     -ms-flex-align: center;
     -webkit-align-items: center;
     -webkit-box-align: center;
@@ -120,6 +120,18 @@ nav .toggle-bars {
 section {
     height: 100vh;
 }
+footer{
+    background-color: rgba(31, 195, 249, 1);
+}
+
+.about-this-page p{
+    color:white;
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem;
+    margin: 0;
+}
+
 /* Media queries */
 
 @media screen and (min-width: 900px) {
