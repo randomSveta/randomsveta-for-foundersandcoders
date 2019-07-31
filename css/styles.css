@@ -1,5 +1,33 @@
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Caveat&display=swap');
+
+/* ---------- TABLE OF CONTENTS ----------------- 
+1. Global styles 
+2. Global classes
+    2.1 Global classes. Social media
+3. Header
+    3.1 Header. Navigation
+    3.2 Header. Block photo + h1
+4. Sections
+    4.1 Section "About me"
+    4.2 Section "Why me"
+    4.3 Section "Achievements"
+        4.3.1 Section "Achievements". Buttons and indicators
+    4.4 Section "Certificates"
+    4.5 Section "Contact me"
+5. Footer
+6. Media queries
+    6.1 Media queries. Navigation min-769
+    6.2 Media queries. Global styles max-768 
+    6.3 Media queries. Global classes max-768
+    6.4 Media queries. Header. Photo + h1 max-768
+    6.5 Media queries. Navigation max-768 
+-------------------------------------------------- */
+
+
+
+/* ------ Global styles ------ */
+
 html {
     font-size: 62.5%;
     /*10px == 1rem*/
@@ -10,22 +38,72 @@ body {
     margin: 0;
     padding: 0;
 }
+
 *, *::before, *::after {
     box-sizing: border-box;
-  }
-  a {
-      color: white;
-  }
-  a:hover {
-    color: #99ced4;
 }
 
-.container {
-    padding: 3rem 2rem;
-}
 header {
     min-height: 100vh;
     background-color: rgba(62, 92, 145, 0.95);
+}
+
+section {
+    min-height: 100vh;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #99ced4;
+}
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    font-size: 4rem;
+    padding: 0;
+    margin: 0;
+}
+
+h3 {
+    text-align: center;
+    font-size: 3rem;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+textarea {
+    height: 10rem;
+    width: 100%;
+}
+
+input[type=text], input[type=email] {
+    width: 50%;
+}
+
+footer {
+    background-color: #3e5c91;
+}
+
+/* ------ Global classes ------ */
+
+.container {
+    padding: 3rem 2rem;
 }
 
 .large-screen-flex {
@@ -38,6 +116,29 @@ header {
     -webkit-box-align: center;
     align-items: center;
 }
+
+/* --- Global classes. Social media --- */
+
+.social-media ul {
+    list-style: none;
+    display: flex;
+    display: -webkit-flex;
+    /* Safari */
+    margin: 0;
+    padding: 2rem 1rem 1rem 1rem;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media a {
+    font-size: 5rem;
+    padding-right: 2.5rem;
+}
+
+/* --- Header. Navigation --- */
 
 .navbar-brand {
     font-family: 'Caveat', Arial, cursive;
@@ -68,19 +169,15 @@ header {
     align-items: center;
 }
 
-a {
-    text-decoration: none;
-}
-
 .underscore-nav-item li {
     margin-left: 2rem;
 }
 
-
-
 nav .toggle-bars {
     display: none;
 }
+
+/* --- Header. Block photo + h1 --- */
 
 .photo-info-social {
     padding-top: 10rem;
@@ -91,34 +188,10 @@ nav .toggle-bars {
     align-items: center;
 }
 
+.photo-info-social .info-about {
+    margin-left: 18%;
+}
 
-.photo-info-social h1{
-    font-size: 4rem;
-    text-align: center;
-    color:white;
-   }
-.photo-info-social .info-about{
- margin-left: 18%;
-
-}
-.social-media ul{
-    list-style: none;
-    display: flex;
-    display: -webkit-flex;
-    /* Safari */
-    margin: 0;
-    padding: 2rem 1rem 1rem 1rem;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    justify-content: center;
-    align-items: center;
-    
-}
-.social-media a {
- font-size: 5rem;
- padding-right: 2.5rem; 
-}
 .photo-info-social img {
     width: 100%;
     max-width: 350px;
@@ -126,79 +199,35 @@ nav .toggle-bars {
     height: auto;
 }
 
-footer{
-    background-color: #3e5c91;
+/* ------ Sections ------ */
+
+.section-about, .section-contact-me {
+    background-color: #99ced4;
 }
 
-.about-this-page p{
-    color:white;
-    text-align: center;
-    font-size: 2rem;
-    padding: 1rem;
-    margin: 0;
-    z-index: -1;
-}
-.carousel-certificates{
-    margin: 0;
-    padding: 2rem;
-    position: relative;
-    
-}
-.slide-indicators{
-    position: absolute;
-    top: 40%;
-    right: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-.carousel-images-list{
-    list-style: none;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+.section-why-me {
+    background-color: #6fa0ce;
 }
 
-.carousel-images-list img{
-    width: 100%;
-    max-width: 800px;
-    height: auto;
+.section-my-achievements {
+    background-color: #eeb6b7;
 }
 
-.slides {
-    display: none;
-    max-height: 60vh;
+.section-certificates {
+    background-color: #6e7376;
 }
-.dots, .play-stop-buttons {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
+
+/* --- Section "About me" --- */
+
+/* --- Section "Why me" --- */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 2rem;
 }
-.dot {
-    height: 0.2rem;
-    width: 0.2rem;
-    padding: 0.3rem;
-    margin: 0.5rem;
-    border: 0.1rem solid black;
-}
-h2 {
-    text-align: center;
-    font-size: 4rem;
-    padding:0;
-    margin:0;
-}
-h3 {
-    text-align: center;
-    font-size: 3rem; 
-    padding:0;
-    margin:0;
-}
-p {
-    font-size: 2rem;
-    padding:0;
-    margin:0;
-}
+
+/* --- Section "Achievements" --- */
 
 .achievements {
     width: 100%;
@@ -209,14 +238,62 @@ p {
     padding: 0;
 }
 
+.carousel-certificates {
+    margin: 0;
+    padding: 2rem;
+    position: relative;
+}
+
+.carousel-images-list {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-images-list img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+}
+
+.slides {
+    display: none;
+    max-height: 60vh;
+}
+
+/* --- Section "Achievements". Buttons and indicators --- */
+
+.slide-indicators {
+    position: absolute;
+    top: 40%;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dots, .play-stop-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.dot {
+    height: 0.2rem;
+    width: 0.2rem;
+    padding: 0.3rem;
+    margin: 0.5rem;
+    border: 0.1rem solid black;
+}
+
 .fill-color {
     background-color: black;
 }
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 2rem;
-}
+
+/* --- Section "Certificates" --- */
+
 .accordion {
     background-color: #eee;
     color: #444;
@@ -228,63 +305,53 @@ p {
     outline: none;
     font-size: 15px;
     transition: 0.4s;
-  }
-  
-  .active-acc-button, .accordion:hover {
+}
+
+.active-acc-button, .accordion:hover {
     background-color: #ccc;
-  }
-  
-  .accordion:after {
+}
+
+.accordion:after {
     content: '\002B';
     color: #777;
     font-weight: bold;
     float: right;
     margin-left: 5px;
-  }
-  
-  .active-acc-button:after {
+}
+
+.active-acc-button:after {
     content: "\2212";
-  }
-  
-  .accordion-content {
+}
+
+.accordion-content {
     padding: 0 18px;
     background-color: white;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-  }
+}
 
-    textarea {
-        height: 10rem;
-        width:100%;
-    }
-    input[type=text], input[type=email] {
-        width: 50%;
-    }
+/* --- Section "Contact me" --- */
 
-    .contact-form {
-        border: 0.1rem solid black;
-        padding: 3rem;
-    }
-    .section-about, .section-contact-me {
-        background-color: #99ced4;
+.contact-form {
+    border: 0.1rem solid black;
+    padding: 3rem;
+}
 
-    }
-    .section-why-me {
+/* ------ Footer ------ */
 
-        background-color:  #6fa0ce;
-    }
-    .section-my-achievements {
-        background-color: #eeb6b7;
-    }
-    .section-certificates {
-        background-color: #6e7376;
-    }
+.about-this-page p {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem;
+    margin: 0;
+}
 
-
-/* Media queries */
+/* ----- Media queries ------ */
 
 @media screen and (min-width: 769px) {
+    /* --- Media queries. Navigation min-769 --- */
     .underscore-nav-item a {
         position: relative;
     }
@@ -305,7 +372,7 @@ p {
         color: #99ced4;
     }
     .underscore-nav-item a:hover {
-        color:#99ced4;
+        color: #99ced4;
     }
     .underscore-nav-item a.active {
         background-color: white;
@@ -313,12 +380,16 @@ p {
         padding: 0.5rem 1rem 1rem 1rem;
     }
     .underscore-nav-item a.active:hover {
-        background-color:#99ced4;
+        background-color: #99ced4;
     }
-
 }
 
 @media screen and (max-width: 768px) {
+    /* --- Media queries. Global styles max-768 --- */
+    header {
+        min-height: 50vh;
+    }
+     /* --- Media queries. Global classes max-768 --- */
     .large-screen-flex {
         display: block;
     }
@@ -332,6 +403,18 @@ p {
         -webkit-box-align: center;
         align-items: center;
     }
+    /* --- Media queries. Header. Photo + h1 max-768 --- */
+    .photo-info-social img {
+        max-height: 30vh;
+    }
+    .photo-info-social h1 {
+        font-size: 3.5rem;
+    }
+    .photo-info-social .info-about {
+        margin-left: 1.5rem;
+    }
+    
+    /* --- Media queries. Navigation max-768 --- */
     .navigation-bar .toggle-bars {
         display: block;
         margin: 0 1rem;
@@ -354,34 +437,17 @@ p {
     }
     .underscore-nav-item a {
         padding: 0.5rem;
-        
     }
     .underscore-nav-item a:hover {
-        background-color: #6e7376 ;
-    
-        
+        background-color: #6e7376;
     }
     .underscore-nav-item a.active {
-        background-color:white;
+        background-color: white;
         color: rgb(31, 195, 249);
     }
     .underscore-nav-item a.active:hover {
         background-color: rgb(255, 255, 204);
     }
-    header {
-        mins-height: 50vh;
-    }
-    .photo-info-social img {
-        max-height: 30vh;
-    }
-    .photo-info-social h1{
-        font-size: 3.5rem;
-       }
-    .photo-info-social .info-about{
-     margin-left: 1.5rem;
-    }
 }
 
-@media screen and (max-width: 414px) {
-
-}
+@media screen and (max-width: 414px) {}
