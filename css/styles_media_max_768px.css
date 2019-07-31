@@ -1,0 +1,73 @@
+/* ------ TABLE OF CONTENTS 
+Media max-width 768px:
+    1. Global styles
+    2. Media queries. Global classes
+    3. Header. Photo + h1
+    4. Navigation
+------ */
+
+@media screen and (max-width: 768px) {
+    /* ---  Global styles --- */
+    header {
+        min-height: 50vh;
+    }
+     /* --- Global classes --- */
+    .large-screen-flex {
+        display: block;
+    }
+    .small-screen-flex {
+        display: flex;
+        display: -webkit-flex;
+        /* Safari */
+        justify-content: space-between;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        align-items: center;
+    }
+    /* --- Header. Photo + h1 --- */
+    .photo-info-social img {
+        max-height: 30vh;
+    }
+    .photo-info-social h1 {
+        font-size: 3.5rem;
+    }
+    .photo-info-social .info-about {
+        margin-left: 1.5rem;
+    }
+    
+    /* --- Navigation --- */
+    .navigation-bar .toggle-bars {
+        display: block;
+        margin: 0 1rem;
+        padding: 0.2rem;
+    }
+    .navigation-bar .responsive .toggle-bars {
+        position: absolute;
+        right: 2rem;
+        top: 3.3rem;
+    }
+    .navigation-bar ul {
+        display: none;
+    }
+    .navigation-bar.responsive ul {
+        display: block;
+        margin-top: 3rem;
+    }
+    .underscore-nav-item li {
+        margin-top: 1.5rem;
+    }
+    .underscore-nav-item a {
+        padding: 0.5rem;
+    }
+    .underscore-nav-item a:hover {
+        background-color: #6e7376;
+    }
+    .underscore-nav-item a.active {
+        background-color: white;
+        color: rgb(31, 195, 249);
+    }
+    .underscore-nav-item a.active:hover {
+        background-color: rgb(255, 255, 204);
+    }
+}

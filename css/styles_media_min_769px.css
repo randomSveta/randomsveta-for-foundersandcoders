@@ -1,0 +1,40 @@
+/* ------ Table of contents 
+Media min-width: 769px
+    1. Navigation bar
+
+------ */
+
+
+@media screen and (min-width: 769px) {
+    /* --- Navigation bar --- */
+    .underscore-nav-item a {
+        position: relative;
+    }
+    .underscore-nav-item a::after {
+        content: '';
+        display: block;
+        background-color: #99ced4;
+        height: 0.6rem;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -1rem;
+        transform: scale(0, 1);
+        transition: transform ease-in-out 250ms;
+    }
+    .underscore-nav-item a:hover::after {
+        transform: scale(1, 1);
+        color: #99ced4;
+    }
+    .underscore-nav-item a:hover {
+        color: #99ced4;
+    }
+    .underscore-nav-item a.active {
+        background-color: white;
+        color: rgb(31, 195, 249);
+        padding: 0.5rem 1rem 1rem 1rem;
+    }
+    .underscore-nav-item a.active:hover {
+        background-color: #99ced4;
+    }
+}

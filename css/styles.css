@@ -16,12 +16,6 @@
     4.4 Section "Certificates"
     4.5 Section "Contact me"
 5. Footer
-6. Media queries
-    6.1 Media queries. Navigation min-769
-    6.2 Media queries. Global styles max-768 
-    6.3 Media queries. Global classes max-768
-    6.4 Media queries. Header. Photo + h1 max-768
-    6.5 Media queries. Navigation max-768 
 -------------------------------------------------- */
 
 
@@ -105,6 +99,9 @@ footer {
 .container {
     padding: 3rem 2rem;
 }
+.inside-container {
+    padding: 4rem;
+}
 
 .large-screen-flex {
     display: flex;
@@ -180,7 +177,7 @@ nav .toggle-bars {
 /* --- Header. Block photo + h1 --- */
 
 .photo-info-social {
-    padding-top: 10rem;
+    padding-top: 15rem;
     display: flex;
     -ms-flex-align: center;
     -webkit-align-items: center;
@@ -188,15 +185,18 @@ nav .toggle-bars {
     align-items: center;
 }
 
-.photo-info-social .info-about {
-    margin-left: 18%;
+.info-about {
+    margin-left: 10%;
 }
 
 .photo-info-social img {
+    padding: 1rem;
+    background-color:  #99ced4;
     width: 100%;
-    max-width: 350px;
-    max-height: 80vh;
     height: auto;
+    max-width: 500px;
+    max-height: 80vh;
+    border: 1rem solid rgba(62, 92, 145, 0.6);
 }
 
 /* ------ Sections ------ */
@@ -348,106 +348,3 @@ nav .toggle-bars {
     margin: 0;
 }
 
-/* ----- Media queries ------ */
-
-@media screen and (min-width: 769px) {
-    /* --- Media queries. Navigation min-769 --- */
-    .underscore-nav-item a {
-        position: relative;
-    }
-    .underscore-nav-item a::after {
-        content: '';
-        display: block;
-        background-color: #99ced4;
-        height: 0.6rem;
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: -1rem;
-        transform: scale(0, 1);
-        transition: transform ease-in-out 250ms;
-    }
-    .underscore-nav-item a:hover::after {
-        transform: scale(1, 1);
-        color: #99ced4;
-    }
-    .underscore-nav-item a:hover {
-        color: #99ced4;
-    }
-    .underscore-nav-item a.active {
-        background-color: white;
-        color: rgb(31, 195, 249);
-        padding: 0.5rem 1rem 1rem 1rem;
-    }
-    .underscore-nav-item a.active:hover {
-        background-color: #99ced4;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    /* --- Media queries. Global styles max-768 --- */
-    header {
-        min-height: 50vh;
-    }
-     /* --- Media queries. Global classes max-768 --- */
-    .large-screen-flex {
-        display: block;
-    }
-    .small-screen-flex {
-        display: flex;
-        display: -webkit-flex;
-        /* Safari */
-        justify-content: space-between;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        -webkit-box-align: center;
-        align-items: center;
-    }
-    /* --- Media queries. Header. Photo + h1 max-768 --- */
-    .photo-info-social img {
-        max-height: 30vh;
-    }
-    .photo-info-social h1 {
-        font-size: 3.5rem;
-    }
-    .photo-info-social .info-about {
-        margin-left: 1.5rem;
-    }
-    
-    /* --- Media queries. Navigation max-768 --- */
-    .navigation-bar .toggle-bars {
-        display: block;
-        margin: 0 1rem;
-        padding: 0.2rem;
-    }
-    .navigation-bar .responsive .toggle-bars {
-        position: absolute;
-        right: 2rem;
-        top: 3.3rem;
-    }
-    .navigation-bar ul {
-        display: none;
-    }
-    .navigation-bar.responsive ul {
-        display: block;
-        margin-top: 3rem;
-    }
-    .underscore-nav-item li {
-        margin-top: 1.5rem;
-    }
-    .underscore-nav-item a {
-        padding: 0.5rem;
-    }
-    .underscore-nav-item a:hover {
-        background-color: #6e7376;
-    }
-    .underscore-nav-item a.active {
-        background-color: white;
-        color: rgb(31, 195, 249);
-    }
-    .underscore-nav-item a.active:hover {
-        background-color: rgb(255, 255, 204);
-    }
-}
-
-@media screen and (max-width: 414px) {}
