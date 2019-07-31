@@ -40,7 +40,7 @@ body {
 
 header {
     min-height: 100vh;
-    background-color: rgba(62, 92, 145, 0.95);
+    background-color: black;
 }
 
 section {
@@ -48,8 +48,8 @@ section {
 }
 
 a {
-    color: white;
     text-decoration: none;
+    color:white;
 }
 
 a:hover {
@@ -59,8 +59,8 @@ a:hover {
 h1 {
     font-size: 4rem;
     text-align: center;
-    color: white;
     font-weight: 50;
+    color: white;
 }
 
 h2 {
@@ -95,7 +95,7 @@ input[type=text], input[type=email] {
 }
 
 footer {
-    background-color: #3e5c91;
+    background-color: black;
 }
 
 /* ------ Global classes ------ */
@@ -142,17 +142,17 @@ footer {
 /* --- Header. Navigation --- */
 
 .navbar-brand {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin: 0 1rem;
     padding: 0 0.6rem;
 }
 
 .navigation-bar {
-    background-color: rgba(62, 92, 145, 0.97);
+    background-color: black;
     position: fixed;
     padding-top: 2rem;
     width: 100%;
-    font-size: 2rem;
+    font-size: 1.6rem;
     z-index: 10;
 }
 
@@ -194,33 +194,27 @@ nav .toggle-bars {
 
 .photo-info-social img {
     padding: 1rem;
-    background-color:  #99ced4;
     width: 100%;
     height: auto;
     max-width: 500px;
     max-height: 80vh;
-    border: 1rem solid rgba(62, 92, 145, 0.6);
 }
 
 /* ------ Sections ------ */
 
 .section-about, .section-contact-me {
-    background-color: #99ced4;
     padding-top: 6.8rem;
 }
 
 .section-why-me {
-    background-color: #6fa0ce;
     padding-top: 7rem;
 }
 
 .section-my-achievements {
-    background-color: #eeb6b7;
     padding-top: 7rem;
 }
 
 .section-certificates {
-    background-color: #6e7376;
     padding-top: 7rem;
 }
 
@@ -249,6 +243,7 @@ nav .toggle-bars {
     margin: 0;
     padding: 2rem;
     position: relative;
+    cursor: pointer;
 }
 
 .carousel-images-list {
@@ -302,25 +297,26 @@ nav .toggle-bars {
 /* --- Section "Certificates" --- */
 
 .accordion {
-    background-color: #eee;
-    color: #444;
+    background-color: gray;
+    color: dimgray;
+    outline: none;
+    font-size: 15px;
     cursor: pointer;
     padding: 18px;
     width: 100%;
     border: none;
     text-align: left;
-    outline: none;
-    font-size: 15px;
+   
     transition: 0.4s;
 }
 
 .active-acc-button, .accordion:hover {
-    background-color: #ccc;
+    background-color: gray;
 }
 
 .accordion:after {
     content: '\002B';
-    color: #777;
+    color: lightgray;
     font-weight: bold;
     float: right;
     margin-left: 5px;

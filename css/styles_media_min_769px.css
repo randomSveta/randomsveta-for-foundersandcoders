@@ -30,11 +30,9 @@ Media min-width: 769px
         color: #99ced4;
     }
     .underscore-nav-item a.active {
-        background-color: white;
-        color: rgb(31, 195, 249);
-        padding: 0.5rem 1rem 1rem 1rem;
+    
     }
     .underscore-nav-item a.active:hover {
-        background-color: #99ced4;
+
     }
 }
