@@ -121,9 +121,7 @@ nav .toggle-bars {
     max-height: 80vh;
     height: auto;
 }
-section {
-    min-height: 100vh;
-}
+
 footer{
     background-color: rgba(31, 195, 249, 1);
 }
@@ -183,8 +181,22 @@ footer{
 }
 h2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 4rem;
+    padding:0;
+    margin:0;
 }
+h3 {
+    text-align: center;
+    font-size: 3rem; 
+    padding:0;
+    margin:0;
+}
+p {
+    font-size: 2rem;
+    padding:0;
+    margin:0;
+}
+
 .achievements {
     width: 100%;
     display: flex;
@@ -198,10 +210,12 @@ h2 {
 .fill-color {
     background-color: black;
 }
-.why-me-blocks {
-    display: flex;
-    justify-content: space-between;
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 2rem;
 }
+
 
 /* Media queries */
 
