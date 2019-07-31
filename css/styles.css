@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Caveat&display=swap');
 html {
     font-size: 62.5%;
@@ -6,20 +6,26 @@ html {
 }
 
 body {
-    font-family: 'Darker Grotesque', Arial, sans-serif;
+    font-family: 'Caveat', Arial, cursive;
     margin: 0;
     padding: 0;
 }
 *, *::before, *::after {
     box-sizing: border-box;
   }
+  a {
+      color: white;
+  }
+  a:hover {
+    color: #99ced4;
+}
 
 .container {
     padding: 3rem 2rem;
 }
 header {
     min-height: 100vh;
-    background-color: rgba(77, 210, 255, 0.95);
+    background-color: rgba(62, 92, 145, 0.95);
 }
 
 .large-screen-flex {
@@ -35,14 +41,14 @@ header {
 
 .navbar-brand {
     font-family: 'Caveat', Arial, cursive;
-    font-size: 3rem;
+    font-size: 4rem;
     margin: 0 1rem;
     padding: 0 0.6rem;
-    text-shadow: 0.2rem 0.2rem black;
+    text-shadow: 0.2rem 0.2rem #1f2e47;
 }
 
 .navigation-bar {
-    background-color: rgba(31, 195, 249, 0.95);
+    background-color: rgba(62, 92, 145, 0.97);
     position: fixed;
     width: 100%;
     font-size: 2rem;
@@ -70,9 +76,7 @@ a {
     margin-left: 2rem;
 }
 
-.navigation-bar a {
-    color: white;
-}
+
 
 nav .toggle-bars {
     display: none;
@@ -95,6 +99,7 @@ nav .toggle-bars {
    }
 .photo-info-social .info-about{
  margin-left: 18%;
+
 }
 .social-media ul{
     list-style: none;
@@ -112,7 +117,6 @@ nav .toggle-bars {
 }
 .social-media a {
  font-size: 5rem;
- color:white;
  padding-right: 2.5rem; 
 }
 .photo-info-social img {
@@ -123,7 +127,7 @@ nav .toggle-bars {
 }
 
 footer{
-    background-color: rgba(31, 195, 249, 1);
+    background-color: #3e5c91;
 }
 
 .about-this-page p{
@@ -177,7 +181,6 @@ footer{
     padding: 0.3rem;
     margin: 0.5rem;
     border: 0.1rem solid black;
-    border-radius: 1rem;
 }
 h2 {
     text-align: center;
@@ -204,7 +207,6 @@ p {
     align-content: center;
     margin: 0;
     padding: 0;
-    background-color: rgba(255, 255, 153, 0.4);
 }
 
 .fill-color {
@@ -262,8 +264,21 @@ p {
 
     .contact-form {
         border: 0.1rem solid black;
-        border-radius: 0.5rem;
         padding: 3rem;
+    }
+    .section-about, .section-contact-me {
+        background-color: #99ced4;
+
+    }
+    .section-why-me {
+
+        background-color:  #6fa0ce;
+    }
+    .section-my-achievements {
+        background-color: #eeb6b7;
+    }
+    .section-certificates {
+        background-color: #6e7376;
     }
 
 
@@ -276,31 +291,29 @@ p {
     .underscore-nav-item a::after {
         content: '';
         display: block;
-        background-color: rgb(255, 255, 153);
+        background-color: #99ced4;
         height: 0.6rem;
         position: absolute;
         left: 0;
         right: 0;
-        border-radius: 2rem;
         bottom: -1rem;
         transform: scale(0, 1);
         transition: transform ease-in-out 250ms;
     }
     .underscore-nav-item a:hover::after {
         transform: scale(1, 1);
-        color: rgb(255, 255, 153);
+        color: #99ced4;
     }
     .underscore-nav-item a:hover {
-        color: rgb(255, 255, 153);
+        color:#99ced4;
     }
     .underscore-nav-item a.active {
         background-color: white;
         color: rgb(31, 195, 249);
         padding: 0.5rem 1rem 1rem 1rem;
-        border-radius: 2rem;
     }
     .underscore-nav-item a.active:hover {
-        background-color: rgb(255, 255, 204);
+        background-color:#99ced4;
     }
 
 }
@@ -344,15 +357,13 @@ p {
         
     }
     .underscore-nav-item a:hover {
-        background-color: rgb(255, 255, 204);
-        color: rgb(31, 195, 249);
-        border-radius: 0.2rem;
+        background-color: #6e7376 ;
+    
         
     }
     .underscore-nav-item a.active {
         background-color:white;
         color: rgb(31, 195, 249);
-        border-radius: 0.2rem;
     }
     .underscore-nav-item a.active:hover {
         background-color: rgb(255, 255, 204);
