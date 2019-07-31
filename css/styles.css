@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,300,400&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Caveat&display=swap');
 
 /* ---------- TABLE OF CONTENTS ----------------- 
@@ -28,7 +28,8 @@ html {
 }
 
 body {
-    font-family: 'Caveat', Arial, cursive;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-weight: 50;
     margin: 0;
     padding: 0;
 }
@@ -43,7 +44,7 @@ header {
 }
 
 section {
-    min-height: 100vh;
+    min-height: 90vh;
 }
 
 a {
@@ -59,11 +60,13 @@ h1 {
     font-size: 4rem;
     text-align: center;
     color: white;
+    font-weight: 50;
 }
 
 h2 {
     text-align: center;
     font-size: 4rem;
+    font-weight: 100;
     padding: 0;
     margin: 0;
 }
@@ -71,6 +74,7 @@ h2 {
 h3 {
     text-align: center;
     font-size: 3rem;
+    font-weight: 100;
     padding: 0;
     margin: 0;
 }
@@ -97,7 +101,7 @@ footer {
 /* ------ Global classes ------ */
 
 .container {
-    padding: 3rem 2rem;
+    padding: 0rem 2rem 3rem 2rem;
 }
 .inside-container {
     padding: 4rem;
@@ -138,16 +142,15 @@ footer {
 /* --- Header. Navigation --- */
 
 .navbar-brand {
-    font-family: 'Caveat', Arial, cursive;
-    font-size: 4rem;
+    font-size: 2rem;
     margin: 0 1rem;
     padding: 0 0.6rem;
-    text-shadow: 0.2rem 0.2rem #1f2e47;
 }
 
 .navigation-bar {
     background-color: rgba(62, 92, 145, 0.97);
     position: fixed;
+    padding-top: 2rem;
     width: 100%;
     font-size: 2rem;
     z-index: 10;
@@ -203,18 +206,22 @@ nav .toggle-bars {
 
 .section-about, .section-contact-me {
     background-color: #99ced4;
+    padding-top: 6.8rem;
 }
 
 .section-why-me {
     background-color: #6fa0ce;
+    padding-top: 7rem;
 }
 
 .section-my-achievements {
     background-color: #eeb6b7;
+    padding-top: 7rem;
 }
 
 .section-certificates {
     background-color: #6e7376;
+    padding-top: 7rem;
 }
 
 /* --- Section "About me" --- */
