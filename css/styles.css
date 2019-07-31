@@ -252,6 +252,20 @@ p {
     transition: max-height 0.2s ease-out;
   }
 
+    textarea {
+        height: 10rem;
+        width:100%;
+    }
+    input[type=text], input[type=email] {
+        width: 50%;
+    }
+
+    .contact-form {
+        border: 0.1rem solid black;
+        border-radius: 0.5rem;
+        padding: 3rem;
+    }
+
 
 /* Media queries */
 
