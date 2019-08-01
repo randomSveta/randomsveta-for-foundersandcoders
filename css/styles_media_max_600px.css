@@ -9,9 +9,8 @@ Media max-width 600px:
         min-height: 100vh;
     }
     section {
-        min-height: 50vh; 
+        min-height: 100vh; 
     }
-    
     .header-info-social {
         display: block;
     }

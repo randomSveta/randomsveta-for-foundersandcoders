@@ -1,9 +1,10 @@
 /* ------ TABLE OF CONTENTS 
 Media max-width 768px:
     1. Global styles
-    2. Media queries. Global classes
-    3. Header. Photo + h1
-    4. Navigation
+    2. Global classes
+    3. Header
+        3.1 Header. Content
+        3.2 Header. Navigation
 ------ */
 
 @media screen and (max-width: 768px) {
@@ -23,7 +24,8 @@ Media max-width 768px:
         -webkit-box-align: center;
         align-items: center;
     }
-    /* --- Header. Photo + h1 --- */
+    /* ------ Header ------ */
+    /* --- Header. Content --- */
     .social-media-header {
         background-color: rgba(0, 0, 0, 0.85);
         display: flex;
@@ -32,7 +34,7 @@ Media max-width 768px:
         align-content: center;
     }
     
-    /* --- Navigation --- */
+    /* --- Header. Navigation --- */
     .navigation-bar .toggle-bars {
         display: block;
         margin: 0 1rem;
