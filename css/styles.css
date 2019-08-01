@@ -37,7 +37,7 @@ body {
 header {
     background-color: rgba(0, 0, 0, 0.80);
     height: 100vh;
-    background-image: url("../images/background/header_background.JPG");
+    background-image: url("../images/background/header_background_max_768.JPG");
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: auto 98%;
@@ -54,7 +54,7 @@ a {
 a:hover {}
 
 h1 {
-    font-size: 4rem;
+    font-size: 3vw;
     text-align: center;
     font-weight: 130;
     color: black;
@@ -80,7 +80,6 @@ h3 {
 }
 
 p {
-    font-size: 2rem;
     padding: 0;
     margin: 0;
 }
@@ -178,12 +177,12 @@ nav .toggle-bars {
     transition: transform ease-in-out 250ms;
 }
 
-.underscore-nav-item a:hover::after {
+.underscore-nav-item a:hover::after, .underscore-nav-item a:active::after, .underscore-nav-item a:focus::after {
     transform: scale(1, 1);
     color: #99ced4;
 }
 
-.underscore-nav-item a:hover {
+.underscore-nav-item a:hover, .underscore-nav-item a:active, .underscore-nav-item a:focus {
     color: #26555a;
 }
 
@@ -240,6 +239,7 @@ nav .toggle-bars {
 }
 
 .info p {
+    font-size: 1.5vw;
     text-align: center;
     padding: 2rem 0;
     background-color: rgba(255, 255, 255, 0.7);
@@ -397,7 +397,7 @@ nav .toggle-bars {
     color: white;
     text-align: center;
     font-weight: 50;
-    font-size: 1.5rem;
+    font-size: 1.2vw;
     padding: 1rem;
     margin: 0;
 }

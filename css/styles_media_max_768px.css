@@ -9,8 +9,11 @@ Media max-width 768px:
 
 @media screen and (max-width: 768px) {
     /* ---  Global styles --- */
- 
-     /* --- Global classes --- */
+    header {
+        background-image: url("../images/background/header_background_max_768-600.JPG");
+        background-size: auto 89%;
+    }
+    /* --- Global classes --- */
     .large-screen-flex {
         display: block;
     }
@@ -33,14 +36,13 @@ Media max-width 768px:
         justify-content: center;
         align-content: center;
     }
-    
     /* --- Header. Navigation --- */
     .navigation-bar .toggle-bars {
         display: block;
-        margin: 0 1rem;
-        padding: 0.2rem;
+        font-size: 6vw;
+        margin: 0 2rem;
+        padding: 0.2rem 0;
     }
-
     .navigation-bar ul {
         display: none;
     }
@@ -56,9 +58,28 @@ Media max-width 768px:
     .underscore-nav-item a {
         padding: 0.5rem;
     }
-    .underscore-nav-item a.active {
-       
+    .underscore-nav-item a.active {}
+    .underscore-nav-item a.active:hover {}
+    
+    h1 {
+        text-align: center;
+        font-size: 5vw;
     }
-    .underscore-nav-item a.active:hover {
+    .social-media-footer a {
+        font-size: 6vw;
+    }
+
+    .social-media-header a {
+        font-size: 6vw;
+    }
+    .about-this-page p {
+        font-size: 2vw;
+  
+    }
+    .info p {
+        font-size: 3vw;
+    }
+    .social-media-footer li {
+        margin: 1rem;
     }
 }

@@ -7,14 +7,59 @@ Media max-width 600px:
 @media screen and (max-width: 600px) {
     header {
         min-height: 100vh;
+        background-position: left bottom;
+        background-size: auto 95%;
+        background-image: url("../images/background/header_background_max_768-600.JPG");
     }
     section {
         min-height: 100vh; 
     }
-    .header-info-social {
-        display: block;
+    h1 {
+        text-align: center;
+        font-size: 9vw;
     }
+    .container{
+        padding: 0rem 3rem;
+    }
+    .navbar-brand img {
+        width: 10rem;
+        height: auto;
+    }
+    .navigation-bar .toggle-bars {
+        margin: 0;
+    }
+    
+    .info {
+        width: 100%;
+    }
+    .header-info-social {
+        padding-top: 20rem;
+        flex-direction: column;
+        align-content: center;
+       
+    }
+    .social-media-header ul{
+       flex-direction: row;
+    }
+
+    .social-media-header li {
+        margin: 0 1rem;
+        padding: 0;
+    }
+    
     .grid-container {
         display: block;
     }
+    .social-media-footer a {
+        font-size: 7vw;
+    }
+
+    .about-this-page p {
+        font-size: 3vw;
+  
+    }
+    .info p {
+        font-size: 5vw;
+    }
+
 }
