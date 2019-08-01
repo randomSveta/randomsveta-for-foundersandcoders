@@ -9,7 +9,7 @@ Media max-width 768px:
 @media screen and (max-width: 768px) {
     /* ---  Global styles --- */
     header {
-        min-height: 50vh;
+        max-height: 50vh;
     }
     section {
         min-height: 50vh; 
@@ -29,13 +29,13 @@ Media max-width 768px:
         align-items: center;
     }
     /* --- Header. Photo + h1 --- */
-    .photo-info-social img {
+    .header-info-social img {
         max-height: 30vh;
     }
-    .photo-info-social h1 {
+    .header-info-social h1 {
         font-size: 3.5rem;
     }
-    .photo-info-social .info-about {
+    .header-info-social .info-about {
         margin-left: 1.5rem;
     }
     

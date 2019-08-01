@@ -39,8 +39,8 @@ body {
 }
 
 header {
+    background-color: white;
     min-height: 100vh;
-    background-color: black;
 }
 
 section {
@@ -49,7 +49,7 @@ section {
 
 a {
     text-decoration: none;
-    color:white;
+    color:black;
 }
 
 a:hover {
@@ -59,8 +59,11 @@ a:hover {
 h1 {
     font-size: 4rem;
     text-align: center;
-    font-weight: 50;
-    color: white;
+    font-weight: 100;
+    color: black;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 1); 
 }
 
 h2 {
@@ -95,16 +98,16 @@ input[type=text], input[type=email] {
 }
 
 footer {
-    background-color: black;
+    background-color: white;
 }
 
 /* ------ Global classes ------ */
 
 .container {
-    padding: 0rem 2rem 3rem 2rem;
+    padding: 0rem 6rem;
 }
 .inside-container {
-    padding: 4rem;
+    padding: 10rem;
 }
 
 .large-screen-flex {
@@ -120,39 +123,22 @@ footer {
 
 /* --- Global classes. Social media --- */
 
-.social-media ul {
-    list-style: none;
-    display: flex;
-    display: -webkit-flex;
-    /* Safari */
-    margin: 0;
-    padding: 2rem 1rem 1rem 1rem;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
-.social-media a {
-    font-size: 5rem;
-    padding-right: 2.5rem;
-}
 
 /* --- Header. Navigation --- */
 
-.navbar-brand {
-    font-size: 1.8rem;
-    margin: 0 1rem;
-    padding: 0 0.6rem;
+.navbar-brand img{
+    margin: 0 ;
+    padding: 0 ;
+    width: 18rem;
+    height: auto;
 }
 
 .navigation-bar {
-    background-color: black;
+    background-color: white;
     position: fixed;
-    padding-top: 2rem;
+    padding: 1rem 0;
     width: 100%;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     z-index: 10;
 }
 
@@ -179,26 +165,50 @@ nav .toggle-bars {
 
 /* --- Header. Block photo + h1 --- */
 
-.photo-info-social {
-    padding-top: 15rem;
+.header-info-social {
+    background-image: url("../images/background/header_background.JPG");
+    background-color: black;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: auto 100%;  
+    background-origin: content-box, border-box;
+    padding-top: 11.8rem;
+    max-height: 100vh;
     display: flex;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    align-items: center;
+    justify-content: right;
 }
+.social-media-header ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.85);
+    height: 100%;
+    margin: 0;
+    padding: 0.5rem 1rem;
+}
+.social-media-header a {
+    font-size: 3vw;
+    color: #99ced4;
+    margin: 0;
+    padding: 0;
+}
+.social-media-header li {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+    padding: 0;
+}
+.info {   
+    width: 50%;
+    padding: 0;
+    margin: 0;
+}
+.info p {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: rgba(255, 255, 255, 0.7);
+} 
 
-.info-about {
-    margin-left: 10%;
-}
-
-.photo-info-social img {
-    padding: 1rem;
-    width: 100%;
-    height: auto;
-    max-width: 500px;
-    max-height: 80vh;
-}
 
 /* ------ Sections ------ */
 

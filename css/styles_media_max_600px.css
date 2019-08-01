@@ -11,15 +11,12 @@ Media max-width 600px:
     section {
         min-height: 50vh; 
     }
-    .info-about {
+    .info {
         margin-top: 3rem;
         padding-top: 2rem;
     }
-    .photo-info-social {
+    .header-info-social {
         display: block;
-    }
-    .photo-info-social img {
-        max-height: 60vh;
     }
     .grid-container {
         display: block;
