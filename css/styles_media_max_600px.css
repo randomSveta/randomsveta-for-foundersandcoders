@@ -11,10 +11,7 @@ Media max-width 600px:
     section {
         min-height: 50vh; 
     }
-    .info {
-        margin-top: 3rem;
-        padding-top: 2rem;
-    }
+    
     .header-info-social {
         display: block;
     }

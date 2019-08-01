@@ -8,12 +8,7 @@ Media max-width 768px:
 
 @media screen and (max-width: 768px) {
     /* ---  Global styles --- */
-    header {
-        max-height: 50vh;
-    }
-    section {
-        min-height: 50vh; 
-    }
+ 
      /* --- Global classes --- */
     .large-screen-flex {
         display: block;
@@ -29,14 +24,12 @@ Media max-width 768px:
         align-items: center;
     }
     /* --- Header. Photo + h1 --- */
-    .header-info-social img {
-        max-height: 30vh;
-    }
-    .header-info-social h1 {
-        font-size: 3.5rem;
-    }
-    .header-info-social .info-about {
-        margin-left: 1.5rem;
+    .social-media-header {
+        background-color: rgba(0, 0, 0, 0.85);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
     }
     
     /* --- Navigation --- */
@@ -45,20 +38,17 @@ Media max-width 768px:
         margin: 0 1rem;
         padding: 0.2rem;
     }
-    .navigation-bar .responsive .toggle-bars {
-        position: absolute;
-        right: 2rem;
-        top: 3.3rem;
-    }
+
     .navigation-bar ul {
         display: none;
     }
     .navigation-bar.responsive ul {
         display: block;
-        margin-top: 3rem;
+        margin: 3rem 0;
     }
     .underscore-nav-item li {
         margin-top: 1.5rem;
+        padding: 1rem;
         text-align: center;
     }
     .underscore-nav-item a {

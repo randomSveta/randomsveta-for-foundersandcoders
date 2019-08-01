@@ -39,12 +39,17 @@ body {
 }
 
 header {
-    background-color: white;
-    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.80);
+    height: 100vh;
+    background-image: url("../images/background/header_background.JPG");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: auto 98%;  
+    background-origin: content-box, border-box;
 }
 
 section {
-    min-height: 90vh;
+
 }
 
 a {
@@ -61,7 +66,7 @@ h1 {
     text-align: center;
     font-weight: 130;
     color: black;
-    padding: 0;
+    padding: 1rem 0;
     margin: 0;
     background-color: rgba(255, 255, 255, 1); 
 }
@@ -98,7 +103,8 @@ input[type=text], input[type=email] {
 }
 
 footer {
-    background-color: white;
+    background-color:rgba(0, 0, 0, 0.85);
+    color: white;
 }
 
 /* ------ Global classes ------ */
@@ -195,28 +201,30 @@ nav .toggle-bars {
 /* --- Header. Block photo + h1 --- */
 
 .header-info-social {
-    background-image: url("../images/background/header_background.JPG");
-    background-color: black;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: auto 100%;  
-    background-origin: content-box, border-box;
-    padding-top: 11.8rem;
-    max-height: 100vh;
+    padding-top: 11.9rem;
+    height: 100%;
     display: flex;
     justify-content: right;
+    align-content: center;
+}
+.social-media-header {
+    background-color: rgba(0, 0, 0, 0.85); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }
 .social-media-header ul {
     list-style: none;
     display: flex;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.85);
-    height: 100%;
-    margin: 0;
-    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    padding: 0 1rem;
+    justify-content: center;
+    align-content: center;
 }
 .social-media-header a {
-    font-size: 3vw;
+    font-size: 4.5vh;
     color: #99ced4;
     margin: 0;
     padding: 0;
@@ -224,7 +232,7 @@ nav .toggle-bars {
 .social-media-header li {
     display: flex;
     justify-content: center;
-    margin: 2rem 0;
+    margin: 1rem 0;
     padding: 0;
 }
 .info {   
@@ -237,24 +245,30 @@ nav .toggle-bars {
     padding: 2rem 0;
     background-color: rgba(255, 255, 255, 0.7);
 } 
-
+.arrow-down {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 3vw;
+    padding: 2%; 
+}
 
 /* ------ Sections ------ */
 
 .section-about, .section-contact-me {
-    padding-top: 6.8rem;
+    padding-top: 0;
 }
 
 .section-why-me {
-    padding-top: 7rem;
+    padding-top: 0;
 }
 
 .section-my-achievements {
-    padding-top: 7rem;
+    padding-top: 0;
 }
 
 .section-certificates {
-    padding-top: 7rem;
+    padding-top: 0;
 }
 
 /* --- Section "About me" --- */
@@ -381,12 +395,34 @@ nav .toggle-bars {
 }
 
 /* ------ Footer ------ */
+.social-media-footer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
 
 .about-this-page p {
     color: white;
     text-align: center;
-    font-size: 2rem;
+    font-weight: 50;
+    font-size: 1.5rem;
     padding: 1rem;
     margin: 0;
+}
+
+.social-media-footer ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0.5rem 1rem;
+}
+.social-media-footer li {
+ margin: 2rem;
+}
+.social-media-footer a {
+    font-size: 2.5vw;
+    color: #99ced4;
+    margin: 0;
+    padding: 0;
 }
 
