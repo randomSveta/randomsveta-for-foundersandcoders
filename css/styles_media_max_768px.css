@@ -11,11 +11,12 @@ Media max-width 768px:
     /* ---  Global styles --- */
     header {
         background-image: url("../images/background/header_background_max_768-600.JPG");
-        background-size: auto 89%;
+        background-size: auto 100%;
     }
     section {
         min-height: 50vh;
     }
+
     /* --- Global classes --- */
     .large-screen-flex {
         display: block;
@@ -32,8 +33,10 @@ Media max-width 768px:
     }
     /* ------ Header ------ */
     /* --- Header. Content --- */
+    .header-info-social {
+        padding-top: 10%;
+    }
     .social-media-header {
-        background-color: rgba(0, 0, 0, 0.85);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -80,5 +83,15 @@ Media max-width 768px:
     }
     .social-media-footer li {
         margin: 1rem;
+    }
+    /* ----- Section "Contact me" ----- */
+    .section-contact-me {
+        background-image: url("../images/background/contact_me_background_max_768.png");
+        background-size: auto 100%;
+        min-height: 50rem;
+        
+    }
+    .contact-form {
+        padding: 2rem 4rem;
     }
 }

@@ -8,15 +8,24 @@ Media max-width 600px:
     header {
         min-height: 100vh;
         background-position: left bottom;
-        background-size: auto 95%;
+        background-size: auto 100vh;
         background-image: url("../images/background/header_background_max_768-600.JPG");
     }
     section {
-        min-height: 100vh; 
+
     }
     h1 {
-        text-align: center;
         font-size: 8vw;
+    }
+    h2 {
+        font-size: 7vw;
+    }
+    h3 {
+        font-size: 6vw; 
+    }
+
+    form {
+        width: 100%;
     }
     .container{
         padding: 0rem 3rem;
@@ -63,6 +72,18 @@ Media max-width 600px:
     }
     .info p {
         font-size: 5vw;
+    }
+
+    .section-contact-me {
+        
+        background-image: url("../images/background/contact_me_background_max_600.png");
+        background-size: auto 75%;
+        background-repeat: no-repeat;
+        min-height: 90vh;
+    }
+    .contact-form {
+        display: block;
+        padding: 2rem;
     }
 
 }
