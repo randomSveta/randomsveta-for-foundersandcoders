@@ -1,10 +1,22 @@
-/* ------ TABLE OF CONTENTS 
-Media max-width 600px:
-
------- */
-
+/* ---------- TABLE OF CONTENTS ----------------- 
+   Media max-width 768px:
+1. Global styles 
+2. Global classes
+3. Header
+    3.1 Header. Navigation
+    3.2 Header. Content
+4. Sections
+    4.1 Section "About me"
+    4.2 Section "Why me"
+    4.3 Section "Achievements"
+        4.3.1 Section "Achievements". Buttons and indicators
+    4.4 Section "Certificates"
+    4.5 Section "Contact me"
+5. Footer
+-------------------------------------------------- */
 
 @media screen and (max-width: 600px) {
+    /* ------  Global styles ------ */
     header {
         min-height: 100vh;
         background-position: left bottom;
@@ -12,7 +24,7 @@ Media max-width 600px:
         background-image: url("../images/background/header_background_max_768-600.JPG");
     }
     section {
-
+        min-height: 90vh;
     }
     h1 {
         font-size: 8vw;
@@ -21,15 +33,18 @@ Media max-width 600px:
         font-size: 7vw;
     }
     h3 {
-        font-size: 6vw; 
+        font-size: 6vw;
     }
-
     form {
-        width: 100%;
+        width: 100%!important;
+        /* to fix layout issues caused by some browser extensions adding their styles */
     }
-    .container{
+    /* ------ Global classes ------ */
+    .container {
         padding: 0rem 3rem;
     }
+    /* ------ Header ------ */
+    /* --- Header. Navigation --- */
     .navbar-brand img {
         width: 10rem;
         height: auto;
@@ -37,45 +52,52 @@ Media max-width 600px:
     .navigation-bar .toggle-bars {
         margin: 0;
     }
-    
+    /* --- Header. Content ---*/
     .info {
         width: 100%;
+    }
+    .info p {
+        font-size: 5vw;
     }
     .header-info-social {
         padding-top: 20rem;
         flex-direction: column;
         align-content: center;
-       
     }
-    .social-media-header ul{
-       flex-direction: row;
+    .social-media-header ul {
+        flex-direction: row;
     }
-
     .social-media-header li {
         margin: 0 1rem;
         padding: 0;
     }
-    .social-media-header a{
+    .social-media-header a {
         font-size: 7vw;
     }
-    
-    .grid-container {
-        display: block;
+    /* ------ Sections ------ */
+    /* --- Section "About me" --- */
+    .about-text {
+        background-image: none; 
     }
-    .social-media-footer a {
-        font-size: 7vw;
+    .section-about {
+        min-height: 90vh;
+        background-image: url("../images/background/section_aboutme_background.png");
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-origin: content-box, border-box;
     }
-
-    .about-this-page p {
-        font-size: 3vw;
-  
-    }
-    .info p {
-        font-size: 5vw;
-    }
-
-    .section-contact-me {
+    .section-about p {
+        font-size: 3.7vw;
+        padding: 2rem;    
         
+    }
+    /* --- Section "Why me" --- */
+    /* --- Section "Achievments" --- */
+    /* - Section "Achievements". Buttons and indicators - */
+    /* --- Section "Certificates" --- */
+    /* --- Section "Contact me" --- */
+    .section-contact-me {
         background-image: url("../images/background/contact_me_background_max_600.png");
         background-size: auto 75%;
         background-repeat: no-repeat;
@@ -85,5 +107,11 @@ Media max-width 600px:
         display: block;
         padding: 2rem;
     }
-
+    /* ------ Footer ------ */
+    .social-media-footer a {
+        font-size: 7vw;
+    }
+    .about-this-page p {
+        font-size: 3vw;
+    }
 }

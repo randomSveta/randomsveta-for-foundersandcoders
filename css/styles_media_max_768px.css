@@ -1,11 +1,19 @@
-/* ------ TABLE OF CONTENTS 
-Media max-width 768px:
-    1. Global styles
-    2. Global classes
-    3. Header
-        3.1 Header. Content
-        3.2 Header. Navigation
------- */
+/* ---------- TABLE OF CONTENTS ----------------- 
+   Media max-width 768px:
+1. Global styles 
+2. Global classes
+3. Header
+    3.1 Header. Navigation
+    3.2 Header. Content
+4. Sections
+    4.1 Section "About me"
+    4.2 Section "Why me"
+    4.3 Section "Achievements"
+        4.3.1 Section "Achievements". Buttons and indicators
+    4.4 Section "Certificates"
+    4.5 Section "Contact me"
+5. Footer
+-------------------------------------------------- */
 
 @media screen and (max-width: 768px) {
     /* ---  Global styles --- */
@@ -14,9 +22,11 @@ Media max-width 768px:
         background-size: auto 100%;
     }
     section {
-        min-height: 50vh;
+        min-height: 45vh;
     }
-
+    h2 {
+        font-size: 3.5vh;
+    }
     /* --- Global classes --- */
     .large-screen-flex {
         display: block;
@@ -32,16 +42,6 @@ Media max-width 768px:
         align-items: center;
     }
     /* ------ Header ------ */
-    /* --- Header. Content --- */
-    .header-info-social {
-        padding-top: 10%;
-    }
-    .social-media-header {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-    }
     /* --- Header. Navigation --- */
     .navigation-bar .toggle-bars {
         display: block;
@@ -66,32 +66,58 @@ Media max-width 768px:
     }
     .underscore-nav-item a.active {}
     .underscore-nav-item a.active:hover {}
-    
     h1 {
         text-align: center;
         font-size: 4vw;
     }
-    .social-media-footer a {
-        font-size: 5.5vw;
-    }
-
+    /* --- Header. Content ---*/
     .social-media-header a {
         font-size: 4.5vh;
     }
     .info p {
         font-size: 3vw;
     }
-    .social-media-footer li {
-        margin: 1rem;
+    .header-info-social {
+        padding-top: 10%;
     }
-    /* ----- Section "Contact me" ----- */
+    .social-media-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+    /* ------ Sections ------ */
+    /* --- Section "About me" --- */
+    .about-text {
+    align-content: center;
+    justify-content: center;
+    }
+    .section-about {
+        min-height: 45vh;
+    }
+    .section-about p {
+        width: 100%;
+        font-size: 2.5vw;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+    /* --- Section "Why me" --- */
+    /* --- Section "Achievments" --- */
+    /* - Section "Achievements". Buttons and indicators - */
+    /* --- Section "Certificates" --- */
+    /* --- Section "Contact me" --- */
     .section-contact-me {
         background-image: url("../images/background/contact_me_background_max_768.png");
         background-size: auto 100%;
         min-height: 50rem;
-        
     }
     .contact-form {
         padding: 2rem 4rem;
+    }
+    /* ------ Footer ------ */
+    .social-media-footer a {
+        font-size: 5.5vw;
+    }
+    .social-media-footer li {
+        margin: 1rem;
     }
 }

@@ -26,7 +26,7 @@ html {
 body {
     font-family: 'Raleway', Arial, sans-serif;
     font-weight: 200;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin: 0;
     padding: 0;
 }
@@ -45,9 +45,7 @@ header {
     background-origin: content-box, border-box;
 }
 
-section {
-
-}
+section {}
 
 a {
     text-decoration: none;
@@ -86,13 +84,16 @@ p {
     padding: 0;
     margin: 0;
 }
+
 form {
     display: flex;
     flex-direction: column;
-    width: 50%!important; /* to fix layout issues caused by some browser extensions adding their styles */
+    width: 50%!important;
+    /* to fix layout issues caused by some browser extensions adding their styles */
     background: rgba(255, 255, 255, 0.95);
     padding: 1.5rem;
 }
+
 textarea {
     border: 0.1rem solid rgba(0, 0, 0, 0.35);
     padding: 0.5rem;
@@ -104,6 +105,7 @@ textarea {
     resize: none;
     overflow: auto;
 }
+
 input[type=text], input[type=email] {
     border: 0.1rem solid rgba(0, 0, 0, 0.35);
     height: 3.5rem;
@@ -113,41 +115,48 @@ input[type=text], input[type=email] {
     font-weight: 100;
 }
 
-textarea:focus, input:focus{
+textarea:focus, input:focus {
     border-color: #99ced4;
     outline: 0.2rem solid #99ced4;
     box-shadow: none;
     outline-offset: 0;
 }
 
-
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
     font-family: 'Raleway', Arial, sans-serif;
     color: #99a4a5;
-    opacity: 1; /* Firefox */
+    opacity: 1;
+    /* Firefox */
     font-size: 1.2rem;
     font-weight: 50;
-  }
-  
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
     font-family: 'Raleway', Arial, sans-serif;
     color: #99a4a5;
-    opacity: 1; /* Firefox */
+    opacity: 1;
+    /* Firefox */
     font-size: 1.3rem;
     font-weight: 50;
-  }
-  
-  ::-ms-input-placeholder { /* Microsoft Edge */
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
     font-family: 'Raleway', Arial, sans-serif;
     color: #99a4a5;
-    opacity: 1; /* Firefox */
+    opacity: 1;
+    /* Firefox */
     font-size: 1.3rem;
     font-weight: 50;
-  }
+}
+
 label {
     padding: 1rem 0 0.5rem 0;
     text-align: center;
 }
+
 footer {
     background-color: rgba(0, 0, 0, 0.85);
     color: white;
@@ -157,6 +166,8 @@ footer {
 
 .container {
     padding: 0rem 6rem;
+    width: 100%;
+    height: 100%;
 }
 
 .large-screen-flex {
@@ -296,34 +307,72 @@ nav .toggle-bars {
 }
 
 /* ------ Sections ------ */
-
-.section-about, .section-contact-me {
-    padding-top: 0;
-}
-
-.section-why-me {
-    padding-top: 0;
-}
-
-.section-my-achievements {
-    padding-top: 0;
-}
-
-.section-certificates {
-    padding-top: 0;
-}
-
 /* --- Section "About me" --- */
+.section-about {
+    padding-top: 0;
+    min-height: 61.2rem;
+    overflow: auto;
+}
+.about-all-content {
+    min-height: 61.2rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.about-text {
+    display: flex;
+    align-content: center;
+    justify-content: left;
+    background-image: url("../images/background/section_aboutme_background.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-origin: content-box, border-box;
+    background-color: rgba(240, 242, 243, 0.6);
+}
+
+.section-about p {
+    width: 55%;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 3rem;
+    font-size: 1.5vw;
+}
 
 /* --- Section "Why me" --- */
+.section-why-me {
+    padding-top: 0;
+    min-height: 90vh;
+    overflow:auto;
+}
 
-.grid-container {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 2rem;
+.why-me-text-and-prerequisites {
+    background-image: url('../images/background/section_whyme_background.png');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size:  100% auto;
+    background-origin: content-box, border-box;
+    min-height: 75vh;
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.section-why-me p {
+    padding: 3rem;
+    font-size: 1.5vw;
+}
+.why-me-text {
+    width: 45%;
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 /* --- Section "Achievements" --- */
+.section-my-achievements {
+    padding-top: 0;
+}
 
 .achievements {
     width: 100%;
@@ -391,6 +440,9 @@ nav .toggle-bars {
 
 /* --- Section "Certificates" --- */
 
+.section-certificates {
+    padding-top: 0;
+}
 .accordion {
     background-color: gray;
     color: dimgray;
@@ -430,10 +482,11 @@ nav .toggle-bars {
 /* --- Section "Contact me" --- */
 
 .section-contact-me {
+    padding-top: 0;
     background-image: url("../images/background/contact_me_background.png");
     background-position: left bottom;
     background-repeat: repeat;
-    background-size:   100% auto;
+    background-size: 100% auto;
     background-origin: content-box, border-box;
     background-color: rgba(153, 206, 212, 0.5);
     min-height: 61.2rem;
@@ -444,18 +497,16 @@ nav .toggle-bars {
     padding: 3rem 4rem;
     display: flex;
     justify-content: flex-end;
-    
-   
 }
 
 .contact-form input[type=submit] {
- background-color:  rgba(0, 0, 0, 0.80);
- height: 3.5rem;
- border: 0.1rem solid #26555a;
- color: #b7f8ff;
- margin: 1.5rem 0;
- font-size: 1.6rem;
- font-weight: 100;
+    background-color: rgba(0, 0, 0, 0.80);
+    height: 3.5rem;
+    border: 0.1rem solid #26555a;
+    color: #b7f8ff;
+    margin: 1.5rem 0;
+    font-size: 1.6rem;
+    font-weight: 100;
 }
 
 /* ------ Footer ------ */
