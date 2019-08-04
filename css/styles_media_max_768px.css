@@ -22,10 +22,15 @@
         background-size: auto 100%;
     }
     section {
-        min-height: 45vh;
+        min-height: 47vh;
+        margin-top: 0;
+        padding-top: 0;
     }
     h2 {
-        font-size: 3.5vh;
+        font-size: 3vh;
+    }
+    section p {
+        font-size: 2.5vw;
     }
     /* --- Global classes --- */
     .large-screen-flex {
@@ -71,16 +76,16 @@
         font-size: 4vw;
     }
     /* --- Header. Content ---*/
-    .social-media-header a {
-        font-size: 4.5vh;
-    }
-    .info p {
-        font-size: 3vw;
-    }
-    .header-info-social {
+    .header-content {
         padding-top: 10%;
     }
-    .social-media-header {
+    .header-name p {
+        font-size: 3vw;
+    }
+    .header-smIcons a {
+        font-size: 4.5vh;
+    }
+    .header-smIcons {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -88,16 +93,16 @@
     }
     /* ------ Sections ------ */
     /* --- Section "About me" --- */
-    .about-text {
-    align-content: center;
-    justify-content: center;
+    .section-aboutme-content {
+        background-size: auto 100%;
     }
-    .section-about {
-        min-height: 45vh;
+    .section-aboutme-text {
+        align-content: center;
+        justify-content: center;
     }
-    .section-about p {
+    .section-aboutme-text p {
         width: 100%;
-        font-size: 2.5vw;
+        margin: 0 0 3rem 0;
         background-color: rgba(255, 255, 255, 0.3);
     }
     /* --- Section "Why me" --- */
@@ -105,19 +110,21 @@
     /* - Section "Achievements". Buttons and indicators - */
     /* --- Section "Certificates" --- */
     /* --- Section "Contact me" --- */
-    .section-contact-me {
-        background-image: url("../images/background/contact_me_background_max_768.png");
-        background-size: auto 100%;
-        min-height: 50rem;
+    .section-contactme-content{
+        padding-bottom: 2rem;
     }
-    .contact-form {
+    .section-contactme {
+        background-image: url("../images/background/contact_me_background_max_768.png");
+        background-size: 100% auto;
+    }
+    .section-contactme-form {
         padding: 2rem 4rem;
     }
     /* ------ Footer ------ */
-    .social-media-footer a {
+    .footer-smIcons a {
         font-size: 5.5vw;
     }
-    .social-media-footer li {
+    .footer-smIcons li {
         margin: 1rem;
     }
 }

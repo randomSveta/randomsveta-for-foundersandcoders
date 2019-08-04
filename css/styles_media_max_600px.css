@@ -23,8 +23,9 @@
         background-size: auto 100vh;
         background-image: url("../images/background/header_background_max_768-600.JPG");
     }
-    section {
-        min-height: 90vh;
+  
+    section p {
+        font-size: 1.4rem;
     }
     h1 {
         font-size: 8vw;
@@ -41,7 +42,11 @@
     }
     /* ------ Global classes ------ */
     .container {
-        padding: 0rem 3rem;
+        padding: 0 3rem;
+    }
+
+    .container.section-contactme-content {
+        padding-bottom: 3rem;
     }
     /* ------ Header ------ */
     /* --- Header. Navigation --- */
@@ -53,43 +58,44 @@
         margin: 0;
     }
     /* --- Header. Content ---*/
-    .info {
-        width: 100%;
-    }
-    .info p {
-        font-size: 5vw;
-    }
-    .header-info-social {
+    .header-content {
         padding-top: 20rem;
         flex-direction: column;
         align-content: center;
     }
-    .social-media-header ul {
+
+    .header-name {
+        width: 100%;
+    }
+    .header-name p {
+        font-size: 5vw;
+    }
+   
+    .header-smIcons ul {
         flex-direction: row;
     }
-    .social-media-header li {
+    .header-smIcons li {
         margin: 0 1rem;
         padding: 0;
     }
-    .social-media-header a {
+    .header-smIcons a {
         font-size: 7vw;
     }
     /* ------ Sections ------ */
     /* --- Section "About me" --- */
-    .about-text {
+    .section-aboutme-content {
         background-image: none; 
     }
-    .section-about {
-        min-height: 90vh;
+    .section-aboutme {
         background-image: url("../images/background/section_aboutme_background.png");
         background-position: right bottom;
         background-repeat: no-repeat;
         background-size: auto 100%;
         background-origin: content-box, border-box;
     }
-    .section-about p {
-        font-size: 3.7vw;
-        padding: 2rem;    
+    .section-aboutme-text p {
+        padding: 2rem; 
+        margin-top: 2rem;   
         
     }
     /* --- Section "Why me" --- */
@@ -97,21 +103,14 @@
     /* - Section "Achievements". Buttons and indicators - */
     /* --- Section "Certificates" --- */
     /* --- Section "Contact me" --- */
-    .section-contact-me {
+    .section-contactme {
         background-image: url("../images/background/contact_me_background_max_600.png");
-        background-size: auto 75%;
-        background-repeat: no-repeat;
-        min-height: 90vh;
-    }
-    .contact-form {
-        display: block;
-        padding: 2rem;
     }
     /* ------ Footer ------ */
-    .social-media-footer a {
+    .footer-smIcons a {
         font-size: 7vw;
     }
-    .about-this-page p {
+    .footer-about-text p {
         font-size: 3vw;
     }
 }
