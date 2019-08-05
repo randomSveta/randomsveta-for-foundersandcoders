@@ -22,14 +22,13 @@ html {
     font-size: 62.5%;
     /*10px == 1rem*/
     height: 100%;
-    
 }
 
 body {
     font-family: 'Raleway', Arial, sans-serif;
     font-weight: 200;
     color: black;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -51,20 +50,22 @@ header {
     padding: 0;
 }
 
-section {
-    height: 100%;
-    width: 100%;
-    max-height: 80rem;
-    min-height: 90vh;
-    margin-top: 1.5rem;
-    padding-top: 1.5rem;
+section {  
+    min-height: 95vh;
+    margin: 1.5rem 0;
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
-section:not(:last-of-type) {
-    margin-bottom: 1.5rem;
+
+section:last-of-type {
+    margin: 0;
+    padding: 0;
 }
 
 section p {
- font-size: 1.5vw;
+    font-size: 1.5vw;
 }
 
 a {
@@ -87,7 +88,7 @@ h2 {
     text-align: center;
     font-size: 2.5vw;
     font-weight: 200;
-    padding: 1.5rem 0;
+    padding: 3rem 0 4rem 0;
     margin: 0;
 }
 
@@ -95,7 +96,7 @@ h3 {
     text-align: center;
     font-size: 2vw;
     font-weight: 200;
-    padding-bottom: 3rem;
+    padding-bottom: 1.5rem;
     margin: 0;
 }
 
@@ -104,11 +105,16 @@ p {
     margin: 0;
 }
 
+ol {
+    margin: 0;
+    padding: 0;
+}
+
 form {
     display: flex;
     flex-direction: column;
     width: 50%!important;
-    /* to fix layout issues caused by some browser extensions adding their styles */
+    /*to fix layout issues caused by some browser extensions adding their styles */
     background: rgba(255, 255, 255, 0.95);
     padding: 1.5rem;
 }
@@ -177,6 +183,8 @@ label {
 }
 
 footer {
+    margin-top: 0;
+    padding-top: 0;
     background-color: rgba(0, 0, 0, 0.85);
     color: white;
 }
@@ -184,10 +192,7 @@ footer {
 /* ------ Global classes ------ */
 
 .container {
-    padding: 0rem 6rem;
-    display: inline-block;
-    width: 100%;
-    height: 100%;
+    margin: 0rem 6rem;
 }
 
 .large-screen-flex {
@@ -217,7 +222,7 @@ footer {
     position: fixed;
     padding: 1rem 0;
     width: 100%;
-    z-index: 1;
+    z-index: 10;
 }
 
 .navigation-bar ul {
@@ -280,6 +285,7 @@ nav .toggle-bars {
     justify-content: right;
     align-content: center;
 }
+
 .header-name {
     width: 50%;
     padding: 0;
@@ -292,6 +298,7 @@ nav .toggle-bars {
     padding: 2rem 0;
     background-color: rgba(255, 255, 255, 0.7);
 }
+
 .header-smIcons {
     background-color: rgba(0, 0, 0, 0.75);
     display: flex;
@@ -325,60 +332,88 @@ nav .toggle-bars {
 }
 
 /* ------ Sections ------ */
-/* --- Section "About me" --- */
 
-/*  section.section-aboutme {
-    background-image: url("../images/background/section_aboutme_background.png");
-    background-position: center bottom;
-    background-repeat: repeat;
-    background-size:  auto 100%;
-    background-origin: content-box, border-box;
-}*/
-.section-aboutme-content {
-    background-image: url("../images/background/section_aboutme_background.png");
-    background-position: center bottom;
-    background-repeat: repeat-y;
-    background-size:  100% auto;
-    background-origin: content-box, border-box;
-    display: flex;
-    height: 100%;
+/* --- Section "About me" --- */
+.section-aboutme-text-img img{
     width: 100%;
-    flex-direction: column;
-    align-content: center;
-    justify-content: left;
+    height: 100%;
 }
-.section-aboutme-text p {
-    width: 55%;
-    margin: 0 0 3rem 3rem;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 3rem;
+
+.section-aboutme-text-img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 1.5rem;
+}
+.section-aboutme-text {
+    width: 50%;
+    padding: 1.5rem;
+}
+.section-aboutme-img {
+    width: 50%;
+}
+
+.section-aboutme-text p{
+    margin: 0;
+    padding: 0;
+}
+.section-aboutme-text {
+    display: flex;
+    align-self: center;
 }
 
 /* --- Section "Why me" --- */
 
-.section-whyme {
-    background-image: url('../images/background/section_whyme_background.png');
+
+.section-whyme-content {
+    background-image: url("../images/background/section_whyme_background.png");
     background-position: center bottom;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: 100% auto;
     background-origin: content-box, border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .section-whyme-text-and-prerequisites {
+    background-color: white;
+    border: 0.1rem solid #26555a;
     display: flex;
     flex-direction: row-reverse;
-}
-
-.section-whyme p {
-    background-color: rgba(255, 255, 255, 0.7);
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 3rem 3rem 3rem;
+    padding: 0 5rem;
 }
 
 .section-whyme-text {
-    width: 45%;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 1.5rem 3rem;
 }
 
-.sectio-whyme-prerequisites {
-    width: 55%;
+.section-whyme-prerequisites {
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.75);
+    margin-right: 3rem;
+    padding: 1.5rem;
+}
+
+.prerequisites-links ol {
+    padding: 1.5rem 3rem;
+    font-size: 1.5vw;
+}
+
+.prerequisites-links li {
+    padding: 1.5rem 0;
+}
+
+.prerequisites-links img {
+    padding-top: 1rem;
+    width: 90%;
+    height: auto;
 }
 
 /* --- Section "Achievements" --- */
@@ -449,6 +484,9 @@ nav .toggle-bars {
 
 /* --- Section "Certificates" --- */
 
+.section-certificates {
+
+}
 
 .accordion {
     background-color: gray;
@@ -489,21 +527,24 @@ nav .toggle-bars {
 /* --- Section "Contact me" --- */
 
 .section-contactme {
-    background-image: url("../images/background/contact_me_background.png");
+    background-image: url("../images/background/section_contactme_background.png");
     background-position: left bottom;
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-origin: content-box, border-box;
     background-color: rgba(153, 206, 212, 0.5);
 }
-.container.section-contactme-content {
+
+.section-contactme-content {
     padding-bottom: 6rem;
+    width: 100%;
 }
+
 .section-contactme-form {
     border: 0.1rem solid rgba(0, 0, 0, 0.85);
     padding: 3rem 4rem;
     display: flex;
-    justify-content: flex-end;
+    justify-content: right;
 }
 
 .section-contactme-form input[type=submit] {
@@ -523,6 +564,7 @@ nav .toggle-bars {
     justify-content: center;
     align-content: center;
 }
+
 .footer-smIcons ul {
     list-style: none;
     display: flex;
@@ -547,4 +589,3 @@ nav .toggle-bars {
     padding: 1rem;
     margin: 0;
 }
-

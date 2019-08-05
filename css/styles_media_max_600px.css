@@ -23,7 +23,7 @@
         background-size: auto 100vh;
         background-image: url("../images/background/header_background_max_768-600.JPG");
     }
-  
+
     section p {
         font-size: 1.4rem;
     }
@@ -42,7 +42,7 @@
     }
     /* ------ Global classes ------ */
     .container {
-        padding: 0 3rem;
+        margin: 0 3rem;
     }
 
     .container.section-contactme-content {
@@ -83,16 +83,10 @@
     }
     /* ------ Sections ------ */
     /* --- Section "About me" --- */
-    .section-aboutme-content {
-        background-image: none; 
-    }
     .section-aboutme {
-        background-image: url("../images/background/section_aboutme_background.png");
-        background-position: right bottom;
-        background-repeat: no-repeat;
         background-size: auto 100%;
-        background-origin: content-box, border-box;
     }
+
     .section-aboutme-text p {
         padding: 2rem; 
         margin-top: 2rem;   
@@ -104,7 +98,8 @@
     /* --- Section "Certificates" --- */
     /* --- Section "Contact me" --- */
     .section-contactme {
-        background-image: url("../images/background/contact_me_background_max_600.png");
+        background-image: url("../images/background/section_contactme_background_max_600.png");
+        background-size: auto 80%;
     }
     /* ------ Footer ------ */
     .footer-smIcons a {

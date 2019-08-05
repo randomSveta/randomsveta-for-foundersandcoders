@@ -22,7 +22,6 @@
         background-size: auto 100%;
     }
     section {
-        min-height: 47vh;
         margin-top: 0;
         padding-top: 0;
     }
@@ -30,7 +29,7 @@
         font-size: 3vh;
     }
     section p {
-        font-size: 2.5vw;
+        font-size: 2vh;
     }
     /* --- Global classes --- */
     .large-screen-flex {
@@ -93,17 +92,35 @@
     }
     /* ------ Sections ------ */
     /* --- Section "About me" --- */
+    .section-aboutme-img {
+        display: none;
+    }
     .section-aboutme-content {
-        background-size: auto 100%;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
     }
     .section-aboutme-text {
-        align-content: center;
-        justify-content: center;
+        display: block;
+    }
+    .section-aboutme-text-img {
+    padding: 3rem;
+    margin-bottom: 5rem;
+    }
+    .section-aboutme {
+        
+        background-image: url("../images/background/section_aboutme_background.png");
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-size:  auto 100%;
+        background-origin: content-box, border-box;
+    }
+    .section-aboutme-text {
+        width: 100%;
+        padding: 0;
     }
     .section-aboutme-text p {
         width: 100%;
-        margin: 0 0 3rem 0;
-        background-color: rgba(255, 255, 255, 0.3);
     }
     /* --- Section "Why me" --- */
     /* --- Section "Achievments" --- */
@@ -114,8 +131,8 @@
         padding-bottom: 2rem;
     }
     .section-contactme {
-        background-image: url("../images/background/contact_me_background_max_768.png");
-        background-size: 100% auto;
+        background-image: url("../images/background/section_contactme_background_max_768.png");
+        background-size: auto 75%;
     }
     .section-contactme-form {
         padding: 2rem 4rem;
