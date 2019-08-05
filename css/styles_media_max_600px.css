@@ -36,16 +36,13 @@
     h3 {
         font-size: 6vw;
     }
-    form {
-        width: 100%!important;
-        /* to fix layout issues caused by some browser extensions adding their styles */
-    }
+
     /* ------ Global classes ------ */
     .container {
-        margin: 0 3rem;
+        margin: 0 2rem;
     }
 
-    .container.section-contactme-content {
+    .section-contactme-content {
         padding-bottom: 3rem;
     }
     /* ------ Header ------ */
@@ -100,6 +97,9 @@
     .section-contactme {
         background-image: url("../images/background/section_contactme_background_max_600.png");
         background-size: auto 80%;
+    }
+    .section-contactme-form {
+        padding: 1rem;
     }
     /* ------ Footer ------ */
     .footer-smIcons a {

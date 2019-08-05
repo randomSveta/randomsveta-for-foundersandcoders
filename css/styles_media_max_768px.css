@@ -25,11 +25,19 @@
         margin-top: 0;
         padding-top: 0;
     }
+    h1 {
+        text-align: center;
+        font-size: 4vw;
+    }
     h2 {
         font-size: 3vh;
     }
     section p {
         font-size: 2vh;
+    }
+    form {
+        width: 100%!important;
+        /* to fix layout issues caused by some browser extensions adding their styles */
     }
     /* --- Global classes --- */
     .large-screen-flex {
@@ -70,10 +78,7 @@
     }
     .underscore-nav-item a.active {}
     .underscore-nav-item a.active:hover {}
-    h1 {
-        text-align: center;
-        font-size: 4vw;
-    }
+
     /* --- Header. Content ---*/
     .header-content {
         padding-top: 10%;
@@ -135,7 +140,7 @@
         background-size: auto 75%;
     }
     .section-contactme-form {
-        padding: 2rem 4rem;
+        padding: 2rem;
     }
     /* ------ Footer ------ */
     .footer-smIcons a {
