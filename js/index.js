@@ -28,7 +28,7 @@ function currentSlide(n) {
 }
 function play() {
     playSlides = true;
-    setTimeout(function () { showSlides(slideIndex) }, 2000);
+    setTimeout(function () { showSlides(slideIndex) }, 4000);
 }
 
 function stop() {

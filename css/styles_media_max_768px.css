@@ -167,6 +167,10 @@
         font-size: 2vh;
     }
     /* --- Section "Achievments" --- */
+    .carousel-images-list img {
+
+        object-fit: cover;
+    }
     /* - Section "Achievements". Buttons and indicators - */
     /* --- Section "Certificates" --- */
     /* --- Section "Contact me" --- */

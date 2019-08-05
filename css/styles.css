@@ -50,7 +50,7 @@ header {
     padding: 0;
 }
 
-section {  
+section {
     min-height: 95vh;
     margin: 1.5rem 0;
     padding: 1.5rem 0;
@@ -180,6 +180,10 @@ textarea:focus, input:focus {
 label {
     padding: 1rem 0 0.5rem 0;
     text-align: center;
+}
+
+button {
+    cursor: pointer;
 }
 
 footer {
@@ -334,7 +338,8 @@ nav .toggle-bars {
 /* ------ Sections ------ */
 
 /* --- Section "About me" --- */
-.section-aboutme-text-img img{
+
+.section-aboutme-text-img img {
     width: 100%;
     height: 100%;
 }
@@ -346,25 +351,27 @@ nav .toggle-bars {
     background-color: rgba(255, 255, 255, 0.75);
     padding: 1.5rem;
 }
+
 .section-aboutme-text {
     width: 50%;
     padding: 1.5rem;
 }
+
 .section-aboutme-img {
     width: 50%;
 }
 
-.section-aboutme-text p{
+.section-aboutme-text p {
     margin: 0;
     padding: 0;
 }
+
 .section-aboutme-text {
     display: flex;
     align-self: center;
 }
 
 /* --- Section "Why me" --- */
-
 
 .section-whyme-content {
     background-image: url("../images/background/section_whyme_background.png");
@@ -419,40 +426,92 @@ nav .toggle-bars {
 /* --- Section "Achievements" --- */
 
 .section-myachievements {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
     margin: 0;
     padding: 0;
+    color: #b7f8ff;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.section-myachievements-content {
+    padding-bottom: 6rem;
+    width: 100%;
+    align-self: center;
 }
 
 .section-myachievements-carusel {
-    margin: 0;
-    padding: 2rem;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
     position: relative;
-    cursor: pointer;
+    border: 0.1rem solid #b7f8ff;
+    padding: 1.5rem 3rem;
 }
 
 .carousel-images-list {
     list-style: none;
-    width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 1.5rem 0;
+}
+
+.carousel-images-list li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .carousel-images-list img {
-    height: 50rem;
-    width: auto;
-    max-width: 80rem;
+    width: 50%;
+    height: auto;
+    object-fit: cover;
 }
 
 .slides {
     display: none;
-    max-height: 60vh;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 3s;
+    animation-name: fade;
+    animation-duration: 3s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0.2
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.2
+    }
+    to {
+        opacity: 1
+    }
 }
 
 /* --- Section "Achievements". Buttons and indicators --- */
+
+.section-myachievements button {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 0.1rem solid #b7f8ff;
+    color: #b7f8ff;
+    margin: 1rem 0 1rem 1rem;
+}
+.slide-indicators button{
+    width: 6rem;
+    height: 5.5rem;
+    font-size: 2.5rem;
+}
+.play-stop-buttons button {
+    width: 4rem;
+    height: 3.5rem;
+    font-size: 2rem;   
+}
 
 .slide-indicators {
     position: absolute;
@@ -461,38 +520,43 @@ nav .toggle-bars {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    padding: 2rem;
 }
 
-.dots, .play-stop-buttons {
+.dots {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 1rem;
+}
+
+.play-stop-buttons {
+    position: absolute;
+    bottom: 0;
+    right: 26.3%;
 }
 
 .dot {
-    height: 0.2rem;
-    width: 0.2rem;
-    padding: 0.3rem;
+    height: 0.3rem;
+    width: 0.3rem;
+    padding: 0.4rem;
     margin: 0.5rem;
-    border: 0.1rem solid black;
+    border: 0.1rem solid #b7f8ff;
+    border-radius: 50%;
 }
 
 .fill-color {
-    background-color: black;
+    background-color: #b7f8ff;
+    border: 0.1rem solid black;
 }
 
 /* --- Section "Certificates" --- */
 
-.section-certificates {
-
-}
+.section-certificates {}
 
 .accordion {
     background-color: gray;
     color: dimgray;
     outline: none;
-    cursor: pointer;
     padding: 1.5rem;
     width: 100%;
     border: none;
@@ -555,6 +619,7 @@ nav .toggle-bars {
     margin: 1.5rem 0;
     font-size: 1.6rem;
     font-weight: 100;
+    cursor: pointer;
 }
 
 /* ------ Footer ------ */
