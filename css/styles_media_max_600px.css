@@ -23,7 +23,6 @@
         background-size: auto 100vh;
         background-image: url("../images/background/header_background_max_768-600.JPG");
     }
-
     section p {
         font-size: 1.4rem;
     }
@@ -36,12 +35,10 @@
     h3 {
         font-size: 6vw;
     }
-
     /* ------ Global classes ------ */
     .container {
         margin: 0 2rem;
     }
-
     .section-contactme-content {
         padding-bottom: 3rem;
     }
@@ -60,14 +57,12 @@
         flex-direction: column;
         align-content: center;
     }
-
     .header-name {
         width: 100%;
     }
     .header-name p {
         font-size: 5vw;
     }
-   
     .header-smIcons ul {
         flex-direction: row;
     }
@@ -83,18 +78,39 @@
     .section-aboutme {
         background-size: auto 100%;
     }
-
     .section-aboutme-text p {
-        padding: 0; 
-        margin-top: 2rem;   
-        
+        padding: 0;
+        margin-top: 2rem;
     }
     /* --- Section "Why me" --- */
     .prerequisites-links ol {
         font-size: 1.4rem;
     }
     /* --- Section "Achievments" --- */
+    .carousel-images-list li {
+        padding-bottom: 0.5rem;
+    }
     /* - Section "Achievements". Buttons and indicators - */
+    .play-stop-buttons button, .slide-indicators button {
+        width: 4rem;
+        height: 3.5rem;
+        font-size: 1.6rem;
+        margin: 1rem 0.5rem;
+    }
+    .slide-indicators {
+        padding-bottom: 15%;
+    }
+    .dot {
+        width: 0.7rem;
+        height: 0.7rem;
+        margin: 0.3rem;
+        border: 0.1rem solid #b7f8ff;
+        border-radius: 50%;
+    }
+    .dots {
+        display: inline-flex;
+        margin-right: 25%;
+    }
     /* --- Section "Certificates" --- */
     /* --- Section "Contact me" --- */
     .section-contactme {

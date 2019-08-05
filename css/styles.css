@@ -440,16 +440,16 @@ nav .toggle-bars {
 
 .section-myachievements-carusel {
     margin: auto;
+    position: relative;
     max-width: 100%;
     height: auto;
-    position: relative;
     border: 0.1rem solid #b7f8ff;
     padding: 1.5rem 3rem;
 }
 
 .carousel-images-list {
     list-style: none;
-    margin: 0;
+    margin: 0 0 5rem 0;
     padding: 1.5rem 0;
 }
 
@@ -462,7 +462,7 @@ nav .toggle-bars {
 .carousel-images-list img {
     width: 50%;
     height: auto;
-    object-fit: cover;
+    border: 0.1rem solid #b7f8ff;
 }
 
 .slides {
@@ -500,45 +500,59 @@ nav .toggle-bars {
     background-color: rgba(0, 0, 0, 0.8);
     border: 0.1rem solid #b7f8ff;
     color: #b7f8ff;
-    margin: 1rem 0 1rem 1rem;
 }
-.slide-indicators button{
+
+.slide-indicators button {
     width: 6rem;
     height: 5.5rem;
     font-size: 2.5rem;
+    margin: 1rem;
 }
+
 .play-stop-buttons button {
     width: 4rem;
     height: 3.5rem;
-    font-size: 2rem;   
+    font-size: 2rem;
+    margin: 1rem 0.5rem;
+}
+
+.buttons-indicators {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 1rem;
 }
 
 .slide-indicators {
-    position: absolute;
-    top: 40%;
-    right: 0;
-    width: 100%;
-    display: flex;
+    display: inline-flex;
     justify-content: space-between;
-    padding: 2rem;
+    padding-bottom: 15%;
+}
+
+.buttons-bottom-carusel {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
 }
 
 .dots {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    display: inline-flex;
+    margin-right: 30%;
 }
 
 .play-stop-buttons {
-    position: absolute;
-    bottom: 0;
-    right: 26.3%;
+    display: inline-flex;
 }
 
 .dot {
-    height: 0.3rem;
-    width: 0.3rem;
-    padding: 0.4rem;
+    width: 0.9rem;
+    height: 0.9rem;
     margin: 0.5rem;
     border: 0.1rem solid #b7f8ff;
     border-radius: 50%;

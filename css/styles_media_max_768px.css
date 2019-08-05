@@ -81,7 +81,6 @@
     }
     .underscore-nav-item a.active {}
     .underscore-nav-item a.active:hover {}
-
     /* --- Header. Content ---*/
     .header-content {
         padding-top: 10%;
@@ -112,15 +111,14 @@
         display: block;
     }
     .section-aboutme-text-img {
-    padding: 3rem;
-    margin-bottom: 5rem;
+        padding: 3rem;
+        margin-bottom: 5rem;
     }
     .section-aboutme {
-        
         background-image: url("../images/background/section_aboutme_background.png");
         background-position: right bottom;
         background-repeat: no-repeat;
-        background-size:  auto 100%;
+        background-size: auto 100%;
         background-origin: content-box, border-box;
     }
     .section-aboutme-text {
@@ -154,13 +152,12 @@
         padding: 3rem 0;
         margin-right: 0;
     }
-    
-    .section-whyme-text p{
+    .section-whyme-text p {
         padding: 1.5rem 0 0 0;
     }
     .section-whyme-prerequisites {
-     width: 100%;
-     margin-right: 0;
+        width: 100%;
+        margin-right: 0;
     }
     .prerequisites-links ol {
         padding: 0;
@@ -168,13 +165,29 @@
     }
     /* --- Section "Achievments" --- */
     .carousel-images-list img {
-
-        object-fit: cover;
+        width: 100%;
     }
     /* - Section "Achievements". Buttons and indicators - */
+    .slide-indicators button {
+        width: 5rem;
+        height: 4.5rem;
+        font-size: 2rem;
+    }
+    .play-stop-buttons button {
+        width: 4.5rem;
+        height: 3rem;
+        font-size: 1.8rem;
+    }
+    .slide-indicators {
+        padding-bottom: 25%;
+    }
+    .dots {
+        display: inline-flex;
+        margin-right: 50%;
+    }
     /* --- Section "Certificates" --- */
     /* --- Section "Contact me" --- */
-    .section-contactme-content{
+    .section-contactme-content {
         padding-bottom: 2rem;
     }
     .section-contactme {

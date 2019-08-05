@@ -18,7 +18,6 @@ function navbarToggle() {
 let slideIndex = 0;
 let playSlides = true;
 
-
 function plusNumberOfSlide(n) {
     showSlides(slideIndex += n);
 }
@@ -66,17 +65,17 @@ function showSlides(n) {
 function openAccordionContent() {
     var acc = document.getElementsByClassName("accordion");
 
-for (let i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active-acc-button");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-        content.style.maxHeight = null;
-    } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
-}
+    for (let i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            this.classList.toggle("active-acc-button");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
 }
 
 
