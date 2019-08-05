@@ -22,8 +22,8 @@
         background-size: auto 100%;
     }
     section {
-        margin-top: 0;
-        padding-top: 0;
+        margin: 0;
+        padding: 0;
     }
     h1 {
         text-align: center;
@@ -31,6 +31,9 @@
     }
     h2 {
         font-size: 3vh;
+    }
+    h3 {
+        font-size: 2.5vh
     }
     section p {
         font-size: 2vh;
@@ -128,6 +131,41 @@
         width: 100%;
     }
     /* --- Section "Why me" --- */
+    .section-whyme {
+        background-image: url("../images/background/section_whyme_background.png");
+        background-position: center bottom;
+        background-repeat: repeat;
+        background-size: contain;
+        background-origin: content-box, border-box;
+    }
+    .section-whyme-content {
+        background-image: none;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+    .section-whyme-text-and-prerequisites {
+        display: block;
+        margin: 0 0 3rem 0;
+        padding: 0 3rem;
+    }
+    .section-whyme-text {
+        width: 100%;
+        padding: 3rem 0;
+        margin-right: 0;
+    }
+    
+    .section-whyme-text p{
+        padding: 1.5rem 0 0 0;
+    }
+    .section-whyme-prerequisites {
+     width: 100%;
+     margin-right: 0;
+    }
+    .prerequisites-links ol {
+        padding: 0;
+        font-size: 2vh;
+    }
     /* --- Section "Achievments" --- */
     /* - Section "Achievements". Buttons and indicators - */
     /* --- Section "Certificates" --- */

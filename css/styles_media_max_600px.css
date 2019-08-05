@@ -85,11 +85,14 @@
     }
 
     .section-aboutme-text p {
-        padding: 2rem; 
+        padding: 0; 
         margin-top: 2rem;   
         
     }
     /* --- Section "Why me" --- */
+    .prerequisites-links ol {
+        font-size: 1.4rem;
+    }
     /* --- Section "Achievments" --- */
     /* - Section "Achievements". Buttons and indicators - */
     /* --- Section "Certificates" --- */
