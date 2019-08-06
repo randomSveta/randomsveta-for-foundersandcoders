@@ -90,6 +90,7 @@
     .carousel-images-list li {
         padding-bottom: 0.5rem;
     }
+    
     /* - Section "Carousel". Buttons and indicators - */
     .play-stop-buttons button, .slide-indicators button {
         width: 4rem;
@@ -98,7 +99,8 @@
         margin: 1rem 0.5rem;
     }
     .slide-indicators {
-        padding-bottom: 15%;
+        justify-content: center;
+        padding-bottom: 73%;
     }
     .dot {
         width: 0.7rem;
