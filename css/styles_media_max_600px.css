@@ -113,7 +113,14 @@
         display: inline-flex;
         margin-right: 25%;
     }
-    /* --- Section "Certificates" --- */
+    /* --- Section "Skills" --- */
+  
+    }
+    .grid-item{
+        width: 6rem;
+        height: 6rem;
+     
+    }
     /* --- Section "Contact me" --- */
     .section-contactme {
         background-image: url("../images/background/section_contactme_background_max_600.png");
@@ -129,4 +136,3 @@
     .footer-about-text p {
         font-size: 3vw;
     }
-}

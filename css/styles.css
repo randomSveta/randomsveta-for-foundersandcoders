@@ -73,7 +73,10 @@ a {
     color: black;
 }
 
-a:hover {}
+a:hover {
+    text-decoration: underline;
+    color: #1f6774;
+}
 
 h1 {
     font-size: 2.8vw;
@@ -273,15 +276,14 @@ nav .toggle-bars {
 .underscore-nav-item a:hover::after, .underscore-nav-item a:active::after, .underscore-nav-item a:focus::after {
     transform: scale(1, 1);
     color: #99ced4;
+    text-decoration: none;
 }
 
 .underscore-nav-item a:hover, .underscore-nav-item a:active, .underscore-nav-item a:focus {
     color: #26555a;
+    text-decoration: none;
 }
 
-.underscore-nav-item a.active {}
-
-.underscore-nav-item a.active:hover {}
 
 /* --- Header. Content --- */
 
@@ -330,6 +332,9 @@ nav .toggle-bars {
     margin: 0;
     padding: 0;
 }
+.header-smIcons a:hover {
+color: white;
+}
 
 .header-smIcons li {
     display: flex;
@@ -377,7 +382,7 @@ nav .toggle-bars {
 /* --- Section "Why me" --- */
 
 .section-whyme-content {
-    background-image: url("../images/background/section_whyme_background.png");
+    background-image: url("../images/background/whyme1.png");
     background-position: center bottom;
     background-repeat: repeat;
     background-size: 100% auto;
@@ -388,8 +393,7 @@ nav .toggle-bars {
 }
 
 .section-whyme-text-and-prerequisites {
-    background-color: white;
-    border: 0.1rem solid #26555a;
+    background-color: rgba(255, 255, 255, 0.8);
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -432,7 +436,7 @@ nav .toggle-bars {
     margin: 0;
     padding: 0;
     color: rgba(255, 255, 255, 1);
-    background-color: rgba(0, 0, 0, 0.90);
+    background-color: rgba(0, 0, 0, 0.85);
 }
 .section-carousel h2{
  font-weight: 100;
@@ -461,7 +465,7 @@ nav .toggle-bars {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 1);
+  
 }
 
 .carousel-images-list img {
@@ -501,7 +505,7 @@ nav .toggle-bars {
 /* --- Section "Carousel". Buttons and indicators --- */
 
 .section-carousel button, .dot {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     border: 0.05rem solid rgba(255, 255, 255, 0.9);
     color: rgba(255, 255, 255, 1);
     box-shadow: 0.2rem 0.2rem rgb(209, 206, 206);
@@ -586,41 +590,67 @@ nav .toggle-bars {
 /* --- Section "Skills" --- */
 .section-skills-content {
     width: 100%;
+    align-self: center;
 }
-.skills-and-accordion {
+.technologies-and-accordion {
     width: 100%;
     display: inline-flex;
     justify-content: space-between;
+    padding-bottom: 3rem;
 }
-.skills-iamfamiliarwith-content {
+.technologies-content {
     color: black;
     width: 50%;
+    margin-right: 5rem; 
 }
-.skills-icons a{
-    color: red;
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 1.5rem;
+    justify-content: center;
+}
+.grid-item{
+    background-color: black;
+    color: white;
+    width: 10rem;
+    height: 10rem;
+    text-align: center;
+ 
+}
+a.grid-item {
+    padding: 1rem;
+}
+a.grid-item:hover {
+    color: #99ced4;
+    text-decoration: none;
+}
+.grid-item i {
+    font-size: 4.5rem; 
+    padding-bottom: 1rem;
 }
 .accordion-certificates-content {
     width: 50%;
 }
 .cert-accordion {
-    background-color: gray;
-    color: dimgray;
+    background-color: black;
+    color: white;
     outline: none;
     padding: 1.5rem;
     width: 100%;
     border: none;
     text-align: left;
+    font-weight: 200;
     transition: 0.4s;
+    font-size: 2rem;
 }
 
 .active-acc-button, .cert-accordion:hover {
-    background-color: gray;
+    background-color: #5e8a8f;
 }
 
 .cert-accordion:after {
     content: '\002B';
-    color: lightgray;
-    font-weight: 150;
+    color: white;
     float: right;
     margin-left: 0.5rem;
 }
@@ -695,6 +725,9 @@ nav .toggle-bars {
     color: #99ced4;
     margin: 0;
     padding: 0;
+}
+.footer-smIcons a:hover {
+ color: white;
 }
 
 .footer-about-text {

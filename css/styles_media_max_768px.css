@@ -79,8 +79,7 @@
     .underscore-nav-item a {
         padding: 0.5rem;
     }
-    .underscore-nav-item a.active {}
-    .underscore-nav-item a.active:hover {}
+
     /* --- Header. Content ---*/
     .header-content {
         padding-top: 10%;
@@ -186,7 +185,22 @@
         display: inline-flex;
         margin-right: 50%;
     }
-    /* --- Section "Certificates" --- */
+    /* --- Section "Skills" --- */
+    .technologies-and-accordion {
+        width: 100%;
+        padding-bottom: 3rem;
+        display: block;
+
+        
+    }
+    .technologies-content {
+        width: 100%;
+        margin-right: 0; 
+        margin-bottom: 5rem;
+    }
+    .accordion-certificates-content {
+        width: 100%;
+    }
     /* --- Section "Contact me" --- */
     .section-contactme-content {
         padding-bottom: 2rem;
