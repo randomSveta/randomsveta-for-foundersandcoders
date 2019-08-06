@@ -8,8 +8,8 @@
 4. Sections
     4.1 Section "About me"
     4.2 Section "Why me"
-    4.3 Section "Achievements"
-        4.3.1 Section "Achievements". Buttons and indicators
+    4.3 Section "Carousel"
+        4.3.1 Section "Carousel". Buttons and indicators
     4.4 Section "Certificates"
     4.5 Section "Contact me"
 5. Footer
@@ -86,11 +86,11 @@
     .prerequisites-links ol {
         font-size: 1.4rem;
     }
-    /* --- Section "Achievments" --- */
+    /* --- Section "Carousel" --- */
     .carousel-images-list li {
         padding-bottom: 0.5rem;
     }
-    /* - Section "Achievements". Buttons and indicators - */
+    /* - Section "Carousel". Buttons and indicators - */
     .play-stop-buttons button, .slide-indicators button {
         width: 4rem;
         height: 3.5rem;

@@ -63,7 +63,7 @@ function showSlides(n) {
 }
 
 function openAccordionContent() {
-    var acc = document.getElementsByClassName("accordion");
+    var acc = document.getElementsByClassName("cert-accordion");
 
     for (let i = 0; i < acc.length; i++) {
         acc[i].addEventListener("click", function () {

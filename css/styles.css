@@ -9,9 +9,9 @@
 4. Sections
     4.1 Section "About me"
     4.2 Section "Why me"
-    4.3 Section "Achievements"
-        4.3.1 Section "Achievements". Buttons and indicators
-    4.4 Section "Certificates"
+    4.3 Section "Carousel"
+        4.3.1 Section "Carousel". Buttons and indicators
+    4.4 Section "Skills"
     4.5 Section "Contact me"
 5. Footer
 -------------------------------------------------- */
@@ -423,22 +423,22 @@ nav .toggle-bars {
     height: auto;
 }
 
-/* --- Section "Achievements" --- */
+/* --- Section "Carousel" --- */
 
-.section-myachievements {
+.section-carousel {
     margin: 0;
     padding: 0;
     color: #b7f8ff;
     background-color: rgba(0, 0, 0, 0.85);
 }
 
-.section-myachievements-content {
+.section-carousel-content {
     padding-bottom: 6rem;
     width: 100%;
     align-self: center;
 }
 
-.section-myachievements-carusel {
+.section-all-carousel-elements {
     margin: auto;
     position: relative;
     max-width: 100%;
@@ -494,9 +494,9 @@ nav .toggle-bars {
     }
 }
 
-/* --- Section "Achievements". Buttons and indicators --- */
+/* --- Section "Carousel". Buttons and indicators --- */
 
-.section-myachievements button {
+.section-carousel button {
     background-color: rgba(0, 0, 0, 0.8);
     border: 0.1rem solid #b7f8ff;
     color: #b7f8ff;
@@ -534,7 +534,7 @@ nav .toggle-bars {
     padding-bottom: 15%;
 }
 
-.buttons-bottom-carusel {
+.buttons-bottom-carousel {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -563,11 +563,10 @@ nav .toggle-bars {
     border: 0.1rem solid black;
 }
 
-/* --- Section "Certificates" --- */
+/* --- Section "Skills" --- */
 
-.section-certificates {}
 
-.accordion {
+.cert-accordion {
     background-color: gray;
     color: dimgray;
     outline: none;
@@ -578,11 +577,11 @@ nav .toggle-bars {
     transition: 0.4s;
 }
 
-.active-acc-button, .accordion:hover {
+.active-acc-button, .cert-accordion:hover {
     background-color: gray;
 }
 
-.accordion:after {
+.cert-accordion:after {
     content: '\002B';
     color: lightgray;
     font-weight: 150;
@@ -594,7 +593,7 @@ nav .toggle-bars {
     content: "\2212";
 }
 
-.accordion-content {
+.cert-accordion-content {
     padding: 0 1.8rem;
     background-color: white;
     max-height: 0;
