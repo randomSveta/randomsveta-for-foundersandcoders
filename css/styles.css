@@ -428,8 +428,8 @@ nav .toggle-bars {
 .section-carousel {
     margin: 0;
     padding: 0;
-    color: #b7f8ff;
-    background-color: rgba(0, 0, 0, 0.85);
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, 0.90);
 }
 
 .section-carousel-content {
@@ -443,7 +443,7 @@ nav .toggle-bars {
     position: relative;
     max-width: 100%;
     height: auto;
-    border: 0.1rem solid #b7f8ff;
+    border: 0.1rem solid rgba(255, 255, 255, 1);
     padding: 1.5rem 3rem;
 }
 
@@ -457,12 +457,12 @@ nav .toggle-bars {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .carousel-images-list img {
     width: 50%;
     height: auto;
-    border: 0.1rem solid #b7f8ff;
 }
 
 .slides {
@@ -496,10 +496,25 @@ nav .toggle-bars {
 
 /* --- Section "Carousel". Buttons and indicators --- */
 
-.section-carousel button {
+.section-carousel button, .dot {
     background-color: rgba(0, 0, 0, 0.8);
-    border: 0.1rem solid #b7f8ff;
-    color: #b7f8ff;
+    border: 0.1rem solid rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0.2rem 0.2rem rgb(209, 206, 206);
+}
+
+.section-carousel button:hover, .dot:hover {
+    background-color: rgba(153, 206, 212, 1);
+    color: rgba(0, 0, 0, 0.8);
+   border: 0.1rem solid rgba(0, 0, 0, 0.8);
+   box-shadow: 0.2rem 0.2rem gray;
+}
+
+.section-carousel button:active, .dot:active {
+  background-color: rgba(153, 206, 212, 1);
+  box-shadow: 0.2rem 0.2rem gray;
+  color: rgba(255, 255, 255, 1);
+  transform: translateY(0.3rem);
 }
 
 .slide-indicators button {
@@ -554,17 +569,21 @@ nav .toggle-bars {
     width: 0.9rem;
     height: 0.9rem;
     margin: 0.5rem;
-    border: 0.1rem solid #b7f8ff;
+    border: 0.1rem solid rgba(255, 255, 255, 1);
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .fill-color {
-    background-color: #b7f8ff;
+    background-color: rgba(255, 255, 255, 1);
     border: 0.1rem solid black;
 }
 
 /* --- Section "Skills" --- */
-
+.section-skills-iamfamiliarwith {
+    color: black;
+    display: flex;
+}
 
 .cert-accordion {
     background-color: gray;
