@@ -472,6 +472,7 @@ nav .toggle-bars {
 }
 
 .carousel-images-list {
+    display: flex;
     list-style: none;
     margin: 0 0 5rem 0;
     padding: 1.5rem 0;
@@ -488,33 +489,8 @@ nav .toggle-bars {
     height: auto;
 }
 
-.slides {
+.slide {
     display: none;
-}
-
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 3s;
-    animation-name: fade;
-    animation-duration: 3s;
-}
-
-@-webkit-keyframes fade {
-    from {
-        opacity: 0.2
-    }
-    to {
-        opacity: 1
-    }
-}
-
-@keyframes fade {
-    from {
-        opacity: 0.2
-    }
-    to {
-        opacity: 1
-    }
 }
 
 /* --- Section "Carousel". Buttons and indicators --- */

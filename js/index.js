@@ -1,3 +1,4 @@
+/* ------ Responsive Nav Bar ------ */
 function navbarToggle() {
     let elem = document.getElementById("navbar-top");
 
@@ -15,53 +16,45 @@ function navbarToggle() {
     }
 }
 
+/* ------ Carousel ------ */
+
 let slideIndex = 0;
 let playSlides = true;
 
-function plusNumberOfSlide(n) {
-    showSlides(slideIndex += n);
+function increaseNumberOfSlide(n) {
+    slideIndex += n;
+    console.log(slideIndex);
+    changeSlides(slideIndex);
 }
 
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-function play() {
-    playSlides = true;
-    setTimeout(function () { showSlides(slideIndex) }, 4000);
+function findCurrentSlide(index) {
+    slideIndex = index;
+    changeSlides(slideIndex);
 }
 
-function stop() {
-    playSlides = false;
-}
+function changeSlides(index) {
+    let slides = document.getElementsByClassName('slide');
+    let dots = document.getElementsByClassName('dot');
 
-function showSlides(n) {
-    var slides = document.getElementsByClassName("slides");
-    var dots = document.getElementsByClassName("dot");
-
-    if (n > slides.length) {
-        slideIndex = 1;
+    if (index < 0) {
+        slideIndex = slides.length-1;
     }
-    if (n < 1) {
-        slideIndex = slides.length;
+    else if (index >= slides.length || index == 'null' || index == 'undefined') {
+        slideIndex = 0;
     }
+
     for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+        slides[i].style.display = 'none';
+        dots[i].classList.remove("fill-color");
     }
-    if (playSlides) {
-        play();
-        slideIndex++;
-    }
-
-    if (slideIndex > slides.length) { slideIndex = 1 }
-    for (let i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" fill-color", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " fill-color";
-
-
+    console.log(slideIndex);
+    slides[slideIndex].style.display = 'block';
+    dots[slideIndex].classList.add("fill-color");
 }
 
+
+
+/* ------ Accordion ------ */
 function openAccordionContent() {
     var acc = document.getElementsByClassName("cert-accordion");
 
@@ -78,8 +71,8 @@ function openAccordionContent() {
     }
 }
 
-
+/* --- Window onload --- */
 window.onload = function () {
-    showSlides(slideIndex);
+    changeSlides(0);
     openAccordionContent();
 };

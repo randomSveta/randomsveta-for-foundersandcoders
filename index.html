@@ -40,7 +40,7 @@
         <div class="container header-content">
             <div class="header-name">
                 <h1>Sveta Klimova</h1>
-                <p>Junior Front-End Developer</p>
+                <p>Web-Developer</p>
             </div>
             <div class="header-smIcons">
                 <ul>
@@ -143,35 +143,35 @@
                 <h2>Carousel</h2>
                 <div class="section-all-carousel-elements">
                     <ul class="carousel-images-list">
-                        <li><img class="slides fade" src="./images/certificates/FCC_responsive_web_design_cert.png"
+                        <li><img class="slide" src="./images/certificates/FCC_responsive_web_design_cert.png"
                                 alt="The certificate 'Responsive Web Design' from FreeCodeCamp">
                         </li>
-                        <li><img class="slides fade" src="./images/certificates/FCC_JS_algoritms_cert.png"
+                        <li><img class="slide" src="./images/certificates/FCC_JS_algoritms_cert.png"
                                 alt="The certificate 'JavaScrip Algorithms' from FreeCodeCamp"></li>
-                        <li><img class="slides fade" src="./images/certificates/coursera_bootstrap_cert.png"
+                        <li><img class="slide" src="./images/certificates/coursera_bootstrap_cert.png"
                                 alt="The certificate 'Bootstrap 4' from Coursera"></li>
-                        <li><img class="slides fade" src="./images/certificates/coursera_react_cert.png"
+                        <li><img class="slide" src="./images/certificates/coursera_react_cert.png"
                                 alt="The certificate 'React' from Coursera"></li>
-                        <li><img class="slides fade" src="./images/certificates/coursera_mongoDB_cert.png"
+                        <li><img class="slide" src="./images/certificates/coursera_mongoDB_cert.png"
                                 alt="The certificate 'NodeJS and MongoDB' from Coursera"></li>
                     </ul>
                     <div class="buttons-indicators">
                         <div class="slide-indicators">
-                            <button type="button" onclick="plusNumberOfSlide(-1)"><i class="fas fa-chevron-left"></i>
+                            <button type="button" onclick="increaseNumberOfSlide(-1)"><i class="fas fa-chevron-left"></i>
                             </button>
-                            <button type="button" plusNumberOfSlide(1)"><i class="fas fa-chevron-right"></i></button>
+                            <button type="button" onclick="increaseNumberOfSlide(1)"><i class="fas fa-chevron-right"></i></button>
                         </div>
                         <div class="buttons-bottom-carousel">
                             <div class="dots">
-                                <span class="dot" onclick="currentSlide(1)"></span>
-                                <span class="dot" onclick="currentSlide(2)"></span>
-                                <span class="dot" onclick="currentSlide(3)"></span>
-                                <span class="dot" onclick="currentSlide(4)"></span>
-                                <span class="dot" onclick="currentSlide(5)"></span>
+                                <span class="dot" onclick="findCurrentSlide(0)"></span>
+                                <span class="dot" onclick="findCurrentSlide(1)"></span>
+                                <span class="dot" onclick="findCcurrentSlide(2)"></span>
+                                <span class="dot" onclick="findCurrentSlide(3)"></span>
+                                <span class="dot" onclick="findCurrentSlide(4)"></span>
                             </div>
                             <div class="play-stop-buttons">
-                                <button type="button" onclick="stop()"><i class="fa fa-stop-circle"></i></button>
-                                <button type="button" onclick="play()"><i class="fa fa-play-circle"></i></button>
+                                <button type="button" onclick="stopPlayingSlides()"><i class="fa fa-stop-circle"></i></button>
+                                <button type="button" onclick="startPlayingSlides()"><i class="fa fa-play-circle"></i></button>
 
                             </div>
                         </div>
