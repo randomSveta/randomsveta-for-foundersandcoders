@@ -7,7 +7,7 @@
     3.2 Header. Content
 4. Sections
     4.1 Section "About me"
-    4.2 Section "Why me"
+    4.2 Section "Bootcamp prerequisites"
     4.3 Section "Carousel"
         4.3.1 Section "Carousel". Buttons and indicators
     4.4 Section "Certificates"
@@ -17,31 +17,16 @@
 
 @media screen and (max-width: 600px) {
     /* ------  Global styles ------ */
-    header {
-        min-height: 100vh;
-        background-position: left bottom;
-        background-size: auto 100vh;
-        background-image: url("../images/background/header_background_max_768-600.JPG");
-    }
-    section p {
-        font-size: 1.4rem;
-    }
-    h1 {
-        font-size: 8vw;
-    }
-    h2 {
-        font-size: 7vw;
-    }
+   
     h3 {
         font-size: 6vw;
     }
     /* ------ Global classes ------ */
     .container {
-        margin: 0 2rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem; 
     }
-    .section-contactme-content {
-        padding-bottom: 3rem;
-    }
+   
     /* ------ Header ------ */
     /* --- Header. Navigation --- */
     .navbar-brand img {
@@ -53,15 +38,12 @@
     }
     /* --- Header. Content ---*/
     .header-content {
-        padding-top: 20rem;
+        padding-top: 15rem;
         flex-direction: column;
         align-content: center;
     }
     .header-name {
         width: 100%;
-    }
-    .header-name p {
-        font-size: 5vw;
     }
     .header-smIcons ul {
         flex-direction: row;
@@ -75,15 +57,12 @@
     }
     /* ------ Sections ------ */
     /* --- Section "About me" --- */
-    .section-aboutme {
+    .section-aboutme .section-content {
         background-size: auto 100%;
+        background-position: right bottom;
     }
-    .section-aboutme-text p {
-        padding: 0;
-        margin-top: 2rem;
-    }
-    /* --- Section "Why me" --- */
-    .prerequisites-links ol {
+    /* --- Section "Bootcamp prerequisites" --- */
+    .prerequisites-links ul {
         font-size: 1.4rem;
     }
     /* --- Section "Carousel" --- */
@@ -92,25 +71,7 @@
     }
     
     /* - Section "Carousel". Buttons and indicators - */
-    .play-stop-buttons button, .slide-indicators button {
-        width: 4rem;
-        height: 3.5rem;
-        font-size: 1.6rem;
-        margin: 1rem 0.5rem;
-    }
-    .slide-indicators {
-        justify-content: center;
-        padding-bottom: 73%;
-    }
-    .dot {
-        width: 0.7rem;
-        height: 0.7rem;
-        margin: 0.3rem;
-        border: 0.1rem solid #b7f8ff;
-        border-radius: 50%;
-    }
     .dots {
-        display: inline-flex;
         margin-right: 25%;
     }
     /* --- Section "Skills" --- */
@@ -124,7 +85,7 @@
     /* --- Section "Contact me" --- */
     .section-contactme {
         background-image: url("../images/background/section_contactme_background_max_600.png");
-        background-size: auto 80%;
+        background-position: bottom left;
     }
     .section-contactme-form {
         padding: 1rem;
@@ -132,7 +93,4 @@
     /* ------ Footer ------ */
     .footer-smIcons a {
         font-size: 7vw;
-    }
-    .footer-about-text p {
-        font-size: 3vw;
     }

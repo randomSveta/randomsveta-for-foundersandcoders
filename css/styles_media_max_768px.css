@@ -7,7 +7,7 @@
     3.2 Header. Content
 4. Sections
     4.1 Section "About me"
-    4.2 Section "Why me"
+    4.2 Section "Bootcamp prerequisites"
     4.3 Section "Carousel"
         4.3.1 Section "Carousel". Buttons and indicators
     4.4 Section "Certificates"
@@ -18,25 +18,26 @@
 @media screen and (max-width: 768px) {
     /* ---  Global styles --- */
     header {
-        background-image: url("../images/background/header_background_max_768-600.JPG");
-        background-size: auto 100%;
+        background-image: url("../images/background/header_background_max_768-600.png");
+        background-position: left;
+        padding-bottom: 0;
     }
     section {
         margin: 0;
         padding: 0;
     }
     h1 {
-        text-align: center;
-        font-size: 4vw;
+        font-size: 3rem;
     }
     h2 {
-        font-size: 3vh;
+        font-size: 2.5rem;
     }
     h3 {
-        font-size: 2.5vh
+        font-size: 2rem;
     }
-    section p {
+    p {
         font-size: 2vh;
+        text-align: justify;
     }
     form {
         width: 100%!important;
@@ -60,7 +61,7 @@
     /* --- Header. Navigation --- */
     .navigation-bar .toggle-bars {
         display: block;
-        font-size: 6vw;
+        font-size: 2.5rem;
         margin: 0 2rem;
         padding: 0.2rem 0;
     }
@@ -82,10 +83,10 @@
 
     /* --- Header. Content ---*/
     .header-content {
-        padding-top: 10%;
+        padding-top: 7%;
     }
     .header-name p {
-        font-size: 3vw;
+        font-size: 2rem;
     }
     .header-smIcons a {
         font-size: 4.5vh;
@@ -98,68 +99,44 @@
     }
     /* ------ Sections ------ */
     /* --- Section "About me" --- */
-    .section-aboutme-img {
-        display: none;
-    }
-    .section-aboutme-content {
-        display: flex;
-        flex-direction: column;
-        align-self: center;
-    }
+.section-aboutme .section-content {
+    background-image: none;
+    background-color: transparent;
+}
+
+.section-aboutme {
+    background-image: url("../images/background/section_aboutme_background.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: content-box, border-box;
+    background-color: rgba(226, 230, 231, 0.9);
+}
+
     .section-aboutme-text {
+        margin: 1.5rem 0;
+        width: 100%;
+       
+    }
+    .section-aboutme .section-content {
+        background-size: auto 100%;        
+    }
+    /* --- Section "Bootcamp prerequisites" --- */
+    .section-bootcamppre-text-and-prerequisites {
         display: block;
     }
-    .section-aboutme-text-img {
-        padding: 3rem;
-        margin-bottom: 5rem;
-    }
-    .section-aboutme {
-        background-image: url("../images/background/section_aboutme_background.png");
-        background-position: right bottom;
-        background-repeat: no-repeat;
-        background-size: auto 100%;
-        background-origin: content-box, border-box;
-    }
-    .section-aboutme-text {
+    .section-bootcamppre-text {
         width: 100%;
-        padding: 0;
+        margin: 0;
     }
-    .section-aboutme-text p {
+    .section-bootcamppre-prerequisites {
         width: 100%;
+        margin: 0;
+        padding: 0rem;
     }
-    /* --- Section "Why me" --- */
-    .section-whyme {
-        background-image: url("../images/background/section_whyme_background.png");
-        background-position: center bottom;
-        background-repeat: repeat;
-        background-size: contain;
-        background-origin: content-box, border-box;
-    }
-    .section-whyme-content {
-        background-image: none;
-        display: flex;
-        flex-direction: column;
-        align-self: center;
-    }
-    .section-whyme-text-and-prerequisites {
-        display: block;
-        margin: 0 0 3rem 0;
-        padding: 0 3rem;
-    }
-    .section-whyme-text {
-        width: 100%;
-        padding: 3rem 0;
-        margin-right: 0;
-    }
-    .section-whyme-text p {
-        padding: 1.5rem 0 0 0;
-    }
-    .section-whyme-prerequisites {
-        width: 100%;
-        margin-right: 0;
-    }
-    .prerequisites-links ol {
-        padding: 0;
+
+    .prerequisites-links ul {
+        padding: 0 3rem 3rem 3rem;
         font-size: 2vh;
     }
     /* --- Section "Carousel" --- */
@@ -167,19 +144,9 @@
         width: 100%;
     }
     /* - Section "Carousel". Buttons and indicators - */
-    .slide-indicators button {
-        width: 5rem;
-        height: 4.5rem;
-        font-size: 2rem;
-    }
-    .play-stop-buttons button {
-        width: 4.5rem;
-        height: 3rem;
-        font-size: 1.8rem;
-    }
     .slide-indicators {
         justify-content: center;
-        padding-bottom: 67%;
+        padding-bottom: 64%;
     }
     .dots {
         display: inline-flex;
@@ -202,12 +169,10 @@
         width: 100%;
     }
     /* --- Section "Contact me" --- */
-    .section-contactme-content {
-        padding-bottom: 2rem;
-    }
     .section-contactme {
         background-image: url("../images/background/section_contactme_background_max_768.png");
-        background-size: auto 75%;
+        background-position: center;
+        background-size: cover;
     }
     .section-contactme-form {
         padding: 2rem;
