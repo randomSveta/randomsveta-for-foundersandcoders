@@ -20,9 +20,19 @@ function navbarToggle() {
 
 let slideIndex = 0;
 let intervalPlay;
+let currentAnimationClass;
+let previousAnimationClass;
 
 function increaseSlideIndex(n) {
+    previousAnimationClass = currentAnimationClass;
     slideIndex += n;
+
+    if (n > 0) {
+        currentAnimationClass = "slide-to-right-animation";
+    }
+    else {
+        currentAnimationClass = "slide-to-left-animation";
+    }
     changeSlides(slideIndex);
 }
 
@@ -32,9 +42,11 @@ function findCurrentSlide(index) {
 }
 
 function controlStopPlaySlides(playSlides) {
+    previousAnimationClass = currentAnimationClass;
     if (playSlides) {
+        currentAnimationClass = "slide-to-right-animation";
         changeSlides(slideIndex);
-        intervalPlay = setInterval(increaseSlideIndex, 3000, 1);
+        intervalPlay = setInterval(increaseSlideIndex, 5000, 1);
     }
     else {
         clearInterval(intervalPlay);
@@ -54,9 +66,11 @@ function changeSlides(index) {
 
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = 'none';
+        slides[i].classList.remove(previousAnimationClass);
         dots[i].classList.remove("fill-color");
     }
     slides[slideIndex].style.display = 'block';
+    slides[slideIndex].classList.add(currentAnimationClass);
     dots[slideIndex].classList.add("fill-color");
 }
 

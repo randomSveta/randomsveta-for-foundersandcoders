@@ -477,7 +477,6 @@ nav .toggle-bars {
     margin: 0 0 5rem 0;
     padding: 1.5rem 0;
     width: 100%;
-    overflow: hidden;
 }
 
 .carousel-images-list li {
@@ -490,7 +489,34 @@ nav .toggle-bars {
     width: 50%;
     height: auto;
 }
-
+.slide-to-right-animation {   
+        position: relative;
+        animation: slideRight 2s;
+}
+@keyframes slideRight {
+    from {
+        left: -120px;
+        opacity: 0;
+    }
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
+.slide-to-left-animation {   
+    position: relative;
+    animation: slideLeft 2s;
+}
+@keyframes slideLeft {
+from {
+    right: -120px;
+    opacity: 0;
+}
+to {
+    right: 0;
+    opacity: 1;
+}
+}
 
 /* --- Section "Carousel". Buttons and indicators --- */
 
