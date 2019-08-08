@@ -81,7 +81,7 @@ section:last-of-type {
 footer {
     margin-top: 0;
     padding-top: 0;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgb(40, 43, 46);
     color: white;
 }
 
@@ -133,7 +133,7 @@ p {
 
 a {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 1);
 }
 
 a:hover {
@@ -264,12 +264,12 @@ button {
 .navbar-brand img {
     margin: 0;
     padding: 0;
-    width: 8vw;
+    width: 4.3vw;
     height: auto;
 }
 
 .navigation-bar {
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgb(40, 43, 46);
     position: fixed;
     padding: 1rem 0;
     width: 100%;
@@ -327,7 +327,7 @@ nav .toggle-bars {
     text-decoration: none;
 }
 .active-nav-item {
-    border: 1px solid rgb(51, 204, 204);
+    border: 0.15rem solid #99ced4;
 }
 
 /* --- Header. Content styles--- */
@@ -423,7 +423,7 @@ nav .toggle-bars {
 }
 
 .section-bootcamppre .section-content {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(56, 60, 63, 0.85);
     color: white;
 }
 .section-bootcamppre-text-and-prerequisites {
@@ -489,8 +489,8 @@ nav .toggle-bars {
 .section-carousel {
     margin: 0;
     padding: 0;
-    color: rgba(255, 255, 255, 1);
-    background-color: rgba(0, 0, 0, 0.8);
+    color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(204, 231, 234, 0.8);
     font-weight: 100;
 }
 
@@ -516,8 +516,9 @@ nav .toggle-bars {
 }
 
 .carousel-images-list img {
-    width: 50%;
+    width: 55%;
     height: auto;
+    box-shadow: 0 0.5rem 0.9rem 0 rgba(0, 0, 0, 0.5), 0 0.7rem 2rem 0 rgba(0, 0, 0, 0.25);
 }
 /* - Section "Carousel". Animation - */
 .slide-to-right-animation {
@@ -556,16 +557,16 @@ nav .toggle-bars {
 
 .section-carousel button, .dot {
     background-color: transparent;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(0, 0, 0, 0.9);
     border: none;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     text-align: center;
     padding: 0;
     margin: 0.5rem;
 }
 
 .section-carousel button:hover, .dot:hover {
-    background-color: rgba(153, 206, 212, 0.8);
+    background-color:rgba(0, 0, 0, 0.4);
     color: rgba(0, 0, 0, 0.85);
 }
 
@@ -626,14 +627,14 @@ nav .toggle-bars {
     width: 0.9rem;
     height: 0.9rem;
     margin: 0.5rem;
-    border: 0.1rem solid rgba(255, 255, 255, 1);
+    border: 0.15rem solid rgba(0, 0, 0, 0.85);
     border-radius: 50%;
     cursor: pointer;
 }
 
 .fill-color {
-    background-color: rgba(255, 255, 255, 1);
-    border: 0.1rem solid black;
+    background-color: rgba(0, 0, 0, 0.85);
+    border: 0.1rem solid white;
 }
 
 /* --- Section "Skills" --- */
@@ -719,6 +720,7 @@ a.grid-item {
 
 a.grid-item:hover {
     color: rgba(0, 0, 0, 0.75);
+    background-color: #99ced4;
     text-decoration: none;
 }
 
@@ -733,7 +735,7 @@ a.grid-item:hover {
 }
 
 .cert-accordion {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(68, 73, 76, 0.9);
     color: white;
     outline: none;
     padding: 1.5rem;
@@ -743,9 +745,14 @@ a.grid-item:hover {
     transition: 0.4s;
     font-size: 2rem;
 }
-
+.cert-accordion-content a{
+    color: rgba(0, 0, 0, 1);
+}
+.cert-accordion-content a:hover{
+    color: rgb(98, 134, 138);
+}
 .active-acc-button, .cert-accordion:hover {
-    background-color: rgb(51, 204, 204);
+    background-color: #99ced4;
     color: rgba(0, 0, 0, 0.75);
 }
 

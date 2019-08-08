@@ -71,6 +71,10 @@
     }
     /* ------ Header ------ */
     /* --- Header. Navigation styles--- */
+    .navbar-brand img {
+        width: 7vh;
+        height: auto;
+    }
     .navigation-bar .toggle-bars {
         display: block;
         font-size: 2.5rem;
@@ -95,7 +99,7 @@
     }
     /* --- Header. Content styles--- */
     .header-content {
-        padding-top: 7%;
+        padding-top: 9.2vh;
     }
     .header-name p {
         font-size: 2rem;
