@@ -15,6 +15,90 @@ function navbarToggle() {
         icon.className = "fa fa-bars"
     }
 }
+/* ------ Add active-nav-item class to Nevigation 
+function addActiveClassToNavbarItem() {
+    document.querySelectorAll('.underscore-nav-item a.active-nav-item').forEach((link) =>
+        link.classList.remove('active-nav-item')
+    )
+    event.target.classList.add("active-nav-item");
+};------ */
+
+
+/* ------ Add active-nav-item class to Nevigation onscroll——— */
+function addActiveClassToNavbarItemOnscroll() {
+    document.querySelectorAll('a.active-nav-item').forEach((link) =>
+        link.classList.remove('active-nav-item')
+    );
+
+    const navigationBar = document.getElementById('navbar-top');
+    const navBarHeight = navigationBar.getBoundingClientRect().height;
+
+    const sectionAboutMe = document.getElementById('about-me');
+    const aboutmeTopBorder = sectionAboutMe.getBoundingClientRect().top;
+
+    const sectionBootcampPre = document.getElementById('bootcamp-prerequisites');
+    const bootcamppreTopBorder = sectionBootcampPre.getBoundingClientRect().top;
+
+    const sectionCarousel = document.getElementById('carousel');
+    const carouselTopBorder = sectionCarousel.getBoundingClientRect().top;
+
+    const sectionSkills = document.getElementById('skills');
+    const skillsTopBorder = sectionSkills.getBoundingClientRect().top;
+
+    const sectionContactMe = document.getElementById('contact-me');
+    const contactmeTopBorder = sectionContactMe.getBoundingClientRect().top;
+
+    if (navBarHeight >= aboutmeTopBorder) {
+        document.querySelectorAll('a.active-nav-item').forEach((link) =>
+            link.classList.remove('active-nav-item')
+        );
+        document.getElementById('nav-aboutme').classList.add('active-nav-item');
+        
+    }
+    if (navBarHeight >= bootcamppreTopBorder) {
+        document.querySelectorAll('a.active-nav-item').forEach((link) =>
+            link.classList.remove('active-nav-item')
+        );
+        document.getElementById('nav-bootcamppre').classList.add('active-nav-item');
+        
+    }
+    if (navBarHeight >= carouselTopBorder) {
+        document.querySelectorAll('a.active-nav-item').forEach((link) =>
+            link.classList.remove('active-nav-item')
+        );    
+        document.getElementById('nav-carousel').classList.add('active-nav-item');       
+    }
+
+    if (navBarHeight >= skillsTopBorder) {
+        document.querySelectorAll('a.active-nav-item').forEach((link) =>
+            link.classList.remove('active-nav-item')
+        );
+        document.getElementById('nav-skills').classList.add('active-nav-item');
+        
+    }
+    if (navBarHeight >= contactmeTopBorder) {
+        document.querySelectorAll('a.active-nav-item').forEach((link) =>
+            link.classList.remove('active-nav-item')
+        );
+        document.getElementById('nav-contactme').classList.add('active-nav-item');
+        
+    }
+
+}
+/*
+Hide Navigation when user scrolls down and show when scrolls up
+
+let previousScrollPosition = window.pageYOffset;
+
+function hideAndShowNavigation() {
+    const currentScrollPosition = window.pageYOffset;
+    if (previousScrollPosition > currentScrollPosition) {
+        document.getElementById("navbar-top").style.top = "0";
+    } else {
+        document.getElementById("navbar-top").style.top = "-40rem";
+    }
+    previousScrollPosition = currentScrollPosition;
+}*/
 
 /* ------ Carousel ------ */
 
@@ -94,8 +178,11 @@ function openAccordionContent() {
 }
 
 /* --- Window onload --- */
-window.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("DOMContentLoaded", () => {
     controlStopPlaySlides(true);
     openAccordionContent();
 }, false);
 
+window.addEventListener("scroll", () => {
+    addActiveClassToNavbarItemOnscroll();
+});

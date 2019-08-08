@@ -1,22 +1,32 @@
 /* ---------- TABLE OF CONTENTS ----------------- 
-   Media max-width 768px:
 1. Global styles 
-2. Global classes
+    1.1 Body blocks styles
+    1.2 Headers (h1, h2, ...), text and links styles
+    1.2 Global elements styles
+2. Global classes styles
 3. Header
-    3.1 Header. Navigation
-    3.2 Header. Content
+    3.1 Header. Navigation styles
+    3.2 Header. Content styles
+    3.3 Header. Social media icons styles
 4. Sections
     4.1 Section "About me"
+        4.1.1 Section "About me". Text styles
     4.2 Section "Bootcamp prerequisites"
+        4.2.1 Section "Bootcamp prerequisites". Text styles
     4.3 Section "Carousel"
-        4.3.1 Section "Carousel". Buttons and indicators
-    4.4 Section "Certificates"
+        4.3.1 Section "Carousel". Animation
+        4.3.2 Section "Carousel". Buttons and indicators
+    4.4 Section "Skills"
+        4.4.1 Section "Skills". Trchnologies styles
+        4.4.2 Section "Skills". Accordion styles
     4.5 Section "Contact me"
 5. Footer
+    5.1 Footer. Text styles 
+    5.2 Footer. Social media icons styles
 -------------------------------------------------- */
 
 @media screen and (max-width: 768px) {
-    /* ---  Global styles --- */
+    /* --- Body blocks styles --- */
     header {
         background-image: url("../images/background/header_background_max_768-600.png");
         background-position: left;
@@ -26,6 +36,7 @@
         margin: 0;
         padding: 0;
     }
+    /* --- Headers (h1, h2, ...), text and links styles --- */
     h1 {
         font-size: 3rem;
     }
@@ -39,11 +50,12 @@
         font-size: 2vh;
         text-align: justify;
     }
+    /* --- Global elements styles --- */
     form {
         width: 100%!important;
         /* to fix layout issues caused by some browser extensions adding their styles */
     }
-    /* --- Global classes --- */
+    /* ------ Global classes styles------ */
     .large-screen-flex {
         display: block;
     }
@@ -58,7 +70,7 @@
         align-items: center;
     }
     /* ------ Header ------ */
-    /* --- Header. Navigation --- */
+    /* --- Header. Navigation styles--- */
     .navigation-bar .toggle-bars {
         display: block;
         font-size: 2.5rem;
@@ -79,15 +91,16 @@
     }
     .underscore-nav-item a {
         padding: 0.5rem;
+        color: rgba(255, 255, 255, 0.9);
     }
-
-    /* --- Header. Content ---*/
+    /* --- Header. Content styles--- */
     .header-content {
         padding-top: 7%;
     }
     .header-name p {
         font-size: 2rem;
     }
+    /* --- Header. Social media icons styles --- */
     .header-smIcons a {
         font-size: 4.5vh;
     }
@@ -99,50 +112,49 @@
     }
     /* ------ Sections ------ */
     /* --- Section "About me" --- */
-.section-aboutme .section-content {
-    background-image: none;
-    background-color: transparent;
-}
-
-.section-aboutme {
-    background-image: url("../images/background/section_aboutme_background.png");
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-origin: content-box, border-box;
-    background-color: rgba(226, 230, 231, 0.9);
-}
-
+    .section-aboutme .section-content {
+        background-image: none;
+        background-color: transparent;
+    }
+    .section-aboutme {
+        background-image: url("../images/background/section_aboutme_background.png");
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-origin: content-box, border-box;
+        background-color: rgba(226, 230, 231, 0.9);
+    }
+    .section-aboutme .section-content {
+        background-size: auto 100%;
+    }
+    /* - Section "About me". Text styles - */
     .section-aboutme-text {
         margin: 1.5rem 0;
         width: 100%;
-       
-    }
-    .section-aboutme .section-content {
-        background-size: auto 100%;        
     }
     /* --- Section "Bootcamp prerequisites" --- */
     .section-bootcamppre-text-and-prerequisites {
         display: block;
-    }
-    .section-bootcamppre-text {
-        width: 100%;
-        margin: 0;
     }
     .section-bootcamppre-prerequisites {
         width: 100%;
         margin: 0;
         padding: 0rem;
     }
-
     .prerequisites-links ul {
         padding: 0 3rem 3rem 3rem;
         font-size: 2vh;
+    }
+    /* - Section "Bootcamp prerequisites". Text styles - */
+    .section-bootcamppre-text {
+        width: 100%;
+        margin: 0;
     }
     /* --- Section "Carousel" --- */
     .carousel-images-list img {
         width: 100%;
     }
+    /* - Section "Carousel". Animation - */
     /* - Section "Carousel". Buttons and indicators - */
     .slide-indicators {
         justify-content: center;
@@ -157,14 +169,14 @@
         width: 100%;
         padding-bottom: 3rem;
         display: block;
-
-        
     }
+    /* - Section "Skills". Techologies styles- */
     .technologies-content {
         width: 100%;
-        margin-right: 0; 
+        margin-right: 0;
         margin-bottom: 5rem;
     }
+    /* - Section "Skills". Accordion styles- */
     .accordion-certificates-content {
         width: 100%;
     }
@@ -178,6 +190,8 @@
         padding: 2rem;
     }
     /* ------ Footer ------ */
+    /* --- Footer. Text styles --- */
+    /* --- Foter. Social media styles --- */
     .footer-smIcons a {
         font-size: 5.5vw;
     }

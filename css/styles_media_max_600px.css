@@ -1,34 +1,45 @@
 /* ---------- TABLE OF CONTENTS ----------------- 
-   Media max-width 768px:
 1. Global styles 
-2. Global classes
+    1.1 Body blocks styles
+    1.2 Headers (h1, h2, ...), text and links styles
+    1.2 Global elements styles
+2. Global classes styles
 3. Header
-    3.1 Header. Navigation
-    3.2 Header. Content
+    3.1 Header. Navigation styles
+    3.2 Header. Content styles
+    3.3 Header. Social media icons styles
 4. Sections
     4.1 Section "About me"
+        4.1.1 Section "About me". Text styles
     4.2 Section "Bootcamp prerequisites"
+        4.2.1 Section "Bootcamp prerequisites". Text styles
     4.3 Section "Carousel"
-        4.3.1 Section "Carousel". Buttons and indicators
-    4.4 Section "Certificates"
+        4.3.1 Section "Carousel". Animation
+        4.3.2 Section "Carousel". Buttons and indicators
+    4.4 Section "Skills"
+        4.4.1 Section "Skills". Trchnologies styles
+        4.4.2 Section "Skills". Accordion styles
     4.5 Section "Contact me"
 5. Footer
+    5.1 Footer. Text styles 
+    5.2 Footer. Social media icons styles
 -------------------------------------------------- */
 
 @media screen and (max-width: 600px) {
     /* ------  Global styles ------ */
-   
+    /* ---  Body blocks styles --- */
+    /* --- Headers (h1, h2, ...), text and links styles --- */
     h3 {
         font-size: 6vw;
     }
-    /* ------ Global classes ------ */
+    /* --- Global elements styles --- */
+    /* ------ Global classes styles------ */
     .container {
         margin-left: 1.5rem;
-        margin-right: 1.5rem; 
+        margin-right: 1.5rem;
     }
-   
     /* ------ Header ------ */
-    /* --- Header. Navigation --- */
+    /* --- Header. Navigation styles--- */
     .navbar-brand img {
         width: 10rem;
         height: auto;
@@ -36,7 +47,7 @@
     .navigation-bar .toggle-bars {
         margin: 0;
     }
-    /* --- Header. Content ---*/
+    /* --- Header. Content styles--- */
     .header-content {
         padding-top: 15rem;
         flex-direction: column;
@@ -45,6 +56,7 @@
     .header-name {
         width: 100%;
     }
+    /* --- Header. Social media icons styles --- */
     .header-smIcons ul {
         flex-direction: row;
     }
@@ -61,27 +73,28 @@
         background-size: auto 100%;
         background-position: right bottom;
     }
+    /* - Section "About me". Text styles - */
     /* --- Section "Bootcamp prerequisites" --- */
     .prerequisites-links ul {
         font-size: 1.4rem;
     }
+    /* - Section "Bootcamp prerequisites". Text styles - */
     /* --- Section "Carousel" --- */
     .carousel-images-list li {
         padding-bottom: 0.5rem;
     }
-    
+    /* - Section "Carousel". Animation - */
     /* - Section "Carousel". Buttons and indicators - */
     .dots {
         margin-right: 25%;
     }
     /* --- Section "Skills" --- */
-  
-    }
-    .grid-item{
+    /* - Section "Skills". Techologies styles- */
+    .grid-item {
         width: 6rem;
         height: 6rem;
-     
     }
+    /* - Section "Skills". Accordion styles- */
     /* --- Section "Contact me" --- */
     .section-contactme {
         background-image: url("../images/background/section_contactme_background_max_600.png");
@@ -91,6 +104,9 @@
         padding: 1rem;
     }
     /* ------ Footer ------ */
+    /* --- Footer. Text styles --- */
+    /* --- Foter. Social media styles --- */
     .footer-smIcons a {
         font-size: 7vw;
     }
+}
