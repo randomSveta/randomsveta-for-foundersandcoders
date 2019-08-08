@@ -9,7 +9,7 @@
     <link rel="stylesheet" media="screen and (max-width: 600px)" href="./css/styles_media_max_600px.css">
     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" rel="stylesheet">
-    <script src="./js/index.js"></script>
+   <script src="./js/index.js"></script>
     <title>Svetlana Klimova</title>
 </head>
 
@@ -157,21 +157,21 @@
                     </ul>
                     <div class="buttons-indicators">
                         <div class="slide-indicators">
-                            <button type="button" onclick="increaseNumberOfSlide(-1)"><i class="fas fa-chevron-left"></i>
+                            <button type="button" onclick="increaseSlideIndex(-1)"><i class="fas fa-chevron-left"></i>
                             </button>
-                            <button type="button" onclick="increaseNumberOfSlide(1)"><i class="fas fa-chevron-right"></i></button>
+                            <button type="button" onclick="increaseSlideIndex(1)"><i class="fas fa-chevron-right"></i></button>
                         </div>
                         <div class="buttons-bottom-carousel">
                             <div class="dots">
                                 <span class="dot" onclick="findCurrentSlide(0)"></span>
                                 <span class="dot" onclick="findCurrentSlide(1)"></span>
-                                <span class="dot" onclick="findCcurrentSlide(2)"></span>
+                                <span class="dot" onclick="findCurrentSlide(2)"></span>
                                 <span class="dot" onclick="findCurrentSlide(3)"></span>
                                 <span class="dot" onclick="findCurrentSlide(4)"></span>
                             </div>
                             <div class="play-stop-buttons">
-                                <button type="button" onclick="stopPlayingSlides()"><i class="fa fa-stop-circle"></i></button>
-                                <button type="button" onclick="startPlayingSlides()"><i class="fa fa-play-circle"></i></button>
+                                <button type="button" onclick="controlStopPlaySlides(false)"><i class="fa fa-stop-circle"></i></button>
+                                <button type="button" onclick="controlStopPlaySlides(true)"><i class="fa fa-play-circle"></i></button>
 
                             </div>
                         </div>

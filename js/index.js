@@ -19,11 +19,10 @@ function navbarToggle() {
 /* ------ Carousel ------ */
 
 let slideIndex = 0;
-let playSlides = true;
+let intervalPlay;
 
-function increaseNumberOfSlide(n) {
+function increaseSlideIndex(n) {
     slideIndex += n;
-    console.log(slideIndex);
     changeSlides(slideIndex);
 }
 
@@ -32,12 +31,22 @@ function findCurrentSlide(index) {
     changeSlides(slideIndex);
 }
 
+function controlStopPlaySlides(playSlides) {
+    if (playSlides) {
+        changeSlides(slideIndex);
+        intervalPlay = setInterval(increaseSlideIndex, 3000, 1);
+    }
+    else {
+        clearInterval(intervalPlay);
+    }
+}
+
 function changeSlides(index) {
     let slides = document.getElementsByClassName('slide');
     let dots = document.getElementsByClassName('dot');
 
     if (index < 0) {
-        slideIndex = slides.length-1;
+        slideIndex = slides.length - 1;
     }
     else if (index >= slides.length || index == 'null' || index == 'undefined') {
         slideIndex = 0;
@@ -47,7 +56,6 @@ function changeSlides(index) {
         slides[i].style.display = 'none';
         dots[i].classList.remove("fill-color");
     }
-    console.log(slideIndex);
     slides[slideIndex].style.display = 'block';
     dots[slideIndex].classList.add("fill-color");
 }
@@ -72,7 +80,8 @@ function openAccordionContent() {
 }
 
 /* --- Window onload --- */
-window.onload = function () {
-    changeSlides(0);
+window.addEventListener("DOMContentLoaded", function () {
+    controlStopPlaySlides(true);
     openAccordionContent();
-};
+}, false);
+

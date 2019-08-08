@@ -476,6 +476,8 @@ nav .toggle-bars {
     list-style: none;
     margin: 0 0 5rem 0;
     padding: 1.5rem 0;
+    width: 100%;
+    overflow: hidden;
 }
 
 .carousel-images-list li {
@@ -489,9 +491,6 @@ nav .toggle-bars {
     height: auto;
 }
 
-.slide {
-    display: none;
-}
 
 /* --- Section "Carousel". Buttons and indicators --- */
 
