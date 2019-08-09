@@ -15,17 +15,21 @@ function navbarToggle() {
         icon.className = "fa fa-bars"
     }
 }
-/* ------ Add active-nav-item class to Nevigation 
+/* ------ Add active-nav-item class to Nevigation ------ */
+/* --- Add active-nav-item class to Nevigation onclick --- */
 function addActiveClassToNavbarItem() {
     document.querySelectorAll('.underscore-nav-item a.active-nav-item').forEach((link) =>
         link.classList.remove('active-nav-item')
     )
     event.target.classList.add("active-nav-item");
-};------ */
+};
 
 
-/* ------ Add active-nav-item class to Nevigation onscroll——— */
+/* --- Add active-nav-item class to Nevigation onscroll ——— */
+
+//Have tried to change url during page scrolling, but it causes issues with onclick function, need to think. Coomented for now
 function addActiveClassToNavbarItemOnscroll() {
+
     document.querySelectorAll('a.active-nav-item').forEach((link) =>
         link.classList.remove('active-nav-item')
     );
@@ -48,57 +52,62 @@ function addActiveClassToNavbarItemOnscroll() {
     const sectionContactMe = document.getElementById('contact-me');
     const contactmeTopBorder = sectionContactMe.getBoundingClientRect().top;
 
-    if (navBarHeight >= aboutmeTopBorder) {
+    //if (navBarHeight < aboutmeTopBorder && window.location.hash && event != 'click') {
+    //  window.location.hash = ''
+    //}
+    if (navBarHeight >= aboutmeTopBorder && navBarHeight < bootcamppreTopBorder) {
         document.querySelectorAll('a.active-nav-item').forEach((link) =>
             link.classList.remove('active-nav-item')
         );
         document.getElementById('nav-aboutme').classList.add('active-nav-item');
-        
+        //if (!window.location.hash) {
+        //  window.location.hash = '#about-me'
+        //}
+        //else if (!window.location.hash.includes('about-me')) {
+        //  window.location.hash = '#about-me'
+        //}
     }
-    if (navBarHeight >= bootcamppreTopBorder) {
+    if (navBarHeight >= bootcamppreTopBorder && navBarHeight < carouselTopBorder) {
         document.querySelectorAll('a.active-nav-item').forEach((link) =>
             link.classList.remove('active-nav-item')
         );
         document.getElementById('nav-bootcamppre').classList.add('active-nav-item');
-        
-    }
-    if (navBarHeight >= carouselTopBorder) {
-        document.querySelectorAll('a.active-nav-item').forEach((link) =>
-            link.classList.remove('active-nav-item')
-        );    
-        document.getElementById('nav-carousel').classList.add('active-nav-item');       
-    }
+        //if (!window.location.hash.includes('bootcamp-prerequisites')) {
+        //   window.location.hash = '#bootcamp-prerequisites';
+        //}
 
-    if (navBarHeight >= skillsTopBorder) {
+    }
+    if (navBarHeight >= carouselTopBorder && navBarHeight < skillsTopBorder) {
         document.querySelectorAll('a.active-nav-item').forEach((link) =>
             link.classList.remove('active-nav-item')
         );
+        document.getElementById('nav-carousel').classList.add('active-nav-item');
+        //if (!window.location.hash.includes('carousel')) {
+        //  window.location.hash = '#carousel';
+        //}
+    }
+
+    if (navBarHeight >= skillsTopBorder && navBarHeight < contactmeTopBorder) {
+        document.querySelectorAll('a.active-nav-item').forEach((link) =>
+            link.classList.remove('active-nav-item')
+        );
+
         document.getElementById('nav-skills').classList.add('active-nav-item');
-        
+        //if (!window.location.hash.includes('skills')) {
+        //  window.location.hash = '#skills';
+        //}
+
     }
     if (navBarHeight >= contactmeTopBorder) {
         document.querySelectorAll('a.active-nav-item').forEach((link) =>
             link.classList.remove('active-nav-item')
         );
         document.getElementById('nav-contactme').classList.add('active-nav-item');
-        
+        //if (!window.location.hash.includes('contact-me')) {
+        //  window.location.hash = '#contact-me';
+        //}
     }
-
 }
-/*
-Hide Navigation when user scrolls down and show when scrolls up
-
-let previousScrollPosition = window.pageYOffset;
-
-function hideAndShowNavigation() {
-    const currentScrollPosition = window.pageYOffset;
-    if (previousScrollPosition > currentScrollPosition) {
-        document.getElementById("navbar-top").style.top = "0";
-    } else {
-        document.getElementById("navbar-top").style.top = "-40rem";
-    }
-    previousScrollPosition = currentScrollPosition;
-}*/
 
 /* ------ Carousel ------ */
 
