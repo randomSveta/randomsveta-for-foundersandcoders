@@ -38,6 +38,7 @@ function changeScrollStatus(){
 /* --- Add active-nav-item class to Nevigation onscroll ——— */
 
 function addActiveClassToNavbarItemOnscroll() {
+    
  if(allowScroll) {
     document.querySelectorAll('a.active-nav-item').forEach((link) =>
     link.classList.remove('active-nav-item')

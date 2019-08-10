@@ -68,8 +68,13 @@ section {
     height: 100%;
     margin-bottom: 3rem;
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -ms-flex-line-pack: center;
     align-content: center;
 }
 
@@ -153,7 +158,12 @@ ul {
 }
 
 form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     width: 50%!important;
     /*to fix layout issues caused by some browser extensions adding their styles */
@@ -185,37 +195,48 @@ input[type=text], input[type=email] {
 textarea:focus, input:focus {
     border-color: #99ced4;
     outline: 0.2rem solid #99ced4;
+    -webkit-box-shadow: none;
     box-shadow: none;
     outline-offset: 0;
 }
 
-textarea::placeholder, input::placeholder {
-    /* Chrome, Firefox, Opera, Safari 10.1+ */
+textarea::-webkit-input-placeholder, input::-webkit-input-placeholder {
     font-family: 'Raleway', Arial, sans-serif;
     color: #99a4a5;
     opacity: 1;
-    /* Firefox */
+    font-size: 1.2rem;
+    font-weight: 50;
+}
+
+textarea::-moz-placeholder, input::-moz-placeholder {
+    font-family: 'Raleway', Arial, sans-serif;
+    color: #99a4a5;
+    opacity: 1;
     font-size: 1.2rem;
     font-weight: 50;
 }
 
 textarea:-ms-input-placeholder, input:-ms-input-placeholder {
-    /* Internet Explorer 10-11 */
     font-family: 'Raleway', Arial, sans-serif;
     color: #99a4a5;
     opacity: 1;
-    /* Firefox */
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 50;
 }
 
-textarea::-ms-input-placeholder, input:-ms-input-placeholder {
-    /* Microsoft Edge */
+textarea::-ms-input-placeholder, input::-ms-input-placeholder {
     font-family: 'Raleway', Arial, sans-serif;
     color: #99a4a5;
     opacity: 1;
-    /* Firefox */
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    font-weight: 50;
+}
+
+textarea::placeholder, input::placeholder {
+    font-family: 'Raleway', Arial, sans-serif;
+    color: #99a4a5;
+    opacity: 1;
+    font-size: 1.2rem;
     font-weight: 50;
 }
 
@@ -240,19 +261,29 @@ button {
     padding: 0;
     width: 100%;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-item-align: center;
     align-self: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
 .large-screen-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     display: -webkit-flex;
-    /* Safari */
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     -ms-flex-align: center;
-    -webkit-align-items: center;
     -webkit-box-align: center;
     align-items: center;
 }
@@ -274,17 +305,19 @@ button {
     padding: 1rem 0;
     width: 100%;
     z-index: 10;
+    -webkit-transition: top 0.5s;
+    -o-transition: top 0.5s;
     transition: top 0.5s;
 }
 
 .navigation-bar ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     display: -webkit-flex;
-    /* Safari */
     margin: 0;
     padding: 0;
     -ms-flex-align: center;
-    -webkit-align-items: center;
     -webkit-box-align: center;
     align-items: center;
 }
@@ -301,6 +334,7 @@ nav .toggle-bars {
     position: relative;
     color: rgba(226, 230, 231, 0.9);
     padding: 0.5rem;
+    border: 0.15rem solid transparent;
 }
 
 .underscore-nav-item a::after {
@@ -312,11 +346,19 @@ nav .toggle-bars {
     left: 0;
     right: 0;
     bottom: -1rem;
+    -webkit-transform: scale(0, 1);
+    -ms-transform: scale(0, 1);
     transform: scale(0, 1);
+    -webkit-transition: -webkit-transform ease-in-out 250ms;
+    transition: -webkit-transform ease-in-out 250ms;
+    -o-transition: transform ease-in-out 250ms;
     transition: transform ease-in-out 250ms;
+    transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
 }
 
 .underscore-nav-item a:hover::after, .underscore-nav-item a:active::after, .underscore-nav-item a:focus::after {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
     transform: scale(1, 1);
     color: #99ced4;
     text-decoration: none;
@@ -326,7 +368,8 @@ nav .toggle-bars {
     color: #99ced4;
     text-decoration: none;
 }
-.active-nav-item {
+
+a.active-nav-item {
     border: 0.15rem solid #99ced4;
 }
 
@@ -335,8 +378,13 @@ nav .toggle-bars {
 .header-content {
     height: 100%;
     padding-top: 6%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: right;
+    -webkit-box-pack: flex-end;
+    -ms-flex-pack: flex-end;
+    justify-content: flex-end;
+    -ms-flex-line-pack: center;
     align-content: center;
 }
 
@@ -354,18 +402,34 @@ nav .toggle-bars {
 
 .header-smIcons {
     background-color: rgba(0, 0, 0, 0.75);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -ms-flex-line-pack: center;
     align-content: center;
 }
 
 .header-smIcons ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     margin: 1rem 0;
     padding: 0 1rem;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -ms-flex-line-pack: center;
     align-content: center;
 }
 
@@ -381,7 +445,11 @@ nav .toggle-bars {
 }
 
 .header-smIcons li {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin: 1rem 0;
     padding: 0;
@@ -426,20 +494,31 @@ nav .toggle-bars {
     background-color: rgba(56, 60, 63, 0.85);
     color: white;
 }
+
 .section-bootcamppre-text-and-prerequisites {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     margin: 0;
     padding: 0;
     font-weight: 100;
 }
+
 .section-bootcamppre-prerequisites {
     width: 50%;
     margin: 1.5rem 3rem;
     padding: 0rem;
 }
+
 /* - Section "Bootcamp prerequisites". Text styles - */
+
 .section-bootcamppre h2 {
     padding: 3rem 0 1.5rem 0;
 }
@@ -510,20 +589,41 @@ nav .toggle-bars {
 }
 
 .carousel-images-list li {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
 .carousel-images-list img {
     width: 55%;
     height: auto;
+    -webkit-box-shadow: 0 0.5rem 0.9rem 0 rgba(0, 0, 0, 0.5), 0 0.7rem 2rem 0 rgba(0, 0, 0, 0.25);
     box-shadow: 0 0.5rem 0.9rem 0 rgba(0, 0, 0, 0.5), 0 0.7rem 2rem 0 rgba(0, 0, 0, 0.25);
 }
+
 /* - Section "Carousel". Animation - */
+
 .slide-to-right-animation {
     position: relative;
+    -webkit-animation: slideRight 2s;
     animation: slideRight 2s;
+}
+
+@-webkit-keyframes slideRight {
+    from {
+        left: -120px;
+        opacity: 0;
+    }
+    to {
+        left: 0;
+        opacity: 1;
+    }
 }
 
 @keyframes slideRight {
@@ -539,7 +639,19 @@ nav .toggle-bars {
 
 .slide-to-left-animation {
     position: relative;
+    -webkit-animation: slideLeft 2s;
     animation: slideLeft 2s;
+}
+
+@-webkit-keyframes slideLeft {
+    from {
+        right: -120px;
+        opacity: 0;
+    }
+    to {
+        right: 0;
+        opacity: 1;
+    }
 }
 
 @keyframes slideLeft {
@@ -566,7 +678,7 @@ nav .toggle-bars {
 }
 
 .section-carousel button:hover, .dot:hover {
-    background-color:rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     color: rgba(0, 0, 0, 0.85);
 }
 
@@ -593,8 +705,15 @@ nav .toggle-bars {
     position: absolute;
     bottom: 0;
     left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
     width: 100%;
     height: 100%;
@@ -602,25 +721,39 @@ nav .toggle-bars {
 }
 
 .slide-indicators {
-    display: inline-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     padding-bottom: 15%;
 }
 
 .buttons-bottom-carousel {
-    display: inline-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 0;
 }
 
 .dots {
-    display: inline-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     margin-right: 30%;
 }
 
 .play-stop-buttons {
-    display: inline-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }
 
 .dot {
@@ -648,10 +781,16 @@ nav .toggle-bars {
 .section-skills li {
     padding: 0.5rem 0;
 }
+
 /* - Section "Skills". Techologies styles- */
+
 .technologies-and-accordion {
     width: 100%;
-    display: inline-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     padding-bottom: 3rem;
 }
@@ -663,9 +802,13 @@ nav .toggle-bars {
 }
 
 .grid-container {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: auto 1.5rem auto 1.5rem auto;
     grid-template-columns: auto auto auto;
     grid-gap: 1.5rem;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -728,6 +871,7 @@ a.grid-item:hover {
     font-size: 4.5rem;
     padding-bottom: 1rem;
 }
+
 /* Section "Skills". Accordion styles" */
 
 .accordion-certificates-content {
@@ -742,15 +886,20 @@ a.grid-item:hover {
     width: 100%;
     border: none;
     text-align: left;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
     transition: 0.4s;
     font-size: 2rem;
 }
-.cert-accordion-content a{
+
+.cert-accordion-content a {
     color: rgba(0, 0, 0, 1);
 }
-.cert-accordion-content a:hover{
+
+.cert-accordion-content a:hover {
     color: rgb(98, 134, 138);
 }
+
 .active-acc-button, .cert-accordion:hover {
     background-color: #99ced4;
     color: rgba(0, 0, 0, 0.75);
@@ -772,6 +921,8 @@ a.grid-item:hover {
     background-color: white;
     max-height: 0;
     overflow: hidden;
+    -webkit-transition: max-height 0.2s ease-out;
+    -o-transition: max-height 0.2s ease-out;
     transition: max-height 0.2s ease-out;
 }
 
@@ -789,7 +940,11 @@ a.grid-item:hover {
 .section-contactme-form {
     border: 0.1rem solid rgba(0, 0, 0, 0.85);
     padding: 3rem 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: right;
+    -ms-flex-pack: right;
     justify-content: right;
 }
 
@@ -823,12 +978,19 @@ a.grid-item:hover {
 /* --- Foter. Social media styles --- */
 
 .footer-smIcons {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -ms-flex-line-pack: center;
     align-content: center;
 }
 
 .footer-smIcons ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: 0;
     padding: 1.5rem 1rem 0 1rem;
