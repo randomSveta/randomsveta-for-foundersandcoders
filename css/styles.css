@@ -29,7 +29,6 @@
 
 /* colours: rgb(0, 0, 0), rgb(255, 255, 255), rgb(40, 43, 46), rgb(198, 239, 241) */
 
-
 /* ------ Global styles ------ */
 
 /* --- Body blocks styles --- */
@@ -91,6 +90,16 @@ footer {
     padding-top: 0;
     background-color: rgb(40, 43, 46);
     color: rgb(255, 255, 255);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 /* --- Headers (h1, h2, ...), text and links styles --- */
@@ -102,25 +111,22 @@ h1 {
     padding: 1.5rem 0;
     margin: 0;
     background-color: rgb(255, 255, 255);
-    width: 100%;
 }
 
 h2 {
     text-align: center;
     font-size: 3rem;
     font-weight: 300;
-    padding: 3rem 0 1.5rem 0;
-    margin: 0 0 1.5rem 0;
-    width: 100%;
+    padding: 1.5rem;
+    margin: 1rem;
 }
 
 h3 {
     text-align: center;
     font-size: 2.5rem;
     font-weight: 300;
-    padding: 0 0 1.5rem 0;
-    margin: 0 0 1.5rem 0;
-    width: 100%;
+    padding: 1.5rem;
+    margin: 1rem;
 }
 
 h4 {
@@ -129,12 +135,11 @@ h4 {
     font-weight: 300;
     padding: 0.5rem 0 0 0;
     margin: 0.5rem 0 0 0;
-    width: 100%;
 }
 
 p {
-    padding: 3rem;
-    margin: 0;
+    padding: 1.5rem;
+    margin: 3rem;
     font-size: 1.5vw;
     text-align: justify;
 }
@@ -147,7 +152,7 @@ a {
 }
 
 a:hover {
-    border: 0.1rem solid rgb(36, 143, 143);
+    border: 0.1rem dashed rgb(36, 143, 143);
     color: rgb(36, 143, 143);
 }
 
@@ -196,7 +201,7 @@ input[type=text], input[type=email] {
 }
 
 textarea:focus, input:focus {
-    border-color: rgba(153, 206, 212, 0.7) ;
+    border-color: rgba(153, 206, 212, 0.7);
     outline: 0.2rem solid rgba(153, 206, 212, 0.7);
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -213,7 +218,7 @@ textarea::-webkit-input-placeholder, input::-webkit-input-placeholder {
 
 textarea::-moz-placeholder, input::-moz-placeholder {
     font-family: 'Raleway', Arial, sans-serif;
-    color:  rgba(40, 43, 46, 0.8);
+    color: rgba(40, 43, 46, 0.8);
     opacity: 1;
     font-size: 1.2rem;
     font-weight: 100;
@@ -221,7 +226,7 @@ textarea::-moz-placeholder, input::-moz-placeholder {
 
 textarea:-ms-input-placeholder, input:-ms-input-placeholder {
     font-family: 'Raleway', Arial, sans-serif;
-    color:  rgba(40, 43, 46, 0.8);
+    color: rgba(40, 43, 46, 0.8);
     opacity: 1;
     font-size: 1.2rem;
     font-weight: 100;
@@ -229,7 +234,7 @@ textarea:-ms-input-placeholder, input:-ms-input-placeholder {
 
 textarea::-ms-input-placeholder, input::-ms-input-placeholder {
     font-family: 'Raleway', Arial, sans-serif;
-    color:  rgba(40, 43, 46, 0.8);
+    color: rgba(40, 43, 46, 0.8);
     opacity: 1;
     font-size: 1.2rem;
     font-weight: 100;
@@ -237,7 +242,7 @@ textarea::-ms-input-placeholder, input::-ms-input-placeholder {
 
 textarea::placeholder, input::placeholder {
     font-family: 'Raleway', Arial, sans-serif;
-    color:  rgba(40, 43, 46, 0.8);
+    color: rgba(40, 43, 46, 0.8);
     opacity: 1;
     font-size: 1.2rem;
     font-weight: 100;
@@ -259,9 +264,6 @@ button {
 }
 
 .section-content {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    padding: 0;
     width: 100%;
     height: 100%;
     display: -webkit-box;
@@ -373,7 +375,7 @@ nav .toggle-bars {
 }
 
 a.active-nav-item {
-    border: 0.15rem solid rgb(198, 239, 241);
+    border: 0.15rem dashed rgb(198, 239, 241);
 }
 
 /* --- Header. Content styles--- */
@@ -396,6 +398,7 @@ a.active-nav-item {
 }
 
 .header-name p {
+    margin: 0;
     font-size: 2rem;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.7);
@@ -476,13 +479,12 @@ a.active-nav-item {
 /* - Section "About me". Text styles - */
 
 .section-aboutme-text {
-    margin: 1.5rem 3rem;
+    margin: 3rem;
     width: 50%;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.85);
 }
 
 /* --- Section "Bootcamp prerequisites" --- */
-
 
 .section-bootcamppre .section-content {
     background-image: url("../images/background/three_sections_background.png");
@@ -490,7 +492,6 @@ a.active-nav-item {
     background-repeat: no-repeat;
     background-size: cover;
     background-origin: content-box, border-box;
-
 }
 
 .section-bootcamppre-text-and-prerequisites {
@@ -504,36 +505,30 @@ a.active-nav-item {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    margin: 0;
-    padding: 0;
+    margin: 3rem;
 }
 
 .section-bootcamppre-prerequisites {
     width: 50%;
-    margin: 1.5rem 3rem;
-    padding: 0rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-right: 6rem;
+    border: 0.2rem dashed rgba(40, 43, 46, 0.5);
 }
 
 /* - Section "Bootcamp prerequisites". Text styles - */
 
-
-.section-bootcamppre p {
-    padding: 0 3rem 3rem 3rem;
-}
-
 .section-bootcamppre-text {
     width: 50%;
-    padding: 0;
-    margin: 1.5rem 3rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 0.2rem dashed rgba(40, 43, 46, 0.5);
 }
 
 .prerequisites-links ul {
-    padding: 0 3rem 3rem 3rem;
+    padding: 1.5rem;
     font-size: 1.5vw;
-    list-style-position: inside;
     list-style: circle;
+    list-style-position: inside;
 }
-
 
 .prerequisites-links li {
     margin: 1rem;
@@ -551,13 +546,7 @@ a.active-nav-item {
 
 /* --- Section "Carousel" --- */
 
-.section-carousel {
-    margin: 0;
-    padding: 0;
-    color: rgb(40, 43, 46);
-}
 .section-carousel .section-content {
-    background-color:  rgba(198, 239, 241, 0.6);
     background-image: url("../images/background/three_sections_background.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -566,11 +555,11 @@ a.active-nav-item {
 }
 
 .section-all-carousel-elements {
-    margin: auto;
     position: relative;
-    max-width: 100%;
+    left: 0;
+    width: auto;
     height: auto;
-    padding: 1.5rem 3rem;
+    margin: 3rem;
 }
 
 .carousel-images-list {
@@ -696,7 +685,6 @@ a.active-nav-item {
 .buttons-indicators {
     position: absolute;
     bottom: 0;
-    left: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -707,9 +695,8 @@ a.active-nav-item {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
-    width: 100%;
-    height: 100%;
     padding-bottom: 1rem;
+    width: 100%;
 }
 
 .slide-indicators {
@@ -732,7 +719,7 @@ a.active-nav-item {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 0;
+    margin-top: 1.5rem;
 }
 
 .dots {
@@ -764,13 +751,12 @@ a.active-nav-item {
 
 /* --- Section "Skills" --- */
 
-.section-skills .section-content{
+.section-skills .section-content {
     background-image: url("../images/background/three_sections_background.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-origin: content-box, border-box;
-
 }
 
 .section-skills ul {
@@ -786,19 +772,19 @@ a.active-nav-item {
 /* - Section "Skills". Techologies styles- */
 
 .technologies-and-accordion {
-    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding-bottom: 3rem;
+    margin: 3rem;
 }
 
 .technologies-content {
     width: 50%;
-    margin-right: 5rem;
+    margin-right: 6rem;
+    border: 0.2rem dashed rgba(40, 43, 46, 0.5);
 }
 
 .grid-container {
@@ -810,6 +796,8 @@ a.active-nav-item {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    padding: 1.5rem;
+    margin: 3rem;
 }
 
 .grid-item {
@@ -843,6 +831,12 @@ a.grid-item:hover {
 
 .accordion-certificates-content {
     width: 50%;
+    border: 0.2rem dashed rgba(40, 43, 46, 0.5);
+}
+
+.accordion-certificates {
+    padding: 1.5rem;
+    margin: 3rem;
 }
 
 .cert-accordion {

@@ -36,6 +36,10 @@
         margin: 0;
         padding: 0;
     }
+    section:last-of-type {
+        margin: 0;
+
+    }
     /* --- Headers (h1, h2, ...), text and links styles --- */
     h1 {
         font-size: 3rem;
@@ -48,7 +52,6 @@
     }
     p {
         font-size: 2vh;
-        text-align: justify;
     }
     /* --- Global elements styles --- */
     form {
@@ -149,8 +152,8 @@
     }
     /* --- Section "Bootcamp prerequisites" --- */
     .section-bootcamppre {
-        background-image: url("../images/background/section_aboutme_background.png");
-        background-position: right;
+        background-image: url("../images/background/three_sections_background.png");
+        background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         background-origin: content-box, border-box;
@@ -164,8 +167,7 @@
     }
     .section-bootcamppre-prerequisites {
         width: 100%;
-        margin: 0;
-        padding: 0rem;
+        margin-right: 0;
     }
     .prerequisites-links ul {
         padding: 0 3rem 3rem 3rem;
@@ -174,9 +176,19 @@
     /* - Section "Bootcamp prerequisites". Text styles - */
     .section-bootcamppre-text {
         width: 100%;
-        margin: 0;
+        margin-bottom: 6rem;
     }
     /* --- Section "Carousel" --- */
+    .section-carousel {
+        background-image: url("../images/background/three_sections_background.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-origin: content-box, border-box;
+    }
+    .section-carousel .section-content {
+        background-image: none;
+    }
     .carousel-images-list img {
         width: 100%;
     }
@@ -186,7 +198,7 @@
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
-        padding-bottom: 64%;
+        padding-bottom: 65.5%;
     }
     .dots {
         display: -webkit-inline-box;
@@ -195,16 +207,24 @@
         margin-right: 50%;
     }
     /* --- Section "Skills" --- */
+    .section-skills {
+        background-image: url("../images/background/three_sections_background.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-origin: content-box, border-box;
+    }
+    .section-skills .section-content {
+        background-image: none;
+    }
     .technologies-and-accordion {
-        width: 100%;
-        padding-bottom: 3rem;
         display: block;
     }
     /* - Section "Skills". Techologies styles- */
     .technologies-content {
         width: 100%;
         margin-right: 0;
-        margin-bottom: 5rem;
+        margin-bottom: 6rem;
     }
     /* - Section "Skills". Accordion styles- */
     .accordion-certificates-content {
