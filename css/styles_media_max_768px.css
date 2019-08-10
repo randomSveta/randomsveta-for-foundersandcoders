@@ -60,12 +60,15 @@
         display: block;
     }
     .small-screen-flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         display: -webkit-flex;
         /* Safari */
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
         -ms-flex-align: center;
-        -webkit-align-items: center;
         -webkit-box-align: center;
         align-items: center;
     }
@@ -109,9 +112,17 @@
         font-size: 4.5vh;
     }
     .header-smIcons {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -ms-flex-line-pack: center;
         align-content: center;
     }
     /* ------ Sections ------ */
@@ -137,6 +148,17 @@
         width: 100%;
     }
     /* --- Section "Bootcamp prerequisites" --- */
+    .section-bootcamppre {
+        background-image: url("../images/background/section_aboutme_background.png");
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-origin: content-box, border-box;
+        background-color: rgba(226, 230, 231, 0.9);
+    }
+    .section-bootcamppre .section-content {
+        background-image: none;
+    }
     .section-bootcamppre-text-and-prerequisites {
         display: block;
     }
@@ -161,10 +183,14 @@
     /* - Section "Carousel". Animation - */
     /* - Section "Carousel". Buttons and indicators - */
     .slide-indicators {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         padding-bottom: 64%;
     }
     .dots {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
         display: inline-flex;
         margin-right: 50%;
     }

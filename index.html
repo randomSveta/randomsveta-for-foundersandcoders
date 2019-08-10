@@ -9,7 +9,7 @@
     <link rel="stylesheet" media="screen and (max-width: 600px)" href="./css/styles_media_max_600px.css">
     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" rel="stylesheet">
-   <script src="./js/index.js"></script>
+    <script src="./js/index.js"></script>
     <title>Svetlana Klimova</title>
 </head>
 
@@ -22,12 +22,13 @@
                     <div class="navbar-brand">
                         <a href="#"><img src="./images/logo.png" alt="logo: an ice cream on a circle background"></a>
                     </div>
-                    <div class="toggle-bars"><a href="javascript:void(0);" onclick="navbarToggle()">
-                            <i class="fa fa-bars" id="menu-icon"></i>
+                    <div class="toggle-bars"><a href="javascript:void(0);" onclick="navbarToggle()" onkeypress="navbarToggle()"
+                            aria-label="The navigation icon (hamburger) for tablets and mobile phones">
+                            <i class="fa fa-bars" id="menu-icon" aria-hidden="true" title="Navigation"></i>
                         </a>
                     </div>
                 </div>
-                <ul class="underscore-nav-item" id="nav-links" onclick="addActiveClassToNavbarItem()">
+                <ul class="underscore-nav-item" id="nav-links" onclick="addActiveClassToNavbarItem()" onkeypress="addActiveClassToNavbarItem()">
                     <li><a href="#about-me" id="nav-aboutme">ABOUT ME</a></li>
                     <li><a href="#bootcamp-prerequisites" id="nav-bootcamppre">BOOTCAMP PREREQUISITES</a></li>
                     <li><a href="#carousel" id="nav-carousel">CAROUSEL</a></li>
@@ -44,18 +45,26 @@
             </div>
             <div class="header-smIcons">
                 <ul>
-                    <li><a href="https://github.com/randomSveta" target="_blank"><i class="fab fa-github"></i></a>
+                    <li><a href="https://github.com/randomSveta" target="_blank"
+                            aria-label="Link to Sveta's GitHunb profile"><i class="fab fa-github" aria-hidden="true"
+                                title="GitHub"></i></a>
                     </li>
-                    <li><a href="https://www.linkedin.com/in/svetaklimova/" target="_blank"><i
-                                class="fab fa-linkedin"></i></a></li>
-                    <li><a href="https://www.freecodecamp.org/randomsveta" target="_blank"><i
-                                class="fab fa-free-code-camp"></i></a></li>
-                    <li><a href="https://randomsveta.wordpress.com/" target="_blank"><i
-                                class="fab fa-wordpress"></i></a>
+                    <li><a href="https://www.linkedin.com/in/svetaklimova/" target="_blank"
+                            aria-label="Link to Sveta's LinkedIn profile" title="LinkedIn"><i class="fab fa-linkedin"
+                                aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.freecodecamp.org/randomsveta" target="_blank"
+                            aria-label="Link to Sveta's FreeCodeCamp profile" title="FreeCodeCamp"><i
+                                class="fab fa-free-code-camp" aria-hidden="true"></i></a></li>
+                    <li><a href="https://randomsveta.wordpress.com/" target="_blank"
+                            aria-label="Link to Sveta's WordPress profile" title="WordPress"><i class="fab fa-wordpress"
+                                aria-hidden="true"></i></a>
                     </li>
-                    <li><a href="https://www.codewars.com/users/randomsveta" target="_blank"><i
-                                class="fa fa-code"></i></a></li>
-                    <li><a href="https://codepen.io/randomsveta/" target="_blank"><i class="fab fa-codepen"></i></a>
+                    <li><a href="https://www.codewars.com/users/randomsveta" target="_blank"
+                            aria-label="Link to Sveta's CodeWars profile" title="CodeWars"><i class="fa fa-code"
+                                aria-hidden="true"></i></a></li>
+                    <li><a href="https://codepen.io/randomsveta/" target="_blank"
+                            aria-label="Link to Sveta's CodePen profile"><i class="fab fa-codepen" aria-hidden="true"
+                                title="CodePen"></i></a>
                     </li>
                 </ul>
             </div>
@@ -157,21 +166,32 @@
                     </ul>
                     <div class="buttons-indicators">
                         <div class="slide-indicators">
-                            <button type="button" onclick="increaseSlideIndex(-1)"><i class="fas fa-chevron-left"></i>
+                            <button type="button" onclick="increaseSlideIndex(-1)" onkeypress="increaseSlideIndex(-1)" aria-label="Previous slide"><i
+                                    class="fas fa-chevron-left" aria-hidden="true" title="Previous slide"></i>
                             </button>
-                            <button type="button" onclick="increaseSlideIndex(1)"><i class="fas fa-chevron-right"></i></button>
+                            <button type="button" onclick="increaseSlideIndex(1)"  onkeypress="increaseSlideIndex(1)" aria-label="Next slide"><i
+                                    class="fas fa-chevron-right" aria-hidden="true" title="Next slide"></i></button>
                         </div>
                         <div class="buttons-bottom-carousel">
                             <div class="dots">
-                                <span class="dot" onclick="findCurrentSlide(0)"></span>
-                                <span class="dot" onclick="findCurrentSlide(1)"></span>
-                                <span class="dot" onclick="findCurrentSlide(2)"></span>
-                                <span class="dot" onclick="findCurrentSlide(3)"></span>
-                                <span class="dot" onclick="findCurrentSlide(4)"></span>
+                                <span class="dot" onclick="findCurrentSlide(0)" onkeypress="findCurrentSlide(0)"
+                                    aria-label="Current slide"></span>
+                                <span class="dot" onclick="findCurrentSlide(1)" onkeypress="findCurrentSlide(1)"
+                                    aria-label="Current slide"></span>
+                                <span class="dot" onclick="findCurrentSlide(2)" onkeypress="findCurrentSlide(2)"
+                                    aria-label="Current slide"></span>
+                                <span class="dot" onclick="findCurrentSlide(3)" onkeypress="findCurrentSlide(3)"
+                                    aria-label="Current slide"></span>
+                                <span class="dot" onclick="findCurrentSlide(4)" onkeypress="findCurrentSlide(4)"
+                                    aria-label="Current slide"></span>
                             </div>
                             <div class="play-stop-buttons">
-                                <button type="button" onclick="controlStopPlaySlides(false)"><i class="fa fa-stop-circle"></i></button>
-                                <button type="button" onclick="controlStopPlaySlides(true)"><i class="fa fa-play-circle"></i></button>
+                                <button type="button" onclick="controlStopPlaySlides(false)"
+                                    onkeypress="controlStopPlaySlides(false)" aria-label="Autoplay slides"><i
+                                        class="fa fa-stop-circle" aria-hidden="true" title="Play"></i></button>
+                                <button type="button" onclick="controlStopPlaySlides(true)"
+                                    onkeypress="controlStopPlaySlides(true)" aria-label="Stop slides autoplay"><i
+                                        class="fa fa-play-circle" aria-hidden="true" title="Stop"></i></button>
 
                             </div>
                         </div>
@@ -189,15 +209,24 @@
                     <div class="technologies-content">
                         <h3>Technologies</h3>
                         <div class="technologies-icons grid-container">
-                            <a href="#" class="grid-item pink"><i class="fab fa-html5"></i><br>HTML</a>
-                            <a href="#" class="grid-item blue"><i class="fab fa-css3-alt"></i><br>CSS</a>
-                            <a href="#" class="grid-item orange"><i class="fab fa-node-js"></i><br>Node JS</a>
-                            <a href="#" class="grid-item green"><i class="fab fa-js"></i><br>JavaScript</a>
-                            <a href="#" class="grid-item purple"><i class="fab fa-git"></i><br>Git</a>
-                            <a href="#" class="grid-item gray-blue"><i class="fas fa-database"></i><br>SQL</a>
-                            <a href="#" class="grid-item red"><i class="fab fa-bootstrap"></i><br>Bootstrap</a>
-                            <a href="#" class="grid-item gold"><i class="fab fa-react"></i><br>React</a>
-                            <a href="#" class="grid-item gray"><i class="far fa-smile"></i></i><br>and more...</a>
+                            <a href="#" class="grid-item" aria-label="HTML-5 icon"><i class="fab fa-html5"
+                                    aria-hidden="true" title="HTML-5"></i><br>HTML</a>
+                            <a href="#" class="grid-item" aria-label="CSS-3 icon"><i class="fab fa-css3-alt"
+                                    aria-hidden="true" title="CSS-3"></i><br>CSS</a>
+                            <a href="#" class="grid-item" aria-label="NodeJS icon"><i class="fab fa-node-js"
+                                    aria-hidden="true" title="NodeJS"></i><br>Node JS</a>
+                            <a href="#" class="grid-item" aria-label="JavaScript icon"><i class="fab fa-js"
+                                    aria-hidden="true" title="JavaScript"></i><br>JavaScript</a>
+                            <a href="#" class="grid-item" aria-label="Git icon"><i class="fab fa-git"
+                                    aria-hidden="true" title="Git"></i><br>Git</a>
+                            <a href="#" class="grid-item" aria-label="SQL icon"><i class="fas fa-database"
+                                    aria-hidden="true" title="SQL"></i><br>SQL</a>
+                            <a href="#" class="grid-item" aria-label="Bootstrap icon"><i class="fab fa-bootstrap"
+                                    aria-hidden="true" title="Bootstrap"></i><br>Bootstrap</a>
+                            <a href="#" class="grid-item" aria-label="React icon"><i class="fab fa-react"
+                                    aria-hidden="true" title="React"></i><br>React</a>
+                            <a href="#" class="grid-item" aria-label="and more..."><i class="far fa-smile"
+                                    aria-hidden="true" title="and more..."></i></i><br>and more...</a>
                         </div>
                     </div>
                     <div class="accordion-certificates-content">
@@ -208,13 +237,12 @@
                                 <ul>
                                     <li><a href="https://www.freecodecamp.org/certification/randomsveta/responsive-web-design"
                                             target="_blank">Responsive
-                                            Web Design</button></li>
+                                            Web Design</a></li>
                                     <li><a href="https://www.freecodecamp.org/certification/randomsveta/javascript-algorithms-and-data-structures"
                                             target="_blank">JavaScript
                                             Algorithms and Data Structures</a></li>
                                 </ul>
                             </div>
-
                             <button class="cert-accordion">Coursera</button>
                             <div class="cert-accordion-content">
                                 <h4>Full-Stack Web Development with React</h4>
@@ -282,23 +310,31 @@
         <div class="container footer-content">
             <div class="footer-smIcons">
                 <ul>
-                    <li><a href="https://github.com/randomSveta" target="_blank"><i class="fab fa-github"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/svetaklimova/" target="_blank"><i
-                                class="fab fa-linkedin"></i></a></li>
-                    <li><a href="https://www.freecodecamp.org/svetaklimova" target="_blank"><i
-                                class="fab fa-free-code-camp"></i></a></li>
-                    <li><a href="https://randomsveta.wordpress.com/" target="_blank"><i
-                                class="fab fa-wordpress"></i></a>
+                    <li><a href="https://github.com/randomSveta" target="_blank"
+                            aria-label="Link to Sveta's GitHunb profile"><i class="fab fa-github" aria-hidden="true"
+                                title="GitHub"></i></a>
                     </li>
-                    <li><a href="https://www.codewars.com/users/randomsveta" target="_blank"><i
-                                class="fa fa-code"></i></a>
+                    <li><a href="https://www.linkedin.com/in/svetaklimova/" target="_blank"
+                            aria-label="Link to Sveta's LinkedIn profile" title="LinkedIn"><i class="fab fa-linkedin"
+                                aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.freecodecamp.org/randomsveta" target="_blank"
+                            aria-label="Link to Sveta's FreeCodeCamp profile" title="FreeCodeCamp"><i
+                                class="fab fa-free-code-camp" aria-hidden="true"></i></a></li>
+                    <li><a href="https://randomsveta.wordpress.com/" target="_blank"
+                            aria-label="Link to Sveta's WordPress profile" title="WordPress"><i class="fab fa-wordpress"
+                                aria-hidden="true"></i></a>
                     </li>
-                    <li><a href="https://codepen.io/randomsveta/" target="_blank"><i class="fab fa-codepen"></i></a>
+                    <li><a href="https://www.codewars.com/users/randomsveta" target="_blank"
+                            aria-label="Link to Sveta's CodeWars profile" title="CodeWars"><i class="fa fa-code"
+                                aria-hidden="true"></i></a></li>
+                    <li><a href="https://codepen.io/randomsveta/" target="_blank"
+                            aria-label="Link to Sveta's CodePen profile"><i class="fab fa-codepen" aria-hidden="true"
+                                title="CodePen"></i></a>
                     </li>
                 </ul>
             </div>
             <div class="footer-about-text">
-                <p>Made with love by Sveta Klimova 2019<br><i class="fa fa-heart"></i></p>
+                <p>Made with love by Sveta Klimova 2019<br><i class="fa fa-heart" aria-hidden="true"></i></p>
             </div>
         </div>
 

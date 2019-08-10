@@ -40,21 +40,31 @@
     }
     /* ------ Header ------ */
     /* --- Header. Navigation styles--- */
-    
     .navigation-bar .toggle-bars {
         margin: 0;
     }
     /* --- Header. Content styles--- */
     .header-content {
-        padding-top: 15rem;
+        padding-top: 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: start;
+        -ms-flex-line-pack: center;
         align-content: center;
     }
     .header-name {
         width: 100%;
+        padding-top: 13rem;
     }
     /* --- Header. Social media icons styles --- */
     .header-smIcons ul {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;
     }
     .header-smIcons li {
@@ -84,6 +94,9 @@
     /* - Section "Carousel". Buttons and indicators - */
     .dots {
         margin-right: 25%;
+    }
+    .slide-indicators {
+        padding-bottom: 66%;
     }
     /* --- Section "Skills" --- */
     /* - Section "Skills". Techologies styles- */

@@ -27,6 +27,9 @@
     5.2 Footer. Social media icons styles
 -------------------------------------------------- */
 
+/* colours: rgb(0, 0, 0), rgb(255, 255, 255), rgb(40, 43, 46), rgb(198, 239, 241) */
+
+
 /* ------ Global styles ------ */
 
 /* --- Body blocks styles --- */
@@ -41,7 +44,7 @@ html {
 body {
     font-family: 'Raleway', Arial, sans-serif;
     font-weight: 150;
-    color: black;
+    color: rgb(40, 43, 46);
     font-size: 1.6rem;
     margin: 0;
     padding: 0;
@@ -53,7 +56,7 @@ body {
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgb(40, 43, 46);
     height: 100%;
     background-image: url("../images/background/header_background.png");
     background-position: left;
@@ -66,7 +69,7 @@ header {
 
 section {
     height: 100%;
-    margin-bottom: 3rem;
+    margin: 3rem 0;
     padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -79,7 +82,7 @@ section {
 }
 
 section:last-of-type {
-    margin: 0;
+    margin: 3rem 0 0 0;
     padding: 0;
 }
 
@@ -87,7 +90,7 @@ footer {
     margin-top: 0;
     padding-top: 0;
     background-color: rgb(40, 43, 46);
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 /* --- Headers (h1, h2, ...), text and links styles --- */
@@ -95,10 +98,10 @@ footer {
 h1 {
     font-size: 3.5rem;
     text-align: center;
-    font-weight: 250;
+    font-weight: 300;
     padding: 1.5rem 0;
     margin: 0;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgb(255, 255, 255);
     width: 100%;
 }
 
@@ -106,7 +109,7 @@ h2 {
     text-align: center;
     font-size: 3rem;
     font-weight: 300;
-    padding: 0 0 1.5rem 0;
+    padding: 3rem 0 1.5rem 0;
     margin: 0 0 1.5rem 0;
     width: 100%;
 }
@@ -138,12 +141,14 @@ p {
 
 a {
     text-decoration: none;
-    color: rgba(255, 255, 255, 1);
+    color: rgb(40, 43, 46);
+    padding: 0.2rem;
+    border: 0.1rem solid transparent;
 }
 
 a:hover {
-    text-decoration: underline;
-    color: #99ced4;
+    border: 0.1rem solid rgb(36, 143, 143);
+    color: rgb(36, 143, 143);
 }
 
 /* --- Global elements styles --- */
@@ -172,11 +177,10 @@ form {
 }
 
 textarea {
-    border: 0.1rem solid rgba(0, 0, 0, 0.35);
+    border: 0.1rem solid rgba(40, 43, 46, 0.5);
     padding: 0.5rem;
     font-family: 'Raleway', Arial, sans-serif;
     font-size: 1.4rem;
-    font-weight: 100;
     width: 100%;
     height: 12rem;
     resize: none;
@@ -184,17 +188,16 @@ textarea {
 }
 
 input[type=text], input[type=email] {
-    border: 0.1rem solid rgba(0, 0, 0, 0.35);
+    border: 0.1rem solid rgba(40, 43, 46, 0.5);
     height: 3.5rem;
     padding: 0.5rem;
     font-family: 'Raleway', Arial, sans-serif;
     font-size: 1.4rem;
-    font-weight: 100;
 }
 
 textarea:focus, input:focus {
-    border-color: #99ced4;
-    outline: 0.2rem solid #99ced4;
+    border-color: rgba(153, 206, 212, 0.7) ;
+    outline: 0.2rem solid rgba(153, 206, 212, 0.7);
     -webkit-box-shadow: none;
     box-shadow: none;
     outline-offset: 0;
@@ -202,42 +205,42 @@ textarea:focus, input:focus {
 
 textarea::-webkit-input-placeholder, input::-webkit-input-placeholder {
     font-family: 'Raleway', Arial, sans-serif;
-    color: #99a4a5;
+    color: rgba(40, 43, 46, 0.8);
     opacity: 1;
     font-size: 1.2rem;
-    font-weight: 50;
+    font-weight: 100;
 }
 
 textarea::-moz-placeholder, input::-moz-placeholder {
     font-family: 'Raleway', Arial, sans-serif;
-    color: #99a4a5;
+    color:  rgba(40, 43, 46, 0.8);
     opacity: 1;
     font-size: 1.2rem;
-    font-weight: 50;
+    font-weight: 100;
 }
 
 textarea:-ms-input-placeholder, input:-ms-input-placeholder {
     font-family: 'Raleway', Arial, sans-serif;
-    color: #99a4a5;
+    color:  rgba(40, 43, 46, 0.8);
     opacity: 1;
     font-size: 1.2rem;
-    font-weight: 50;
+    font-weight: 100;
 }
 
 textarea::-ms-input-placeholder, input::-ms-input-placeholder {
     font-family: 'Raleway', Arial, sans-serif;
-    color: #99a4a5;
+    color:  rgba(40, 43, 46, 0.8);
     opacity: 1;
     font-size: 1.2rem;
-    font-weight: 50;
+    font-weight: 100;
 }
 
 textarea::placeholder, input::placeholder {
     font-family: 'Raleway', Arial, sans-serif;
-    color: #99a4a5;
+    color:  rgba(40, 43, 46, 0.8);
     opacity: 1;
     font-size: 1.2rem;
-    font-weight: 50;
+    font-weight: 100;
 }
 
 label {
@@ -332,7 +335,7 @@ nav .toggle-bars {
 
 .underscore-nav-item a {
     position: relative;
-    color: rgba(226, 230, 231, 0.9);
+    color: rgba(255, 255, 255);
     padding: 0.5rem;
     border: 0.15rem solid transparent;
 }
@@ -340,7 +343,7 @@ nav .toggle-bars {
 .underscore-nav-item a::after {
     content: '';
     display: block;
-    background-color: #99ced4;
+    background-color: rgb(198, 239, 241);
     height: 0.6rem;
     position: absolute;
     left: 0;
@@ -360,17 +363,17 @@ nav .toggle-bars {
     -webkit-transform: scale(1, 1);
     -ms-transform: scale(1, 1);
     transform: scale(1, 1);
-    color: #99ced4;
+    color: rgb(198, 239, 241);
     text-decoration: none;
 }
 
 .underscore-nav-item a:hover, .underscore-nav-item a:active, .underscore-nav-item a:focus {
-    color: #99ced4;
+    color: rgb(198, 239, 241);
     text-decoration: none;
 }
 
 a.active-nav-item {
-    border: 0.15rem solid #99ced4;
+    border: 0.15rem solid rgb(198, 239, 241);
 }
 
 /* --- Header. Content styles--- */
@@ -401,7 +404,7 @@ a.active-nav-item {
 /* --- Header. Social media icons styles --- */
 
 .header-smIcons {
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(40, 43, 46, 0.95);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -435,13 +438,15 @@ a.active-nav-item {
 
 .header-smIcons a {
     font-size: 4.5vh;
-    color: #99ced4;
+    color: rgb(198, 239, 241);
     margin: 0;
     padding: 0;
+    border: none;
 }
 
 .header-smIcons a:hover {
-    color: white;
+    color: rgb(255, 255, 255);
+    border: none;
 }
 
 .header-smIcons li {
@@ -470,29 +475,22 @@ a.active-nav-item {
 
 /* - Section "About me". Text styles - */
 
-.section-aboutme h2 {
-    padding: 3rem 0 1.5rem 0;
-}
-
 .section-aboutme-text {
     margin: 1.5rem 3rem;
     width: 50%;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 /* --- Section "Bootcamp prerequisites" --- */
 
-.section-bootcamppre {
-    background-image: url("../images/background/section_bootcamppre_background.png");
+
+.section-bootcamppre .section-content {
+    background-image: url("../images/background/three_sections_background.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-origin: content-box, border-box;
-}
 
-.section-bootcamppre .section-content {
-    background-color: rgba(56, 60, 63, 0.85);
-    color: white;
 }
 
 .section-bootcamppre-text-and-prerequisites {
@@ -508,7 +506,6 @@ a.active-nav-item {
     justify-content: space-between;
     margin: 0;
     padding: 0;
-    font-weight: 100;
 }
 
 .section-bootcamppre-prerequisites {
@@ -519,9 +516,6 @@ a.active-nav-item {
 
 /* - Section "Bootcamp prerequisites". Text styles - */
 
-.section-bootcamppre h2 {
-    padding: 3rem 0 1.5rem 0;
-}
 
 .section-bootcamppre p {
     padding: 0 3rem 3rem 3rem;
@@ -540,13 +534,6 @@ a.active-nav-item {
     list-style: circle;
 }
 
-.prerequisites-links a {
-    color: white;
-}
-
-.prerequisites-links a:hover {
-    color: #99ced4;
-}
 
 .prerequisites-links li {
     margin: 1rem;
@@ -555,11 +542,10 @@ a.active-nav-item {
 .prerequisites-links img {
     padding: 0.5rem;
     margin: 0.5rem;
-    border: 0.2rem solid rgba(255, 255, 255, 0.75);
+    border: 0.2rem solid rgb(40, 43, 46);
     width: 90%;
     height: auto;
     -webkit-filter: grayscale(100%);
-    /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
 }
 
@@ -568,9 +554,15 @@ a.active-nav-item {
 .section-carousel {
     margin: 0;
     padding: 0;
-    color: rgba(0, 0, 0, 0.9);
-    background-color: rgba(204, 231, 234, 0.8);
-    font-weight: 100;
+    color: rgb(40, 43, 46);
+}
+.section-carousel .section-content {
+    background-color:  rgba(198, 239, 241, 0.6);
+    background-image: url("../images/background/three_sections_background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: content-box, border-box;
 }
 
 .section-all-carousel-elements {
@@ -669,7 +661,7 @@ a.active-nav-item {
 
 .section-carousel button, .dot {
     background-color: transparent;
-    color: rgba(0, 0, 0, 0.9);
+    color: rgb(40, 43, 46);
     border: none;
     border-radius: 0.5rem;
     text-align: center;
@@ -678,13 +670,13 @@ a.active-nav-item {
 }
 
 .section-carousel button:hover, .dot:hover {
-    background-color: rgba(0, 0, 0, 0.4);
-    color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(40, 43, 46, 0.5);
+    color: rgb(40, 43, 46);
 }
 
 .section-carousel button:active, .dot:active {
-    background-color: rgba(153, 206, 212, 1);
-    color: rgba(255, 255, 255, 1);
+    background-color: rgba(40, 43, 46, 0.2);
+    color: rgba(40, 43, 46, 0.5);
 }
 
 .slide-indicators button {
@@ -760,17 +752,26 @@ a.active-nav-item {
     width: 0.9rem;
     height: 0.9rem;
     margin: 0.5rem;
-    border: 0.15rem solid rgba(0, 0, 0, 0.85);
+    border: 0.15rem solid rgb(40, 43, 46);
     border-radius: 50%;
     cursor: pointer;
 }
 
 .fill-color {
-    background-color: rgba(0, 0, 0, 0.85);
-    border: 0.1rem solid white;
+    background-color: rgb(40, 43, 46);
+    border: 0.1rem solid rgb(255, 255, 255);
 }
 
 /* --- Section "Skills" --- */
+
+.section-skills .section-content{
+    background-image: url("../images/background/three_sections_background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: content-box, border-box;
+
+}
 
 .section-skills ul {
     list-style-position: inside;
@@ -796,7 +797,6 @@ a.active-nav-item {
 }
 
 .technologies-content {
-    color: black;
     width: 50%;
     margin-right: 5rem;
 }
@@ -813,58 +813,25 @@ a.active-nav-item {
 }
 
 .grid-item {
-    background-color: black;
-    color: white;
+    background-color: rgb(40, 43, 46);
+    color: rgb(255, 255, 255);
     width: 10rem;
     height: 10rem;
     text-align: center;
-}
-
-.grid-item.pink {
-    background-color: rgb(255, 102, 179);
-}
-
-.grid-item.blue {
-    background-color: rgb(26, 140, 255);
-}
-
-.grid-item.orange {
-    background-color: rgb(255, 179, 102);
-}
-
-.grid-item.green {
-    background-color: rgb(51, 204, 204);
-}
-
-.grid-item.purple {
-    background-color: rgb(153, 102, 255);
-}
-
-.grid-item.gray-blue {
-    background-color: rgb(51, 102, 153);
-}
-
-.grid-item.red {
-    background-color: rgb(255, 102, 102);
-}
-
-.grid-item.gold {
-    background-color: rgb(230, 195, 0);
-}
-
-.grid-item.gray {
-    background-color: rgb(112, 128, 144);
+    -webkit-box-shadow: 0.2rem 0.2rem rgba(40, 43, 46, 0.5);
+    box-shadow: 0.2rem 0.2rem rgb(40, 43, 46, 0.5);
+    border: none;
 }
 
 a.grid-item {
     padding: 1rem;
-    font-weight: 200;
 }
 
 a.grid-item:hover {
-    color: rgba(0, 0, 0, 0.75);
-    background-color: #99ced4;
+    color: rgb(40, 43, 46);
+    background-color: rgb(198, 239, 241);
     text-decoration: none;
+    border: none;
 }
 
 .grid-item i {
@@ -879,9 +846,10 @@ a.grid-item:hover {
 }
 
 .cert-accordion {
-    background-color: rgba(68, 73, 76, 0.9);
-    color: white;
+    background-color: rgb(40, 43, 46);
+    color: rgb(255, 255, 255);
     outline: none;
+    font-weight: 100;
     padding: 1.5rem;
     width: 100%;
     border: none;
@@ -890,24 +858,18 @@ a.grid-item:hover {
     -o-transition: 0.4s;
     transition: 0.4s;
     font-size: 2rem;
+    -webkit-box-shadow: 0.2rem 0.2rem rgba(40, 43, 46, 0.5);
+    box-shadow: 0.2rem 0.2rem rgba(40, 43, 46, 0.5);
 }
 
-.cert-accordion-content a {
-    color: rgba(0, 0, 0, 1);
-}
-
-.cert-accordion-content a:hover {
-    color: rgb(98, 134, 138);
-}
-
-.active-acc-button, .cert-accordion:hover {
-    background-color: #99ced4;
-    color: rgba(0, 0, 0, 0.75);
+.active-acc-button:hover, .cert-accordion:hover {
+    background-color: rgb(198, 239, 241);
+    color: rgb(40, 43, 46);
 }
 
 .cert-accordion:after {
     content: '\002B';
-    color: white;
+    color: rgb(255, 255, 255);
     float: right;
     margin-left: 0.5rem;
 }
@@ -918,7 +880,7 @@ a.grid-item:hover {
 
 .cert-accordion-content {
     padding: 0 1.8rem;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     max-height: 0;
     overflow: hidden;
     -webkit-transition: max-height 0.2s ease-out;
@@ -938,7 +900,7 @@ a.grid-item:hover {
 }
 
 .section-contactme-form {
-    border: 0.1rem solid rgba(0, 0, 0, 0.85);
+    border: 0.1rem solid rgb(40, 43, 46);
     padding: 3rem 4rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -949,14 +911,21 @@ a.grid-item:hover {
 }
 
 .section-contactme-form input[type=submit] {
-    background-color: rgba(0, 0, 0, 0.80);
+    background-color: rgb(40, 43, 46);
+    -webkit-box-shadow: 0.2rem 0.2rem rgba(40, 43, 46, 0.5);
+    box-shadow: 0.2rem 0.2rem rgba(40, 43, 46, 0.5);
     height: 3.5rem;
-    border: 0.1rem solid #26555a;
-    color: #b7f8ff;
+    border: 0.1rem solid rgba(153, 206, 212, 0.7);
+    color: rgb(198, 239, 241);
     margin: 1.5rem 0;
     font-size: 1.6rem;
-    font-weight: 100;
     cursor: pointer;
+}
+
+.section-contactme-form input[type=submit]:hover {
+    color: rgb(40, 43, 46);
+    background-color: rgb(198, 239, 241);
+    text-decoration: none;
 }
 
 /* ------ Footer ------ */
@@ -964,7 +933,7 @@ a.grid-item:hover {
 /* --- Footer. Text styles --- */
 
 .footer-about-text {
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 0;
     margin: 0;
@@ -1002,11 +971,13 @@ a.grid-item:hover {
 
 .footer-smIcons a {
     font-size: 2.5vw;
-    color: #99ced4;
+    color: rgb(198, 239, 241);
     margin: 0;
     padding: 0;
+    border: none;
 }
 
 .footer-smIcons a:hover {
-    color: white;
+    color: rgb(255, 255, 255);
+    border: none;
 }
