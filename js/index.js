@@ -17,109 +17,80 @@ function navbarToggle() {
 }
 /* ------ Add active-nav-item class to Nevigation ------ */
 /* --- Add active-nav-item class to Nevigation onclick --- */
-let allowScroll = true;
 
 function addActiveClassToNavbarItem(callback) {
-    allowScroll = false;
 
     document.querySelectorAll('.underscore-nav-item a.active-nav-item').forEach((link) =>
         link.classList.remove('active-nav-item')
     )
     event.target.classList.add("active-nav-item");
-
-  setTimeout( changeScrollStatus, 1000); //temporary solution
 };
-
-function changeScrollStatus(){
-        allowScroll = true; 
-};
-
 
 /* --- Add active-nav-item class to Nevigation onscroll ——— */
 
 function addActiveClassToNavbarItemOnscroll() {
-    
- if(allowScroll) {
-    document.querySelectorAll('a.active-nav-item').forEach((link) =>
-    link.classList.remove('active-nav-item')
-);
 
-const navigationBar = document.getElementById('navbar-top');
-const navBarHeight = navigationBar.getBoundingClientRect().height;
+        document.querySelectorAll('a.active-nav-item').forEach((link) =>
+            link.classList.remove('active-nav-item')
+        );
 
-const sectionAboutMe = document.getElementById('about-me');
-const aboutmeTopBorder = sectionAboutMe.getBoundingClientRect().top;
+        const navigationBar = document.getElementById('navbar-top');
+        const navBarHeight = navigationBar.getBoundingClientRect().height;
 
-const sectionBootcampPre = document.getElementById('bootcamp-prerequisites');
-const bootcamppreTopBorder = sectionBootcampPre.getBoundingClientRect().top;
+        const sectionAboutMe = document.getElementById('about-me');
+        const aboutmeTopBorder = sectionAboutMe.getBoundingClientRect().top;
 
-const sectionCarousel = document.getElementById('carousel');
-const carouselTopBorder = sectionCarousel.getBoundingClientRect().top;
+        const sectionBootcampPre = document.getElementById('bootcamp-prerequisites');
+        const bootcamppreTopBorder = sectionBootcampPre.getBoundingClientRect().top;
 
-const sectionSkills = document.getElementById('skills');
-const skillsTopBorder = sectionSkills.getBoundingClientRect().top;
+        const sectionCarousel = document.getElementById('carousel');
+        const carouselTopBorder = sectionCarousel.getBoundingClientRect().top;
 
-const sectionContactMe = document.getElementById('contact-me');
-const contactmeTopBorder = sectionContactMe.getBoundingClientRect().top;
+        const sectionSkills = document.getElementById('skills');
+        const skillsTopBorder = sectionSkills.getBoundingClientRect().top;
 
-if (navBarHeight < aboutmeTopBorder && window.location.hash && event != 'click') {
-  window.location.hash = ''
-}
-if (navBarHeight >= aboutmeTopBorder && navBarHeight < bootcamppreTopBorder) {
-    document.querySelectorAll('a.active-nav-item').forEach((link) =>
-        link.classList.remove('active-nav-item')
-    );
-    document.getElementById('nav-aboutme').classList.add('active-nav-item');
-    if (!window.location.hash) {
-      window.location.hash = '#about-me'
+        const sectionContactMe = document.getElementById('contact-me');
+        const contactmeTopBorder = sectionContactMe.getBoundingClientRect().top;
+
+        if (navBarHeight < aboutmeTopBorder && window.location.hash && event != 'click') {
+            window.location.hash = ''
+        }
+        if (navBarHeight >= aboutmeTopBorder && navBarHeight < bootcamppreTopBorder) {
+            document.querySelectorAll('a.active-nav-item').forEach((link) =>
+                link.classList.remove('active-nav-item')
+            );
+            document.getElementById('nav-aboutme').classList.add('active-nav-item');
+        }
+        if (navBarHeight >= bootcamppreTopBorder && navBarHeight < carouselTopBorder) {
+            document.querySelectorAll('a.active-nav-item').forEach((link) =>
+                link.classList.remove('active-nav-item')
+            );
+            document.getElementById('nav-bootcamppre').classList.add('active-nav-item');
+
+        }
+        if (navBarHeight >= carouselTopBorder && navBarHeight < skillsTopBorder) {
+            document.querySelectorAll('a.active-nav-item').forEach((link) =>
+                link.classList.remove('active-nav-item')
+            );
+            document.getElementById('nav-carousel').classList.add('active-nav-item');
+
+        }
+
+        if (navBarHeight >= skillsTopBorder && navBarHeight < contactmeTopBorder) {
+            document.querySelectorAll('a.active-nav-item').forEach((link) =>
+                link.classList.remove('active-nav-item')
+            );
+
+            document.getElementById('nav-skills').classList.add('active-nav-item');
+        }
+        if (navBarHeight >= contactmeTopBorder) {
+            document.querySelectorAll('a.active-nav-item').forEach((link) =>
+                link.classList.remove('active-nav-item')
+            );
+            document.getElementById('nav-contactme').classList.add('active-nav-item');
+           
+        }
     }
-    else if (!window.location.hash.includes('about-me')) {
-      window.location.hash = '#about-me'
-    }
-}
-if (navBarHeight >= bootcamppreTopBorder && navBarHeight < carouselTopBorder) {
-    document.querySelectorAll('a.active-nav-item').forEach((link) =>
-        link.classList.remove('active-nav-item')
-    );
-    document.getElementById('nav-bootcamppre').classList.add('active-nav-item');
-    if (!window.location.hash.includes('bootcamp-prerequisites')) {
-       window.location.hash = '#bootcamp-prerequisites';
-    }
-
-}
-if (navBarHeight >= carouselTopBorder && navBarHeight < skillsTopBorder) {
-    document.querySelectorAll('a.active-nav-item').forEach((link) =>
-        link.classList.remove('active-nav-item')
-    );
-    document.getElementById('nav-carousel').classList.add('active-nav-item');
-    if (!window.location.hash.includes('carousel')) {
-      window.location.hash = '#carousel';
-    }
-}
-
-if (navBarHeight >= skillsTopBorder && navBarHeight < contactmeTopBorder) {
-    document.querySelectorAll('a.active-nav-item').forEach((link) =>
-        link.classList.remove('active-nav-item')
-    );
-
-    document.getElementById('nav-skills').classList.add('active-nav-item');
-    if (!window.location.hash.includes('skills')) {
-      window.location.hash = '#skills';
-    }
-
-}
-if (navBarHeight >= contactmeTopBorder) {
-    document.querySelectorAll('a.active-nav-item').forEach((link) =>
-        link.classList.remove('active-nav-item')
-    );
-    document.getElementById('nav-contactme').classList.add('active-nav-item');
-    if (!window.location.hash.includes('contact-me')) {
-      window.location.hash = '#contact-me';
-    }
-}
- }
-   
-}
 
 /* ------ Carousel ------ */
 
