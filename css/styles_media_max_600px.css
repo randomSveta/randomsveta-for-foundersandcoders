@@ -32,10 +32,12 @@
     /* --- Global elements styles --- */
     /* ------ Global classes styles------ */
     .container {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
+        margin: 0 1.5rem;
     }
     /* ------ Header ------ */
+    .button-to-top {
+        right: 1rem;
+      }
     /* --- Header. Navigation styles--- */
     .navigation-bar .toggle-bars {
         margin: 0;

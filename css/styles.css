@@ -295,6 +295,21 @@ button {
 }
 
 /* ------ Header ------ */
+.button-to-top {
+    z-index: 11;
+    display: none;
+    position: fixed;
+    bottom: 3rem;
+    right: 5rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 4rem;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .button-to-top:hover {
+      color: rgb(36, 143, 143);
+  }
 
 /* --- Header. Navigation styles--- */
 
@@ -305,7 +320,7 @@ button {
     height: auto;
 }
 .navbar-brand a:hover {
- border: none;
+ border: 0.1rem solid transparent;
 }
 
 .navigation-bar {
