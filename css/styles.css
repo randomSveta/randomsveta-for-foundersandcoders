@@ -42,7 +42,7 @@ html {
 
 body {
     font-family: 'Raleway', Arial, sans-serif;
-    font-weight: 150;
+    font-weight: 200;
     color: rgb(40, 43, 46);
     font-size: 1.6rem;
     margin: 0;
@@ -138,9 +138,11 @@ h4 {
 
 p {
     padding: 1.5rem;
-    margin: 3rem;
-    font-size: 1.5vw;
+    margin: 1.5rem;
+    font-size: 1.3vw;
     text-align: justify;
+    line-height: 1.6;
+    word-wrap: break-word;
 }
 
 a {
@@ -301,6 +303,9 @@ button {
     padding: 0;
     width: 4.3vw;
     height: auto;
+}
+.navbar-brand a:hover {
+ border: none;
 }
 
 .navigation-bar {
@@ -476,7 +481,7 @@ a.active-nav-item {
 
 .section-aboutme .section-content {
     background-image: url("../images/background/section_aboutme_background.png");
-    background-position: center;
+    background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
     background-origin: border-box;
@@ -532,7 +537,7 @@ a.active-nav-item {
 
 .prerequisites-links ul {
     padding: 1.5rem;
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     list-style: circle;
     list-style-position: inside;
 }
@@ -843,7 +848,7 @@ a.grid-item:hover {
     background-color: rgb(40, 43, 46);
     color: rgb(255, 255, 255);
     outline: none;
-    font-weight: 100;
+    font-weight: 150;
     padding: 1.5rem;
     width: 100%;
     border: none;

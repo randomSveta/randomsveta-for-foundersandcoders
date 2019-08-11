@@ -16,16 +16,6 @@ function navbarToggle() {
     }
 }
 /* ------ Add active-nav-item class to Nevigation ------ */
-/* --- Add active-nav-item class to Nevigation onclick --- */
-
-function addActiveClassToNavbarItem(callback) {
-
-    document.querySelectorAll('.underscore-nav-item a.active-nav-item').forEach((link) =>
-        link.classList.remove('active-nav-item')
-    )
-    event.target.classList.add("active-nav-item");
-};
-
 /* --- Add active-nav-item class to Nevigation onscroll ——— */
 
 function addActiveClassToNavbarItemOnscroll() {
@@ -52,9 +42,6 @@ function addActiveClassToNavbarItemOnscroll() {
         const sectionContactMe = document.getElementById('contact-me');
         const contactmeTopBorder = sectionContactMe.getBoundingClientRect().top;
 
-        if (navBarHeight < aboutmeTopBorder && window.location.hash && event != 'click') {
-            window.location.hash = ''
-        }
         if (navBarHeight >= aboutmeTopBorder && navBarHeight < bootcamppreTopBorder) {
             document.querySelectorAll('a.active-nav-item').forEach((link) =>
                 link.classList.remove('active-nav-item')
