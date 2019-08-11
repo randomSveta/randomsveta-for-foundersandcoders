@@ -61,7 +61,7 @@ header {
     background-position: left;
     background-repeat: repeat;
     background-size: cover;
-    background-origin: content-box, border-box;
+    background-origin: border-box;
     margin: 0;
     padding: 0;
 }
@@ -82,7 +82,6 @@ section {
 
 section:last-of-type {
     margin: 3rem 0 0 0;
-    padding: 0;
 }
 
 footer {
@@ -152,7 +151,7 @@ a {
 }
 
 a:hover {
-    border: 0.1rem dashed rgb(36, 143, 143);
+    border: 0.1rem solid rgb(78, 158, 158);
     color: rgb(36, 143, 143);
 }
 
@@ -369,13 +368,21 @@ nav .toggle-bars {
     text-decoration: none;
 }
 
+.toggle-bars a {
+    color: rgb(255, 255, 255);
+    border: none;
+}
+.toggle-bars a:hover {
+    color: rgb(198, 239, 241);
+}
+
 .underscore-nav-item a:hover, .underscore-nav-item a:active, .underscore-nav-item a:focus {
     color: rgb(198, 239, 241);
     text-decoration: none;
 }
 
 a.active-nav-item {
-    border: 0.15rem dashed rgb(198, 239, 241);
+    border: 0.15rem solid rgb(198, 239, 241);
 }
 
 /* --- Header. Content styles--- */
@@ -440,7 +447,7 @@ a.active-nav-item {
 }
 
 .header-smIcons a {
-    font-size: 4.5vh;
+    font-size: 2.5vw;
     color: rgb(198, 239, 241);
     margin: 0;
     padding: 0;
@@ -472,7 +479,7 @@ a.active-nav-item {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-origin: content-box, border-box;
+    background-origin: border-box;
     background-color: rgba(226, 230, 231, 0.9);
 }
 
@@ -491,7 +498,7 @@ a.active-nav-item {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-origin: content-box, border-box;
+    background-origin: border-box;
 }
 
 .section-bootcamppre-text-and-prerequisites {
@@ -551,7 +558,7 @@ a.active-nav-item {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-origin: content-box, border-box;
+    background-origin: border-box;
 }
 
 .section-all-carousel-elements {
@@ -564,7 +571,7 @@ a.active-nav-item {
 
 .carousel-images-list {
     list-style: none;
-    margin: 0 0 5rem 0;
+    margin: 0 0 6rem 0;
     padding: 1.5rem 0;
     width: 100%;
 }
@@ -668,19 +675,12 @@ a.active-nav-item {
     color: rgba(40, 43, 46, 0.5);
 }
 
-.slide-indicators button {
-    width: 4rem;
-    height: 6rem;
-    font-size: 4rem;
+.slide-indicators button, .play-stop-buttons button  {
+    font-size: 2.5vw;
     margin: 1rem;
+    padding: 0.5rem;
 }
 
-.play-stop-buttons button {
-    width: 4rem;
-    height: 4rem;
-    font-size: 3rem;
-    margin: 1rem;
-}
 
 .buttons-indicators {
     position: absolute;
@@ -756,7 +756,7 @@ a.active-nav-item {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-origin: content-box, border-box;
+    background-origin: border-box;
 }
 
 .section-skills ul {
@@ -888,9 +888,10 @@ a.grid-item:hover {
     background-image: url("../images/background/section_contactme_background.png");
     background-position: left bottom;
     background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-origin: content-box, border-box;
+    background-size:  80% auto;
+    background-origin: border-box;
     background-color: rgba(153, 206, 212, 0.5);
+    padding-bottom: 3rem;
 }
 
 .section-contactme-form {
@@ -935,7 +936,8 @@ a.grid-item:hover {
 
 .footer-about-text p {
     text-align: center;
-    padding: 1.5rem 3rem 3rem 3rem;
+    padding: 1.5rem;
+    margin: 1rem;
 }
 
 /* --- Foter. Social media styles --- */

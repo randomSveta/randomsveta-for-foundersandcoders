@@ -71,9 +71,6 @@
         margin: 0 1rem;
         padding: 0;
     }
-    .header-smIcons a {
-        font-size: 7vw;
-    }
     /* ------ Sections ------ */
     /* --- Section "About me" --- */
     .section-aboutme .section-content {
@@ -96,7 +93,7 @@
         margin-right: 25%;
     }
     .slide-indicators {
-        padding-bottom: 66%;
+        padding-bottom: 70%;
     }
     /* --- Section "Skills" --- */
     /* - Section "Skills". Techologies styles- */
@@ -106,17 +103,11 @@
     }
     /* - Section "Skills". Accordion styles- */
     /* --- Section "Contact me" --- */
-    .section-contactme {
-        background-image: url("../images/background/section_contactme_background_max_600.png");
-        background-position: bottom left;
-    }
     .section-contactme-form {
         padding: 1rem;
     }
     /* ------ Footer ------ */
     /* --- Footer. Text styles --- */
     /* --- Foter. Social media styles --- */
-    .footer-smIcons a {
-        font-size: 7vw;
-    }
+
 }

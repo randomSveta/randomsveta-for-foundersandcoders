@@ -67,7 +67,6 @@
         display: -ms-flexbox;
         display: flex;
         display: -webkit-flex;
-        /* Safari */
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
         justify-content: space-between;
@@ -83,9 +82,9 @@
     }
     .navigation-bar .toggle-bars {
         display: block;
-        font-size: 2.5rem;
-        margin: 0 2rem;
-        padding: 0.2rem 0;
+        font-size: 4.5vh;
+        margin: 0 1.5rem 0 0;
+        padding: 0;
     }
     .navigation-bar ul {
         display: none;
@@ -112,7 +111,7 @@
     }
     /* --- Header. Social media icons styles --- */
     .header-smIcons a {
-        font-size: 4.5vh;
+        font-size: 4vh;
     }
     .header-smIcons {
         display: -webkit-box;
@@ -164,6 +163,7 @@
     }
     .section-bootcamppre-text-and-prerequisites {
         display: block;
+        margin: 0 0 3rem 0;
     }
     .section-bootcamppre-prerequisites {
         width: 100%;
@@ -198,13 +198,16 @@
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
-        padding-bottom: 65.5%;
+        padding-bottom: 66%;
     }
     .dots {
         display: -webkit-inline-box;
         display: -ms-inline-flexbox;
         display: inline-flex;
         margin-right: 50%;
+    }
+    .slide-indicators button, .play-stop-buttons button  {
+        font-size: 4vh;
     }
     /* --- Section "Skills" --- */
     .section-skills {
@@ -219,6 +222,7 @@
     }
     .technologies-and-accordion {
         display: block;
+        margin: 0 0 3rem 0;
     }
     /* - Section "Skills". Techologies styles- */
     .technologies-content {
@@ -231,10 +235,8 @@
         width: 100%;
     }
     /* --- Section "Contact me" --- */
-    .section-contactme {
-        background-image: url("../images/background/section_contactme_background_max_768.png");
-        background-position: center;
-        background-size: cover;
+   .section-contactme {
+    background-size:  auto 100%;
     }
     .section-contactme-form {
         padding: 2rem;
@@ -243,7 +245,7 @@
     /* --- Footer. Text styles --- */
     /* --- Foter. Social media styles --- */
     .footer-smIcons a {
-        font-size: 5.5vw;
+        font-size: 4vh;
     }
     .footer-smIcons li {
         margin: 1rem;
