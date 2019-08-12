@@ -409,7 +409,6 @@ a.active-nav-item {
 
 .header-content {
     height: 100%;
-    padding-top: 6%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -421,6 +420,7 @@ a.active-nav-item {
 }
 
 .header-name {
+    padding-top: 6%;
     width: 50%;
 }
 
@@ -609,10 +609,16 @@ a.active-nav-item {
 }
 
 .carousel-images-list img {
+    z-index: 1;
     width: 55%;
     height: auto;
+    cursor: pointer;
     -webkit-box-shadow: 0 0.5rem 0.9rem 0 rgba(0, 0, 0, 0.5), 0 0.7rem 2rem 0 rgba(0, 0, 0, 0.25);
     box-shadow: 0 0.5rem 0.9rem 0 rgba(0, 0, 0, 0.5), 0 0.7rem 2rem 0 rgba(0, 0, 0, 0.25);
+}
+.carousel-images-list img:active {
+    transform: scale(1.4);
+
 }
 
 /* - Section "Carousel". Animation - */
@@ -717,6 +723,7 @@ a.active-nav-item {
     justify-content: flex-end;
     padding-bottom: 1rem;
     width: 100%;
+    z-index: 0;
 }
 
 .slide-indicators {
@@ -831,15 +838,12 @@ a.active-nav-item {
     border: none;
 }
 
-a.grid-item {
+span.grid-item {
     padding: 1rem;
 }
 
-a.grid-item:hover {
-    color: rgb(40, 43, 46);
-    background-color: rgb(198, 239, 241);
-    text-decoration: none;
-    border: none;
+span.grid-item:hover {
+    transform: scale(1.4);
 }
 
 .grid-item i {
@@ -920,9 +924,9 @@ a.grid-item:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: right;
-    -ms-flex-pack: right;
-    justify-content: right;
+    -webkit-box-pack: flex-end;
+    -ms-flex-pack: flex-end;
+    justify-content: flex-end;
 }
 
 .section-contactme-form input[type=submit] {
