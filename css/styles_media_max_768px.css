@@ -103,11 +103,11 @@
         color: rgba(255, 255, 255, 0.9);
     }
     /* --- Header. Content styles--- */
-    .header-content {
-        padding-top: 9.2vh;
-    }
     .header-name p {
         font-size: 2rem;
+    }
+    .header-name {
+        padding-top: 14%; 
     }
     /* --- Header. Social media icons styles --- */
     .header-smIcons a {
@@ -140,9 +140,6 @@
         background-size: cover;
         background-origin: content-box, border-box;
         background-color: rgba(226, 230, 231, 0.9);
-    }
-    .section-aboutme .section-content {
-        background-size: auto 100%;
     }
     /* - Section "About me". Text styles - */
     .section-aboutme-text {
@@ -183,7 +180,7 @@
         background-image: url("../images/background/three_sections_background.png");
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: auto 100%;
         background-origin: content-box, border-box;
     }
     .section-carousel .section-content {

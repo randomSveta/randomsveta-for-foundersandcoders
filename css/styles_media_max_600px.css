@@ -73,7 +73,6 @@
     /* ------ Sections ------ */
     /* --- Section "About me" --- */
     .section-aboutme .section-content {
-        background-size: auto 100%;
         background-position: right bottom;
     }
     /* - Section "About me". Text styles - */

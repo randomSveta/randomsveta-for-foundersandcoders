@@ -7,15 +7,13 @@
     <link rel="stylesheet" media="screen and (min-width: 769px)" href="./css/styles_media_min_769px.css">
     <link rel="stylesheet" media="screen and (max-width: 768px)" href="./css/styles_media_max_768px.css">
     <link rel="stylesheet" media="screen and (max-width: 600px)" href="./css/styles_media_max_600px.css">
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" rel="stylesheet">
-    <script src="./js/index.js"></script>
     <title>Svetlana Klimova</title>
 </head>
 
 <body>
     <header>
-        <button onclick="goToTop()" id="go-to-top-button" class="button-to-top" aria-label="Go to top button"><i class="fas fa-arrow-circle-up" aria-hidden="true" title="Go to top"></i></button>
+        <button tabindex="0" type="button" onclick="goToTop()" id="go-to-top-button" class="button-to-top" aria-label="Go to top button"><i class="fas fa-arrow-circle-up" aria-hidden="true" title="Go to top"></i></button>
         <nav class="navigation-bar" id="navbar-top">
             <div class="container large-screen-flex">
                 <div class="small-screen-flex">
@@ -160,15 +158,15 @@
                         </div>
                         <div class="buttons-bottom-carousel">
                             <div class="dots">
-                                <span class="dot" onclick="findCurrentSlide(0)" onkeypress="findCurrentSlide(0)"
+                                <span tabindex="0" class="dot" onclick="findCurrentSlide(0)" onkeypress="findCurrentSlide(0)"
                                     aria-label="Current slide"></span>
-                                <span class="dot" onclick="findCurrentSlide(1)" onkeypress="findCurrentSlide(1)"
+                                <span tabindex="0" class="dot" onclick="findCurrentSlide(1)" onkeypress="findCurrentSlide(1)"
                                     aria-label="Current slide"></span>
-                                <span class="dot" onclick="findCurrentSlide(2)" onkeypress="findCurrentSlide(2)"
+                                <span tabindex="0" class="dot" onclick="findCurrentSlide(2)" onkeypress="findCurrentSlide(2)"
                                     aria-label="Current slide"></span>
-                                <span class="dot" onclick="findCurrentSlide(3)" onkeypress="findCurrentSlide(3)"
+                                <span tabindex="0" class="dot" onclick="findCurrentSlide(3)" onkeypress="findCurrentSlide(3)"
                                     aria-label="Current slide"></span>
-                                <span class="dot" onclick="findCurrentSlide(4)" onkeypress="findCurrentSlide(4)"
+                                <span tabindex="0" class="dot" onclick="findCurrentSlide(4)" onkeypress="findCurrentSlide(4)"
                                     aria-label="Current slide"></span>
                             </div>
                             <div class="play-stop-buttons">
@@ -195,30 +193,30 @@
                     <div class="technologies-content">
                         <h3>Technologies</h3>
                         <div class="technologies-icons grid-container">
-                            <a href="#" class="grid-item" aria-label="HTML-5 icon"><i class="fab fa-html5"
-                                    aria-hidden="true" title="HTML-5"></i><br>HTML</a>
-                            <a href="#" class="grid-item" aria-label="CSS-3 icon"><i class="fab fa-css3-alt"
-                                    aria-hidden="true" title="CSS-3"></i><br>CSS</a>
-                            <a href="#" class="grid-item" aria-label="NodeJS icon"><i class="fab fa-node-js"
-                                    aria-hidden="true" title="NodeJS"></i><br>Node JS</a>
-                            <a href="#" class="grid-item" aria-label="JavaScript icon"><i class="fab fa-js"
-                                    aria-hidden="true" title="JavaScript"></i><br>JavaScript</a>
-                            <a href="#" class="grid-item" aria-label="Git icon"><i class="fab fa-git" aria-hidden="true"
-                                    title="Git"></i><br>Git</a>
-                            <a href="#" class="grid-item" aria-label="SQL icon"><i class="fas fa-database"
-                                    aria-hidden="true" title="SQL"></i><br>SQL</a>
-                            <a href="#" class="grid-item" aria-label="Bootstrap icon"><i class="fab fa-bootstrap"
-                                    aria-hidden="true" title="Bootstrap"></i><br>Bootstrap</a>
-                            <a href="#" class="grid-item" aria-label="React icon"><i class="fab fa-react"
-                                    aria-hidden="true" title="React"></i><br>React</a>
-                            <a href="#" class="grid-item" aria-label="and more..."><i class="far fa-smile"
-                                    aria-hidden="true" title="and more..."></i></i><br>and more...</a>
+                            <span class="grid-item" aria-label="HTML-5 icon"><i class="fab fa-html5"
+                                    aria-hidden="true" title="HTML-5"></i><br>HTML</span>
+                            <span href="#" class="grid-item" aria-label="CSS-3 icon"><i class="fab fa-css3-alt"
+                                    aria-hidden="true" title="CSS-3"></i><br>CSS</span>
+                            <span href="#" class="grid-item" aria-label="NodeJS icon"><i class="fab fa-node-js"
+                                    aria-hidden="true" title="NodeJS"></i><br>Node JS</span>
+                            <span href="#" class="grid-item" aria-label="JavaScript icon"><i class="fab fa-js"
+                                    aria-hidden="true" title="JavaScript"></i><br>JavaScript</span>
+                            <span href="#" class="grid-item" aria-label="Git icon"><i class="fab fa-git" aria-hidden="true"
+                                    title="Git"></i><br>Git</span>
+                            <span href="#" class="grid-item" aria-label="SQL icon"><i class="fas fa-database"
+                                    aria-hidden="true" title="SQL"></i><br>SQL</span>
+                            <span href="#" class="grid-item" aria-label="Bootstrap icon"><i class="fab fa-bootstrap"
+                                    aria-hidden="true" title="Bootstrap"></i><br>Bootstrap</span>
+                            <span href="#" class="grid-item" aria-label="React icon"><i class="fab fa-react"
+                                    aria-hidden="true" title="React"></i><br>React</span>
+                            <span href="#" class="grid-item" aria-label="and more..."><i class="far fa-smile"
+                                    aria-hidden="true" title="and more..."></i></i><br>and more...</span>
                         </div>
                     </div>
                     <div class="accordion-certificates-content">
                         <h3>Certificates</h3>
                         <div class="accordion-certificates">
-                            <button class="cert-accordion">FreeCodeCamp</button>
+                            <button type="button" class="cert-accordion">FreeCodeCamp</button>
                             <div class="cert-accordion-content">
                                 <ul>
                                     <li><a href="https://www.freecodecamp.org/certification/randomsveta/responsive-web-design"
@@ -229,7 +227,7 @@
                                             Algorithms and Data Structures</a></li>
                                 </ul>
                             </div>
-                            <button class="cert-accordion">Coursera</button>
+                            <button type="button" class="cert-accordion">Coursera</button>
                             <div class="cert-accordion-content">
                                 <h4>Full-Stack Web Development with React</h4>
                                 <ul>
@@ -254,7 +252,7 @@
                                 </ul>
                             </div>
 
-                            <button class="cert-accordion">QA</button>
+                            <button type="button" class="cert-accordion">QA</button>
                             <div class="cert-accordion-content">
                                 <ul>
                                     <li><a href="./images/certificates/ISTQB/ISTQB_Foundation_QA.png"
@@ -325,6 +323,7 @@
         </div>
 
     </footer>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>

@@ -54,6 +54,10 @@ body {
     box-sizing: border-box;
 }
 
+*:focus {
+    outline: dotted DarkTurquoise;
+}
+
 header {
     background-color: rgb(40, 43, 46);
     height: 100%;
@@ -145,16 +149,25 @@ p {
     word-wrap: break-word;
 }
 
-a {
+a:link {
     text-decoration: none;
     color: rgb(40, 43, 46);
     padding: 0.2rem;
-    border: 0.1rem solid transparent;
+}
+a:visited {
+    color: rgba(36, 143, 143, 0.9);
 }
 
-a:hover {
-    border: 0.1rem solid rgb(78, 158, 158);
-    color: rgb(36, 143, 143);
+a:hover, a:active {
+    text-decoration-line: underline;
+    text-decoration-style: double;
+    color: rgba(40, 43, 46, 0.8); 
+}
+button {
+    padding:0 0.2rem;
+    margin:0;
+    cursor: pointer;
+    border-radius: 0.5rem;
 }
 
 /* --- Global elements styles --- */
@@ -203,7 +216,6 @@ input[type=text], input[type=email] {
 
 textarea:focus, input:focus {
     border-color: rgba(153, 206, 212, 0.7);
-    outline: 0.2rem solid rgba(153, 206, 212, 0.7);
     -webkit-box-shadow: none;
     box-shadow: none;
     outline-offset: 0;
@@ -254,9 +266,6 @@ label {
     text-align: center;
 }
 
-button {
-    cursor: pointer;
-}
 
 /* ------ Global classes styles ------ */
 
@@ -301,14 +310,12 @@ button {
     position: fixed;
     bottom: 3rem;
     right: 5rem;
-    border: none;
-    outline: none;
     background-color: transparent;
     font-size: 4rem;
     color: rgba(0, 0, 0, 0.7);
   }
   .button-to-top:hover {
-      color: rgb(36, 143, 143);
+      color: rgba(36, 143, 143, 0.9);
   }
 
 /* --- Header. Navigation styles--- */
@@ -318,9 +325,6 @@ button {
     padding: 0;
     width: 4.3vw;
     height: auto;
-}
-.navbar-brand a:hover {
- border: 0.1rem solid transparent;
 }
 
 .navigation-bar {
@@ -400,10 +404,32 @@ nav .toggle-bars {
     color: rgb(198, 239, 241);
     text-decoration: none;
 }
-
-a.active-nav-item {
-    border: 0.15rem solid rgb(198, 239, 241);
+.underscore-nav-item a::before {
+    content: '';
+    display: block;
+    background-color: rgb(198, 239, 241);
+    height: 0.6rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -1rem;
+    -webkit-transform: scale(0, 1);
+    -ms-transform: scale(0, 1);
+    transform: scale(0, 1);
+    -webkit-transition: -webkit-transform ease-in-out 150ms;
+    transition: -webkit-transform ease-in-out 150ms;
+    -o-transition: transform ease-in-out 150ms;
+    transition: transform ease-in-out 150ms;
+    transition: transform ease-in-out 150ms, -webkit-transform ease-in-out 150ms;
 }
+a.active-nav-item::before {
+ 
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+}
+
+
 
 /* --- Header. Content styles--- */
 
@@ -420,7 +446,7 @@ a.active-nav-item {
 }
 
 .header-name {
-    padding-top: 6%;
+    padding-top: 6.5%;
     width: 50%;
 }
 
@@ -469,13 +495,15 @@ a.active-nav-item {
 .header-smIcons a {
     font-size: 2.5vw;
     color: rgb(198, 239, 241);
-    margin: 0;
-    padding: 0;
+    margin: 0.1rem;
+    padding: 0.1rem 0.5rem;
     border: none;
 }
 
 .header-smIcons a:hover {
-    color: rgb(255, 255, 255);
+    color: rgb(40, 43, 46);
+    background-color: rgba(198, 239, 241, 0.8);
+    border-radius: 0.5rem;
     border: none;
 }
 
@@ -684,8 +712,6 @@ a.active-nav-item {
 .section-carousel button, .dot {
     background-color: transparent;
     color: rgb(40, 43, 46);
-    border: none;
-    border-radius: 0.5rem;
     text-align: center;
     padding: 0;
     margin: 0.5rem;
@@ -866,7 +892,6 @@ span.grid-item:hover {
 .cert-accordion {
     background-color: rgb(40, 43, 46);
     color: rgb(255, 255, 255);
-    outline: none;
     font-weight: 150;
     padding: 1.5rem;
     width: 100%;
@@ -881,20 +906,26 @@ span.grid-item:hover {
 }
 
 .active-acc-button:hover, .cert-accordion:hover {
-    background-color: rgb(198, 239, 241);
+    background-color: rgba(198, 239, 241, 0.9);
     color: rgb(40, 43, 46);
 }
-
-.cert-accordion:after {
+.cert-accordion:hover::after  {
+    color: rgb(40, 43, 46);
+}
+button.cert-accordion {
+    display: flex;
+    justify-content: space-between;
+}
+.cert-accordion::after {
     content: '\002B';
     color: rgb(255, 255, 255);
-    float: right;
     margin-left: 0.5rem;
 }
 
-.active-acc-button:after {
+.active-acc-button::after {
     content: "\2212";
 }
+
 
 .cert-accordion-content {
     padding: 0 1.8rem;
@@ -992,12 +1023,14 @@ span.grid-item:hover {
 .footer-smIcons a {
     font-size: 2.5vw;
     color: rgb(198, 239, 241);
-    margin: 0;
-    padding: 0;
+    margin: 0.1rem;
+    padding: 0.1rem 0.5rem;
     border: none;
 }
 
 .footer-smIcons a:hover {
-    color: rgb(255, 255, 255);
+    color: rgb(40, 43, 46);
+    background-color: rgba(198, 239, 241, 0.8);
+    border-radius: 0.5rem;
     border: none;
 }
