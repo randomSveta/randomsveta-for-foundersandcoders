@@ -178,7 +178,7 @@ function openAccordionContent() {
 window.addEventListener("DOMContentLoaded", () => {
     controlStopPlaySlides(true);
     openAccordionContent();
-}, false);
+});
 
 window.addEventListener("scroll", () => {
     addActiveClassToNavbarItemOnscroll();

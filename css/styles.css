@@ -55,7 +55,7 @@ body {
 }
 
 *:focus {
-    outline: dotted DarkTurquoise;
+    outline: 0.2rem dotted PaleVioletRed;
 }
 
 header {
@@ -154,21 +154,17 @@ a:link {
     color: rgb(40, 43, 46);
     padding: 0.2rem;
 }
+
 a:visited {
     color: rgba(36, 143, 143, 0.9);
 }
 
-a:hover, a:active {
-    text-decoration-line: underline;
-    text-decoration-style: double;
-    color: rgba(40, 43, 46, 0.8); 
+a:hover {
+    text-decoration: underline;
 }
-button {
-    padding:0 0.2rem;
-    border: none;
-    outline: none;
-    margin:0;
-    cursor: pointer;
+
+a:active {
+    color: PaleVioletRed;
 }
 
 /* --- Global elements styles --- */
@@ -267,6 +263,27 @@ label {
     text-align: center;
 }
 
+button {
+    background-color: rgb(40, 43, 46);
+    color: rgb(255, 255, 255);
+    font-weight: 150;
+    font-size: 2rem;
+    padding: 1.5rem;
+    border: none;
+    outline: none;
+    margin: 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(198, 239, 241, 0.9);
+    color: rgb(40, 43, 46);
+}
+
+button:active {
+    background-color: PaleVioletRed;
+    color: rgb(40, 43, 46);
+}
 
 /* ------ Global classes styles ------ */
 
@@ -289,6 +306,11 @@ label {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    background-image: url("../images/background/three_sections_background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: border-box;
 }
 
 .large-screen-flex {
@@ -305,19 +327,29 @@ label {
 }
 
 /* ------ Header ------ */
+
 .button-to-top {
     z-index: 11;
     display: none;
     position: fixed;
-    bottom: 3rem;
-    right: 5rem;
+    bottom: 5rem;
+    right: 6rem;
     background-color: transparent;
-    font-size: 4rem;
+    font-size: 2.5vw;
+    padding: 0.15rem 0.3rem;
+    margin: 0;
     color: rgba(0, 0, 0, 0.7);
-  }
-  .button-to-top:hover {
-      color: rgba(36, 143, 143, 0.9);
-  }
+    border-radius: 0.5rem;
+}
+
+.button-to-top:hover {
+    color: rgba(198, 239, 241, 0.9);
+    background-color: rgba(40, 43, 46, 0.8);
+}
+
+.button-to-top:active {
+    color: PaleVioletRed;
+}
 
 /* --- Header. Navigation styles--- */
 
@@ -397,14 +429,16 @@ nav .toggle-bars {
     color: rgb(255, 255, 255);
     border: none;
 }
+
 .toggle-bars a:hover {
     color: rgb(198, 239, 241);
 }
 
-.underscore-nav-item a:hover, .underscore-nav-item a:active, .underscore-nav-item a:focus {
+.underscore-nav-item a:hover, .underscore-nav-item a:active {
     color: rgb(198, 239, 241);
     text-decoration: none;
 }
+
 .underscore-nav-item a::before {
     content: '';
     display: block;
@@ -423,14 +457,12 @@ nav .toggle-bars {
     transition: transform ease-in-out 150ms;
     transition: transform ease-in-out 150ms, -webkit-transform ease-in-out 150ms;
 }
+
 a.active-nav-item::before {
- 
     -webkit-transform: scale(1, 1);
     -ms-transform: scale(1, 1);
     transform: scale(1, 1);
 }
-
-
 
 /* --- Header. Content styles--- */
 
@@ -542,14 +574,6 @@ a.active-nav-item::before {
 
 /* --- Section "Bootcamp prerequisites" --- */
 
-.section-bootcamppre .section-content {
-    background-image: url("../images/background/three_sections_background.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-origin: border-box;
-}
-
 .section-bootcamppre-text-and-prerequisites {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -566,17 +590,17 @@ a.active-nav-item::before {
 
 .section-bootcamppre-prerequisites {
     width: 50%;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     margin-right: 6rem;
-    border: 0.2rem dashed rgba(40, 43, 46, 0.5);
+    border: 0.1rem solid rgba(40, 43, 46, 0.4);
 }
 
 /* - Section "Bootcamp prerequisites". Text styles - */
 
 .section-bootcamppre-text {
     width: 50%;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 0.2rem dashed rgba(40, 43, 46, 0.5);
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 0.1rem solid rgba(40, 43, 46, 0.4);
 }
 
 .prerequisites-links ul {
@@ -601,14 +625,6 @@ a.active-nav-item::before {
 }
 
 /* --- Section "Carousel" --- */
-
-.section-carousel .section-content {
-    background-image: url("../images/background/three_sections_background.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-origin: border-box;
-}
 
 .section-all-carousel-elements {
     position: relative;
@@ -645,9 +661,9 @@ a.active-nav-item::before {
     -webkit-box-shadow: 0 0.5rem 0.9rem 0 rgba(0, 0, 0, 0.5), 0 0.7rem 2rem 0 rgba(0, 0, 0, 0.25);
     box-shadow: 0 0.5rem 0.9rem 0 rgba(0, 0, 0, 0.5), 0 0.7rem 2rem 0 rgba(0, 0, 0, 0.25);
 }
+
 .carousel-images-list img:active {
     transform: scale(1.4);
-
 }
 
 /* - Section "Carousel". Animation - */
@@ -710,32 +726,33 @@ a.active-nav-item::before {
 
 /* --- Section "Carousel". Buttons and indicators --- */
 
-.section-carousel button, .dot {
+.section-carousel button {
     background-color: transparent;
-    color: rgb(40, 43, 46);
+    color: rgba(0, 0, 0, 0.7);
     text-align: center;
     padding: 0;
     margin: 0.5rem;
 }
 
-.section-carousel button:hover, .dot:hover {
-    background-color: rgba(40, 43, 46, 0.5);
-    color: rgb(40, 43, 46);
-    border-radius: 0.5rem;
-}
-
-.section-carousel button:active, .dot:active {
-    background-color: rgba(40, 43, 46, 0.2);
-    color: rgba(40, 43, 46, 0.5);
-    border-radius: 0.5rem;
-}
-
-.slide-indicators button, .play-stop-buttons button  {
-    font-size: 2.5vw;
+.slide-indicators button, .play-stop-buttons button {
+    font-size: 3rem;
     margin: 1rem;
-    padding: 0.5rem;
+    padding: 0.1rem 1rem;
+    border-radius: 0.5rem;
 }
 
+.slide-indicators button:hover, .play-stop-buttons button:hover, .dot:hover {
+    color: rgba(198, 239, 241, 0.9);
+    background-color: rgba(40, 43, 46, 0.8);
+}
+
+.slide-indicators button:active, .play-stop-buttons button:active {
+    color: PaleVioletRed;;
+}
+
+.dot:active {
+    background-color: PaleVioletRed;;
+}
 
 .buttons-indicators {
     position: absolute;
@@ -792,10 +809,10 @@ a.active-nav-item::before {
 }
 
 .dot {
-    width: 0.9rem;
-    height: 0.9rem;
+    width: 1rem;
+    height: 1rem;
     margin: 0.5rem;
-    border: 0.15rem solid rgb(40, 43, 46);
+    border: 0.2rem solid rgb(40, 43, 46);
     border-radius: 50%;
     cursor: pointer;
 }
@@ -806,14 +823,6 @@ a.active-nav-item::before {
 }
 
 /* --- Section "Skills" --- */
-
-.section-skills .section-content {
-    background-image: url("../images/background/three_sections_background.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-origin: border-box;
-}
 
 .section-skills ul {
     list-style-position: inside;
@@ -840,7 +849,8 @@ a.active-nav-item::before {
 .technologies-content {
     width: 50%;
     margin-right: 6rem;
-    border: 0.2rem dashed rgba(40, 43, 46, 0.5);
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 0.1rem solid rgba(40, 43, 46, 0.4);
 }
 
 .grid-container {
@@ -884,7 +894,8 @@ span.grid-item:hover {
 
 .accordion-certificates-content {
     width: 50%;
-    border: 0.2rem dashed rgba(40, 43, 46, 0.5);
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 0.1rem solid rgba(40, 43, 46, 0.4);
 }
 
 .accordion-certificates {
@@ -893,32 +904,21 @@ span.grid-item:hover {
 }
 
 .cert-accordion {
-    background-color: rgb(40, 43, 46);
-    color: rgb(255, 255, 255);
-    font-weight: 150;
-    padding: 1.5rem;
     width: 100%;
-    border: none;
-    text-align: left;
     -webkit-transition: 0.4s;
     -o-transition: 0.4s;
     transition: 0.4s;
-    font-size: 2rem;
-    -webkit-box-shadow: 0.2rem 0.2rem rgba(40, 43, 46, 0.5);
-    box-shadow: 0.2rem 0.2rem rgba(40, 43, 46, 0.5);
 }
 
-.active-acc-button:hover, .cert-accordion:hover {
-    background-color: rgba(198, 239, 241, 0.9);
+.cert-accordion:hover::after {
     color: rgb(40, 43, 46);
 }
-.cert-accordion:hover::after  {
-    color: rgb(40, 43, 46);
-}
+
 button.cert-accordion {
     display: flex;
     justify-content: space-between;
 }
+
 .cert-accordion::after {
     content: '\002B';
     color: rgb(255, 255, 255);
@@ -928,7 +928,6 @@ button.cert-accordion {
 .active-acc-button::after {
     content: "\2212";
 }
-
 
 .cert-accordion-content {
     padding: 0 1.8rem;
@@ -942,11 +941,15 @@ button.cert-accordion {
 
 /* --- Section "Contact me" --- */
 
+.section-contactme .section-content {
+    background-image: none;
+}
+
 .section-contactme {
     background-image: url("../images/background/section_contactme_background.png");
     background-position: left bottom;
     background-repeat: no-repeat;
-    background-size:  80% auto;
+    background-size: 80% auto;
     background-origin: border-box;
     background-color: rgba(153, 206, 212, 0.5);
     padding-bottom: 3rem;
@@ -963,19 +966,9 @@ button.cert-accordion {
     justify-content: flex-end;
 }
 
-.section-contactme-form input[type=submit] {
-    background-color: rgb(40, 43, 46);
-    height: 3.5rem;
-    border: 0.1rem solid rgba(153, 206, 212, 0.7);
-    color: rgb(198, 239, 241);
+.section-contactme-form button {
     margin: 1.5rem 0;
     font-size: 1.6rem;
-}
-
-.section-contactme-form input[type=submit]:hover {
-    color: rgb(40, 43, 46);
-    background-color: rgb(198, 239, 241);
-    text-decoration: none;
 }
 
 /* ------ Footer ------ */

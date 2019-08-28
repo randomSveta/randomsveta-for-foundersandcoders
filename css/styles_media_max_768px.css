@@ -29,8 +29,6 @@
     /* --- Body blocks styles --- */
     header {
         background-image: url("../images/background/header_background_max_768-600.png");
-        background-position: left;
-        padding-bottom: 0;
     }
     section {
         margin: 0;
