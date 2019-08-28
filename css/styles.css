@@ -165,9 +165,10 @@ a:hover, a:active {
 }
 button {
     padding:0 0.2rem;
+    border: none;
+    outline: none;
     margin:0;
     cursor: pointer;
-    border-radius: 0.5rem;
 }
 
 /* --- Global elements styles --- */
@@ -720,11 +721,13 @@ a.active-nav-item::before {
 .section-carousel button:hover, .dot:hover {
     background-color: rgba(40, 43, 46, 0.5);
     color: rgb(40, 43, 46);
+    border-radius: 0.5rem;
 }
 
 .section-carousel button:active, .dot:active {
     background-color: rgba(40, 43, 46, 0.2);
     color: rgba(40, 43, 46, 0.5);
+    border-radius: 0.5rem;
 }
 
 .slide-indicators button, .play-stop-buttons button  {
@@ -962,14 +965,11 @@ button.cert-accordion {
 
 .section-contactme-form input[type=submit] {
     background-color: rgb(40, 43, 46);
-    -webkit-box-shadow: 0.2rem 0.2rem rgba(40, 43, 46, 0.5);
-    box-shadow: 0.2rem 0.2rem rgba(40, 43, 46, 0.5);
     height: 3.5rem;
     border: 0.1rem solid rgba(153, 206, 212, 0.7);
     color: rgb(198, 239, 241);
     margin: 1.5rem 0;
     font-size: 1.6rem;
-    cursor: pointer;
 }
 
 .section-contactme-form input[type=submit]:hover {
