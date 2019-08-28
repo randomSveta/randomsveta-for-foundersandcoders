@@ -20,9 +20,10 @@
         4.4.1 Section "Skills". Trchnologies styles
         4.4.2 Section "Skills". Accordion styles
     4.5 Section "Contact me"
-5. Footer
-    5.1 Footer. Text styles 
-    5.2 Footer. Social media icons styles
+5. "Go to top" button
+6. Footer
+    6.1 Footer. Text styles 
+    6.2 Footer. Social media icons styles
 -------------------------------------------------- */
 
 @media screen and (max-width: 768px) {
@@ -105,7 +106,7 @@
         font-size: 2rem;
     }
     .header-name {
-        padding-top: 14%; 
+        padding-top: 14.5%; 
     }
     /* --- Header. Social media icons styles --- */
     .header-smIcons a {
@@ -222,7 +223,6 @@
     /* - Section "Skills". Techologies styles- */
     .technologies-content {
         width: 100%;
-        margin-right: 0;
         margin-bottom: 6rem;
     }
     /* - Section "Skills". Accordion styles- */
@@ -236,6 +236,11 @@
     .section-contactme-form {
         padding: 2rem;
     }
+    /* ------ "Go to top" button ------ */
+    .button-to-top {
+        font-size: 4vh;
+    }
+    
     /* ------ Footer ------ */
     /* --- Footer. Text styles --- */
     /* --- Foter. Social media styles --- */

@@ -22,9 +22,10 @@
         4.4.1 Section "Skills". Trchnologies styles
         4.4.2 Section "Skills". Accordion styles
     4.5 Section "Contact me"
-5. Footer
-    5.1 Footer. Text styles 
-    5.2 Footer. Social media icons styles
+5. "Go to top" button
+6. Footer
+    6.1 Footer. Text styles 
+    6.2 Footer. Social media icons styles
 -------------------------------------------------- */
 
 /* colours: rgb(0, 0, 0), rgb(255, 255, 255), rgb(40, 43, 46), rgb(198, 239, 241) */
@@ -327,29 +328,6 @@ button:active {
 }
 
 /* ------ Header ------ */
-
-.button-to-top {
-    z-index: 11;
-    display: none;
-    position: fixed;
-    bottom: 5rem;
-    right: 6rem;
-    background-color: transparent;
-    font-size: 2.5vw;
-    padding: 0.15rem 0.3rem;
-    margin: 0;
-    color: rgba(0, 0, 0, 0.7);
-    border-radius: 0.5rem;
-}
-
-.button-to-top:hover {
-    color: rgba(198, 239, 241, 0.9);
-    background-color: rgba(40, 43, 46, 0.8);
-}
-
-.button-to-top:active {
-    color: PaleVioletRed;
-}
 
 /* --- Header. Navigation styles--- */
 
@@ -969,6 +947,30 @@ button.cert-accordion {
 .section-contactme-form button {
     margin: 1.5rem 0;
     font-size: 1.6rem;
+}
+/* ------ "Go to top" button ------ */
+
+.button-to-top {
+    z-index: 11;
+    display: none;
+    position: fixed;
+    bottom: 5rem;
+    right: 6rem;
+    background-color: transparent;
+    font-size: 2.5vw;
+    padding: 0.15rem 0.3rem;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.7);
+    border-radius: 0.5rem;
+}
+
+.button-to-top:hover {
+    color: rgba(198, 239, 241, 0.9);
+    background-color: rgba(40, 43, 46, 0.8);
+}
+
+.button-to-top:active {
+    color: PaleVioletRed;
 }
 
 /* ------ Footer ------ */
